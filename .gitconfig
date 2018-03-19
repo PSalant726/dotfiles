@@ -1,0 +1,25 @@
+[user]
+	name = Phil Salant
+	email = PSalant@gmail.com
+	signingkey = B77BD8C243F6EB9A
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[commit]
+	gpgsign = true
+[push]
+	default = current
