@@ -29,6 +29,12 @@ alias gps='git push'
 alias gs='git status'
 alias master="git checkout master"
 
+alias cfga="cfg add"
+alias cfgm="cfg commit"
+alias cfgpl="cfg pull"
+alias cfgps="cfg push"
+alias cfgs="cfg status"
+
 ###################
 #   Movable Ink   #
 ###################
