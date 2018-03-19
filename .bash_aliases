@@ -39,8 +39,8 @@ alias cfgs="cfg status"
 #   Movable Ink   #
 ###################
 alias dcjs='deploy_customjs -e production -c'
-alias dev='npm run dev'
-alias prod='npm run prod'
+alias dev='yarn dev'
+alias prod='yarn prod'
 
 if [ -f ~/.profile_printer ]; then
   profile_printer() { ~/.profile_printer -company $1 -user $2; }
