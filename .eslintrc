@@ -1,5 +1,5 @@
 {
-  "extends" : "airbnb",
+  "extends" : "eslint:recommended",
   "env" : {
     "browser" : true,
     "node" : true,
@@ -9,6 +9,7 @@
     "qunit" : true,
     "jquery" : true
   },
+  "parserOptions": { "ecmaVersion": 6 },
   "rules" : {
     "arrow-body-style" : "off",
     "arrow-parens" : ["error", "as-needed"],
@@ -30,6 +31,7 @@
       { "object" : "describe", "property" : "only" },
       { "object" : "it", "property" : "only" }
     ],
+    "no-use-before-define": ["error", "nofunc"],
     "no-var" : "off",
     "padded-blocks" : "off",
     "padding-line-between-statements" : ["error",
@@ -45,6 +47,7 @@
       "anonymous" : "never",
       "named" : "never",
       "asyncArrow" : "always"
-    }]
+    }],
+    "vars-on-top" : "off"
   }
 }
