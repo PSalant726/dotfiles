@@ -17,6 +17,11 @@ echo ".cfg" >> .gitignore
 ```
 
 ### 2. Clone this repo into a "bare" repo in a hidden folder in the `$HOME` directory:
+SSH:
+```sh
+$ git clone --bare git@github.com:PSalant726/dotfiles.git $HOME/.cfg
+```
+HTTPS:
 ```sh
 git clone --bare https://github.com/PSalant726/dotfiles.git $HOME/.cfg
 ```
