@@ -2,7 +2,7 @@
 export EDITOR='code -w'
 
 # Load shell dotfiles
-for file in ~/.{bash_prompt,bash_aliases,credentials,git-completion,personal_info}; do
+for file in ~/.{bash_prompt,bash_aliases,credentials,git-completion}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;

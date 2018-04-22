@@ -1,7 +1,7 @@
 [user]
-	name = $NAME
-	email = $EMAIL
-	signingkey = $GHSIGNINGKEY
+	name = Phil Salant
+	email = PSalant@gmail.com
+	signingkey = B77BD8C243F6EB9A
 [color]
 	branch = auto
 	diff = auto
