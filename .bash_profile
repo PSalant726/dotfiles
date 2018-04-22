@@ -24,6 +24,9 @@ fi
 # Load RVM into a shell session *as a function*
 [ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
 
+# Initialize RBENV
+eval "$(rbenv init -)"
+
 # Load NVM
 export NVM_DIR="$HOME/.nvm"
 # This loads nvm
