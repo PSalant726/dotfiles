@@ -67,21 +67,10 @@ set_prompts() {
     userStyle="\[$red\]"
   fi
 
-  # connected via ssh
-  # local hostStyle=""
-
-  # if [[ "$SSH_TTY" ]]; then
-  #   hostStyle="\[$red\]"
-  # else
-  #   hostStyle="\[$yellow\]"
-  # fi
-
   # set the terminal title to the current working directory
   PS1="\[\033]0;\w\007\]"
 
   PS1+="\[$userStyle\]\u" # username
-  # PS1+="\[$reset$white\]@"
-  # PS1+="\[$hostStyle\]\h" # host
   PS1+="\[$reset$white\]: "
   PS1+="\[$blue\]\w" # working directory
   PS1+="\$(prompt_git \"$white on $yellow\")" # git repository details

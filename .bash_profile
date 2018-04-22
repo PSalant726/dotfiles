@@ -2,9 +2,7 @@
 export EDITOR='code -w'
 
 # Load shell dotfiles
-# * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don't want to commit.
-for file in ~/.{bash_prompt,bash_aliases,credentials,git-completion}; do
+for file in ~/.{bash_prompt,bash_aliases,credentials,git-completion,personal_info}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
