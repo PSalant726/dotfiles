@@ -1,53 +1,66 @@
 {
-  "extends" : "eslint:recommended",
-  "env" : {
-    "browser" : true,
-    "node" : true,
-    "mocha" : true,
-    "jasmine" : true,
-    "phantomjs" : true,
-    "qunit" : true,
-    "jquery" : true
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "jasmine": true,
+    "phantomjs": true,
+    "qunit": true,
+    "jquery": true
   },
+  "extends": "eslint:recommended",
   "parserOptions": { "ecmaVersion": 6 },
-  "rules" : {
-    "arrow-body-style" : "off",
-    "arrow-parens" : ["error", "as-needed"],
-    "class-methods-use-this" : "off",
-    "comma-dangle" : ["error", "only-multiline"],
-    "eqeqeq" : ["error", "smart"],
-    "func-names" : ["error", "never"],
-    "key-spacing" : ["error", {
-      "afterColon" : true,
-      "beforeColon" : true,
-      "mode" : "minimum"
-    }],
-    "no-console" : "warn",
-    "no-debugger" : "error",
-    "no-else-return" : ["error", { "allowElseIf" : true }],
-    "no-multi-spaces" : ["error", { "ignoreEOLComments" : true }],
-    "no-plusplus" : "off",
-    "no-restricted-properties" : ["warn",
-      { "object" : "describe", "property" : "only" },
-      { "object" : "it", "property" : "only" }
+  "rules": {
+    "array-bracket-spacing": "warn",
+    "arrow-parens": ["warn", "as-needed"],
+    "block-spacing": "warn",
+    "brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
+    "camelcase": ["warn", { "properties": "never" }],
+    "comma-dangle": ["warn", "only-multiline"],
+    "comma-spacing" : "warn",
+    "default-case": "warn",
+    "eol-last": "error",
+    "eqeqeq": ["warn", "smart"],
+    "guard-for-in": "warn",
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "key-spacing": "warn",
+    "keyword-spacing": "warn",
+    "lines-between-class-members": "warn",
+    "multiline-ternary": ["warn", "always-multiline"],
+    "no-console": "warn",
+    "no-else-return": ["warn", { "allowElseIf": true }],
+    "no-eq-null": "warn",
+    "no-lonely-if": "warn",
+    "no-loop-func": "error",
+    "no-multi-spaces": ["warn", { "ignoreEOLComments": true }],
+    "no-multiple-empty-lines": ["warn", { "max": 1 }],
+    "no-restricted-properties": ["error",
+      { "object": "describe", "property": "only" },
+      { "object": "it", "property": "only" }
     ],
-    "no-use-before-define": ["error", "nofunc"],
-    "no-var" : "off",
-    "padded-blocks" : "off",
-    "padding-line-between-statements" : ["error",
-      { "blankLine" : "always", "prev" : ["const", "let", "var"], "next" : "*"},
-      { "blankLine" : "never", "prev" : ["const", "let", "var"], "next" : ["const", "let", "var"]},
-      { "blankLine" : "always", "prev" : "*", "next" : "return"}
+    "no-return-assign": "warn",
+    "no-self-compare": "warn",
+    "no-trailing-spaces": "warn",
+    "no-undef-init": "warn",
+    "no-unneeded-ternary": "error",
+    "no-use-before-define": ["warn", "nofunc"],
+    "object-curly-spacing": ["warn", "always"],
+    "padding-line-between-statements": ["warn",
+      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
+      { "blankLine": "never", "prev": ["const", "let", "var"], "next": ["const", "let", "var"] },
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "never", "prev": ["const", "let", "var"], "next": "return" }
     ],
-    "prefer-arrow-callback" : "off",
-    "quotes" : ["error", "single", { "avoidEscape" : true }],
-    "semi" : ["error", "always"],
-    "sort-imports" : ["error", { "memberSyntaxSortOrder" : ["none", "all", "single", "multiple"] }],
-    "space-before-function-paren" : ["error", {
-      "anonymous" : "never",
-      "named" : "never",
-      "asyncArrow" : "always"
+    "prefer-promise-reject-errors": "warn",
+    "radix": "warn",
+    "semi": "error",
+    "sort-imports": ["warn", { "memberSyntaxSortOrder": ["none", "all", "single", "multiple"] }],
+    "space-before-blocks": "warn",
+    "space-before-function-paren": ["warn", {
+      "anonymous": "never",
+      "named": "never"
     }],
-    "vars-on-top" : "off"
+    "space-infix-ops": "warn",
+    "yoda": ["warn", "never", { "exceptRange": true }]
   }
 }
