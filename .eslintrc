@@ -56,10 +56,7 @@
     "semi": "error",
     "sort-imports": ["warn", { "memberSyntaxSortOrder": ["none", "all", "single", "multiple"] }],
     "space-before-blocks": "warn",
-    "space-before-function-paren": ["warn", {
-      "anonymous": "never",
-      "named": "never"
-    }],
+    "space-before-function-paren": ["warn", "never"],
     "space-infix-ops": "warn",
     "yoda": ["warn", "never", { "exceptRange": true }]
   }
