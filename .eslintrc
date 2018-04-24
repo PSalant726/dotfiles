@@ -42,7 +42,7 @@
     "no-self-compare": "warn",
     "no-trailing-spaces": "warn",
     "no-undef-init": "warn",
-    "no-unneeded-ternary": "error",
+    "no-unneeded-ternary": ["error", { "defaultAssignment": false }],
     "no-use-before-define": ["warn", "nofunc"],
     "object-curly-spacing": ["warn", "always"],
     "padding-line-between-statements": ["warn",
