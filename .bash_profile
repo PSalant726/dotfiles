@@ -21,9 +21,6 @@ if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   . ~/.config/exercism/exercism_completion.bash
 fi
 
-# Load RVM into a shell session *as a function*
-[ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
-
 # Initialize RBENV
 eval "$(rbenv init -)"
 
