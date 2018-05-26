@@ -1,16 +1,3 @@
-[alias]
-	ga = git add
-	gb = git branch
-	gca = git commit -v -a
-	gcb = git checkout -b
-	gcm = git commit
-	gco = git checkout
-	gd = git diff
-	gl = git log --graph --decorate
-	gpl = git pull
-	gps = git push
-	gs = git status
-	master = git checkout master
 [color]
 	branch = auto
 	diff = auto
