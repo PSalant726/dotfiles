@@ -11,27 +11,27 @@ source ~/.bash_profile
 ```
 
 ## Installation
-### 1. Ensure that the source repo `.gitignore`'s the folder where `.cfg` will be cloned:
+#### 1. Ensure that the source repo `.gitignore`'s the folder where `.cfg` will be cloned:
 ```sh
 echo ".cfg" >> .gitignore
 ```
 
-### 2. Clone this repo into a "bare" repo in a hidden folder in the `$HOME` directory:
+#### 2. Clone this repo into a "bare" repo in a hidden folder in the `$HOME` directory:
 SSH:
 ```sh
-$ git clone --bare git@github.com:PSalant726/dotfiles.git $HOME/.cfg
+git clone --bare git@github.com:PSalant726/dotfiles.git $HOME/.cfg
 ```
 HTTPS:
 ```sh
 git clone --bare https://github.com/PSalant726/dotfiles.git $HOME/.cfg
 ```
 
-### 3. Define the `alias` in the current shell scope (only required if not included in the local `.bash_profile`):
+#### 3. Define the `alias` in the current shell scope (only required if not included in the local `.bash_profile`):
 ```sh
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```
 
-### 4. Checkout the content from the bare repository in the `$HOME` directory:
+#### 4. Checkout the content from the bare repository in the `$HOME` directory:
 ```sh
 cfg checkout
 ```
@@ -50,7 +50,7 @@ This is because the `$HOME` directory might already contain some stock configura
 cfg checkout
 ```
 
-### 5. Set the flag `showUntrackedFiles` to `no` for the local repository:
+#### 5. Set the flag `showUntrackedFiles` to `no` for the local repository:
 This hides files that are not explicitly tracked. This is so that when running `cfg status` and other commands, files that are not of concern will not show up as `untracked`.
 ```sh
 cfg config --local status.showUntrackedFiles no
