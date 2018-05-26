@@ -1,7 +1,16 @@
-[user]
-	name = Phil Salant
-	email = PSalant@gmail.com
-	signingkey = B77BD8C243F6EB9A
+[alias]
+	ga = git add
+	gb = git branch
+	gca = git commit -v -a
+	gcb = git checkout -b
+	gcm = git commit
+	gco = git checkout
+	gd = git diff
+	gl = git log --graph --decorate
+	gpl = git pull
+	gps = git push
+	gs = git status
+	master = git checkout master
 [color]
 	branch = auto
 	diff = auto
@@ -23,3 +32,9 @@
 	gpgsign = true
 [push]
 	default = current
+[url "git@git.movableink.com:"]
+	insteadOf = MI:
+[user]
+	name = Phil Salant
+	email = PSalant@gmail.com
+	signingkey = B77BD8C243F6EB9A
