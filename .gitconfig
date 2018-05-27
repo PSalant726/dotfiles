@@ -19,8 +19,8 @@
 	gpgsign = true
 [push]
 	default = current
-[url "git@git.movableink.com:"]
-	insteadOf = MI:
+[url "git@git.movableink.com"]
+	insteadOf = MI
 [user]
 	name = Phil Salant
 	email = PSalant@gmail.com
