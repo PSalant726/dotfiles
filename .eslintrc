@@ -9,7 +9,9 @@
     "jquery": true
   },
   "extends": "eslint:recommended",
-  "parserOptions": { "ecmaVersion": 6 },
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
   "rules": {
     "array-bracket-spacing": "warn",
     "arrow-parens": ["warn", "as-needed"],
