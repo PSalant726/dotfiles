@@ -40,7 +40,19 @@ alias cfgs="cfg status"
 alias dcjs='deploy_customjs -e production -c'
 alias dev='yarn dev'
 alias prod='yarn prod'
+alias beagle='cdl $GOPATH/src/github.com/movableink/beagle'
+alias mirepos='cdl ~/Documents/MIRepos/'
 
 if [ -f ~/.profile_printer ]; then
   profile_printer() { ~/.profile_printer -company $1 -user $2; }
 fi
+
+platform_start() {
+  echo --------------- Pulling canvas changes ---------------
+  cd ~/Documents/MIRepos/canvas/ && git pull
+  echo ---------------- Pulling ojos changes ----------------
+  cd ~/Documents/MIRepos/ojos/ && git pull
+  echo --------------- Pulling rails changes ----------------
+  cd ~/Documents/MIRepos/movableink/ && git pull
+  forego start
+}
