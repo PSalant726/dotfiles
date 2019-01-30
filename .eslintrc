@@ -36,10 +36,6 @@
     "no-loop-func": "error",
     "no-multi-spaces": ["warn", { "ignoreEOLComments": true }],
     "no-multiple-empty-lines": ["warn", { "max": 1 }],
-    "no-restricted-properties": ["error",
-      { "object": "describe", "property": "only" },
-      { "object": "it", "property": "only" }
-    ],
     "no-return-assign": "warn",
     "no-self-compare": "warn",
     "no-trailing-spaces": "warn",
@@ -47,12 +43,6 @@
     "no-unneeded-ternary": ["error", { "defaultAssignment": false }],
     "no-use-before-define": ["warn", "nofunc"],
     "object-curly-spacing": ["warn", "always"],
-    "padding-line-between-statements": ["warn",
-      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
-      { "blankLine": "never", "prev": ["const", "let", "var"], "next": ["const", "let", "var"] },
-      { "blankLine": "always", "prev": "*", "next": "return" },
-      { "blankLine": "never", "prev": ["const", "let", "var"], "next": "return" }
-    ],
     "prefer-promise-reject-errors": "warn",
     "radix": "warn",
     "semi": "error",
