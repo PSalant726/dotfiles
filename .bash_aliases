@@ -38,9 +38,6 @@ alias cfgs="cfg status"
 #   Movable Ink   #
 ###################
 alias dcjs='deploy_customjs -e production -c'
-alias dev='yarn dev'
-alias prod='yarn prod'
-alias beagle='cdl $GOPATH/src/github.com/movableink/beagle'
 alias mirepos='cdl ~/Documents/MIRepos/'
 
 if [ -f ~/.profile_printer ]; then
