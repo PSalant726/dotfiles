@@ -45,11 +45,6 @@ if [ -f ~/.profile_printer ]; then
 fi
 
 platform_start() {
-  echo --------------- Pulling canvas changes ---------------
-  cd ~/Documents/MIRepos/canvas/ && git pull
-  echo ---------------- Pulling ojos changes ----------------
-  cd ~/Documents/MIRepos/ojos/ && git pull
-  echo --------------- Pulling rails changes ----------------
-  cd ~/Documents/MIRepos/movableink/ && git pull
-  forego start
+  cd ~/Documents/MovableInk/khepri
+  yarn start
 }
