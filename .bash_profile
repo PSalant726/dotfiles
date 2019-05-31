@@ -1,5 +1,6 @@
 # Set VSCode as the default editor
 export EDITOR='code -w'
+HISTCONTROL=ignoredups
 
 # Load shell dotfiles
 for file in ~/.{bash_prompt,bash_aliases,credentials,git-completion}; do
