@@ -39,6 +39,7 @@ alias cfgs="cfg status"
 ###################
 alias dcjs='deploy_customjs -e production -c'
 alias mirepos='cdl ~/Documents/MovableInk/'
+alias provisioning='cd ~/Documents/MovableInk/provisioning && git pull origin master && bundle install'
 
 if [ -f ~/.profile_printer ]; then
   profile_printer() { ~/.profile_printer -company $1 -user $2; }
