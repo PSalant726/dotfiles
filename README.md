@@ -1,16 +1,59 @@
+# Required Software & Settings
+### Homebrew
+Install with:
+```sh
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+### Font
+Install the `Hack Nerd` font [here](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts).
+
+### iTerm
+1. Install with:
+```sh
+brew cask install iterm2
+```
+2. After cloning the bare `cfg` repo (details below), import the `iTerm_profile.json` file (Preferences > Other Actions... > Import JSON Profiles...)
+
+### oh-my-zsh
+1. Install with:
+```sh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+2. Install the `powerlevel10k` theme with:
+```sh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+```
+3. Install ZSH syntax highlighting with:
+```sh
+brew install zsh-syntax-highlighting
+```
+
+### VS Code
+1. Install it [here](https://code.visualstudio.com/).
+1. Install the [Settings Sync](https://github.com/shanalikhan/code-settings-sync) extension.
+1. Follow the directions to add a GitHub token and synchronize settings with [this gist](https://gist.github.com/PSalant726/a179279267788effc1c4477cc069d04c).
+
+### Source `.zshrc`
+After completing the below steps to configure the `cfg` repo, run:
+```sh
+source ~/.zshrc
+```
+
 # `dotfiles` Management with a Bare Git Repository
-## Prerequisite
-Prior to installation, make sure to include the `cfg` `alias` in the local `.bash_profile`:
+### Prerequisite
+Prior to installation, make sure to include the `cfg` `alias` in the local `.bash_profile` or `.zshrc`:
 ```sh
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```
 
 Then, in the command line, run:
 ```sh
+source ~/.zshrc
+# or
 source ~/.bash_profile
 ```
 
-## Installation
+### Installation
 #### 1. Ensure that the source repo `.gitignore`'s the folder where `.cfg` will be cloned:
 ```sh
 echo ".cfg" >> .gitignore
@@ -26,7 +69,7 @@ HTTPS:
 git clone --bare https://github.com/PSalant726/dotfiles.git $HOME/.cfg
 ```
 
-#### 3. Define the `alias` in the current shell scope (only required if not included in the local `.bash_profile`):
+#### 3. Define the `alias` in the current shell scope (only required if not included in the local `.zshrc` or `.bash_profile`):
 ```sh
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 ```
@@ -38,7 +81,7 @@ cfg checkout
 The step above might fail with a message like:
 ```sh
 error: The following untracked working tree files would be overwritten by checkout:
-    .bash_profile
+    .zshrc # or .bash_profile
     .gitconfig
 Please move or remove them before you can switch branches.
 Aborting
@@ -56,14 +99,14 @@ This hides files that are not explicitly tracked. This is so that when running `
 cfg config --local status.showUntrackedFiles no
 ```
 
-## That's it! Type `cfg` commands to add and update `dotfiles`:
+### That's it! Type `cfg` commands to add and update `dotfiles`:
 ```sh
-cfg status
+cfgs                                         # cfg status
 ...
-cfg add .bash_aliases
-cfg commit -m "Add an awesome new alias"
+cfga .zshrc                                  # cfg add
+cfgcm -m "Add an awesome new alias"          # cfg commit
 ...
-cfg add .bash_prompt
-cfg commit -m "Make an awesome new bash prompt"
-cfg push
+cfga .p10k.zsh
+cfgcm -m "Make an awesome new bash prompt"
+cfgps                                        # cfg push
 ```
