@@ -116,6 +116,43 @@ alias cfgs="cfg status"
 alias dcjs='deploy_customjs -e production -c'
 alias mirepos='cdl ~/Documents/MovableInk/'
 alias provisioning='cd ~/Documents/MovableInk/provisioning && git pull origin master && bundle install'
+export GOPRIVATE=github.com/movableink
+platform_start() {
+  # Node v10.* is required
+  nvm use 10
+
+  # Update Canvas and the relevant packages
+  cd ~/Documents/MovableInk/canvas/
+  git checkout master
+  git pull origin master
+  yarn install
+
+  cd ./packages/canvas/
+  git checkout master
+  git pull origin master
+  yarn install
+
+  cd ../kings-cross/
+  git checkout master
+  git pull origin master
+  yarn install
+
+  # Update Ojos
+  cd ~/Documents/MovableInk/ojos
+  git checkout master
+  git pull origin master
+  yarn install
+  bundle install
+
+  # Update rails
+  cd ~/Documents/MovableInk/movableink
+  git checkout master
+  git pull origin master
+  bundle install
+
+  # Start it all up!
+  forego start
+}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
