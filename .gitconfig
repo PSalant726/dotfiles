@@ -12,15 +12,13 @@
 	old = red bold
 	new = green bold
 [color "status"]
-	added = yellow
-	changed = green
+	added = green
+	changed = yellow
 	untracked = cyan
 [commit]
 	gpgsign = true
 [push]
 	default = current
-[url "git@git.movableink.com"]
-	insteadOf = MI
 [user]
 	name = Phil Salant
 	email = PSalant@gmail.com
