@@ -14,7 +14,7 @@ export NVM_DIR="$HOME/.nvm"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/philsalant/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -114,7 +114,7 @@ alias cfgs="cfg status"
 #   Movable Ink   #
 ###################
 alias dcjs='deploy_customjs -e production -c'
-alias mirepos='cdl ~/Documents/MovableInk/'
+alias mirepos='cd ~/Documents/MovableInk/'
 alias provisioning='cd ~/Documents/MovableInk/provisioning && git pull origin master && bundle install'
 export GOPRIVATE=github.com/movableink
 platform_start() {
