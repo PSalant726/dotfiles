@@ -14,7 +14,7 @@ export NVM_DIR="$HOME/.nvm"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/philsalant/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -114,8 +114,45 @@ alias cfgs="cfg status"
 #   Movable Ink   #
 ###################
 alias dcjs='deploy_customjs -e production -c'
-alias mirepos='cdl ~/Documents/MovableInk/'
+alias mirepos='cd ~/Documents/MovableInk/'
 alias provisioning='cd ~/Documents/MovableInk/provisioning && git pull origin master && bundle install'
+export GOPRIVATE=github.com/movableink
+platform_start() {
+  # Node v10.* is required
+  nvm use 10
+
+  # Update Canvas and the relevant packages
+  cd ~/Documents/MovableInk/canvas/
+  git checkout master
+  git pull origin master
+  yarn install
+
+  cd ./packages/canvas/
+  git checkout master
+  git pull origin master
+  yarn install
+
+  cd ../kings-cross/
+  git checkout master
+  git pull origin master
+  yarn install
+
+  # Update Ojos
+  cd ~/Documents/MovableInk/ojos
+  git checkout master
+  git pull origin master
+  yarn install
+  bundle install
+
+  # Update rails
+  cd ~/Documents/MovableInk/movableink
+  git checkout master
+  git pull origin master
+  bundle install
+
+  # Start it all up!
+  forego start
+}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
