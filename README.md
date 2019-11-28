@@ -5,7 +5,11 @@ Install with:
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 ### Font
-Install the `Hack Nerd` font [here](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts).
+Install the `Hack Nerd` font:
+```sh
+brew tap homebrew/cask-fonts
+brew cask install font-hack-nerd-font
+```
 
 ### iTerm
 1. Install with:
@@ -23,13 +27,24 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```sh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 ```
-3. Install ZSH syntax highlighting with:
+3. Install the following plugins:
+    1. `fast-syntax-highlighting`
+    ```sh
+    git clone --depth=1 https://github.com/zdharma/fast-syntax-highlighting.git  $ZSH_CUSTOM/plugins/fast-syntax-highlighting
+    ```
+    2. `alias-tips`
+    ```sh
+    git clone --depth=1 https://github.com/djui/alias-tips.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
+    ```
+
+### fzf
+1. Install with:
 ```sh
-brew install zsh-syntax-highlighting
+brew install fzf
 ```
 
 ### VS Code
-1. Install it [here](https://code.visualstudio.com/).
+1. Download it [here](https://code.visualstudio.com/).
 1. Install the [Settings Sync](https://github.com/shanalikhan/code-settings-sync) extension.
 1. Follow the directions to add a GitHub token and synchronize settings with [this gist](https://gist.github.com/PSalant726/a179279267788effc1c4477cc069d04c).
 
