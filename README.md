@@ -18,6 +18,12 @@ brew cask install iterm2
 ```
 2. After cloning the bare `cfg` repo (details below), import the `iTerm_profile.json` file (Preferences > Other Actions... > Import JSON Profiles...)
 
+### Additional Homebrew Services
+1. Install [`exa`](https://the.exa.website/) and [`fzf`](https://github.com/junegunn/fzf) with:
+```sh
+brew install exa fzf
+```
+
 ### oh-my-zsh
 1. Install with:
 ```sh
@@ -30,18 +36,12 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/the
 3. Install the following plugins:
     1. `fast-syntax-highlighting`
     ```sh
-    git clone --depth=1 https://github.com/zdharma/fast-syntax-highlighting.git  $ZSH_CUSTOM/plugins/fast-syntax-highlighting
+    git clone --depth=1 https://github.com/zdharma/fast-syntax-highlighting.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
     ```
     2. `alias-tips`
     ```sh
     git clone --depth=1 https://github.com/djui/alias-tips.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
     ```
-
-### fzf
-1. Install with:
-```sh
-brew install fzf
-```
 
 ### VS Code
 1. Download it [here](https://code.visualstudio.com/).
@@ -49,7 +49,7 @@ brew install fzf
 1. Follow the directions to add a GitHub token and synchronize settings with [this gist](https://gist.github.com/PSalant726/a179279267788effc1c4477cc069d04c).
 
 ### Source `.zshrc`
-After completing the below steps to configure the `cfg` repo, run:
+After completing the below steps to configure the `cfg` repo, restart iTerm or run:
 ```sh
 source ~/.zshrc
 ```
