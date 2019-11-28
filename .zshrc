@@ -11,8 +11,6 @@ export NVM_DIR="$HOME/.nvm"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -54,7 +52,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -80,7 +78,19 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(alias-tips aws colored-man-pages docker git go jsontools npm urltools yarn)
+plugins=(
+  alias-tips
+  aws
+  colored-man-pages
+  docker
+  fast-syntax-highlighting
+  git
+  go
+  jsontools
+  npm
+  urltools
+  yarn
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,7 +112,11 @@ fi
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
+# Config guidelines for exa: https://the.exa.website/docs/colour-themes
+export EXA_COLORS="da=33:di=1;36:un=31:uu=34"
+alias ls='exa -ahlF --color-scale --git --group-directories-first'
+
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cfga="cfg add"
 alias cfgcm="cfg commit"
