@@ -25,3 +25,7 @@
 	signingkey = 44AF77533D123906
 [gpg]
 	program = gpg
+[core]
+	# Print a diff without the pager:
+	# git --no-pager diff
+	pager = diff-so-fancy | less --tabs=4 -RFX
