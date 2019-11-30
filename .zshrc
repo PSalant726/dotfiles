@@ -14,6 +14,20 @@ export NVM_DIR="$HOME/.nvm"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Info on fzf: https://github.com/junegunn/fzf
+export FZF_DEFAULT_OPTS="--layout=reverse --height=10%"
+
+# Info on bat: https://github.com/sharkdp/bat
+export BAT_THEME="OneHalfDark"
+
+# Info on forgit: https://github.com/wfxr/forgit
+export FORGIT_FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --height=50% --border --preview='bat --color=always {}'"
+
+# Info on enhancd: https://github.com/b4b4r07/enhancd
+export ENHANCD_DIR="$ZSH/custom/plugins/enhancd"
+export ENHANCD_FILTER="fzf"
+export ENHANCD_HOOK_AFTER_CD="pwd && ls"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -80,9 +94,8 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   alias-tips
-  aws
   colored-man-pages
-  docker
+  enhancd
   fast-syntax-highlighting
   git
   go
@@ -90,6 +103,8 @@ plugins=(
   npm
   urltools
   yarn
+
+  forgit # must be loaded after git
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -116,12 +131,6 @@ fi
 # Config guidelines for exa: https://the.exa.website/docs/colour-themes
 export EXA_COLORS="da=33:di=1;36:un=31:uu=34"
 alias ls='exa -ahlF --color-scale --git --group-directories-first'
-
-# Info on fzf: https://github.com/junegunn/fzf
-export FZF_DEFAULT_OPTS="--layout=reverse --height=80 --border --preview='bat --color=always {}'"
-
-# Info on bat: https://github.com/sharkdp/bat
-export BAT_THEME="OneHalfDark"
 
 # dotfiles manipulation
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -177,4 +186,3 @@ platform_start() {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [[ ! -f ~/.credentials ]] || source ~/.credentials
-source <(curl -Ss https://raw.githubusercontent.com/wfxr/forgit/master/forgit.plugin.zsh)

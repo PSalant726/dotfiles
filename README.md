@@ -42,6 +42,15 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/the
     ```sh
     git clone --depth=1 https://github.com/djui/alias-tips.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
     ```
+    3. [`forgit`](https://github.com/wfxr/forgit)
+    ```sh
+    mkdir $ZSH_CUSTOM/plugins/forgit/ && curl -Ss https://raw.githubusercontent.com/wfxr/forgit/master/forgit.plugin.zsh -o $ZSH_CUSTOM/plugins/forgit/forgit.plugin.zsh
+    ```
+    4. [`enhancd`](https://github.com/b4b4r07/enhancd)
+    ```sh
+    git clone --depth=1 https://github.com/b4b4r07/enhancd.git $ZSH_CUSTOM/plugins/enhancd &&\
+     mv $ZSH_CUSTOM/plugins/enhancd/init.sh $ZSH_CUSTOM/plugins/enhancd/enhancd.plugin.zsh
+    ```
 
 ### VS Code
 1. Download it [here](https://code.visualstudio.com/).
