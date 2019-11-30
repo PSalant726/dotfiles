@@ -117,6 +117,13 @@ fi
 export EXA_COLORS="da=33:di=1;36:un=31:uu=34"
 alias ls='exa -ahlF --color-scale --git --group-directories-first'
 
+# Info on fzf: https://github.com/junegunn/fzf
+export FZF_DEFAULT_OPTS="--layout=reverse --height=80 --border --preview='bat --color=always {}'"
+
+# Info on bat: https://github.com/sharkdp/bat
+export BAT_THEME="OneHalfDark"
+
+# dotfiles manipulation
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cfga="cfg add"
 alias cfgcm="cfg commit -v"
@@ -124,9 +131,7 @@ alias cfgpl="cfg pull"
 alias cfgps="cfg push"
 alias cfgs="cfg status"
 
-###################
-#   Movable Ink   #
-###################
+# Movable Ink
 alias dcjs='deploy_customjs -e production -c'
 alias mirepos='cd ~/Documents/MovableInk/'
 alias provisioning='cd ~/Documents/MovableInk/provisioning && git pull origin master && bundle install'
@@ -172,3 +177,4 @@ platform_start() {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [[ ! -f ~/.credentials ]] || source ~/.credentials
+source <(curl -Ss https://raw.githubusercontent.com/wfxr/forgit/master/forgit.plugin.zsh)
