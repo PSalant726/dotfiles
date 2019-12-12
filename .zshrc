@@ -144,7 +144,7 @@ alias cfgs="cfg status"
 # Movable Ink
 alias dcjs='deploy_customjs -e production -c'
 alias mirepos='cd ~/Documents/MovableInk/'
-alias provisioning='cd ~/Documents/MovableInk/provisioning && git pull origin master && bundle install'
+alias provisioning='cd ~/Documents/MovableInk/provisioning && git checkout master && git pull origin master && bundle install'
 export GOPRIVATE=github.com/movableink
 platform_start() {
   # Node v10.* is required
