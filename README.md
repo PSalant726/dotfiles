@@ -22,6 +22,7 @@ brew cask install iterm2
 1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), and [`fzf`](https://github.com/junegunn/fzf) with:
 ```sh
 brew install bat diff-so-fancy exa fzf
+$(brew --prefix)/opt/fzf/install
 ```
 
 ### oh-my-zsh
@@ -45,11 +46,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/the
     3. [`forgit`](https://github.com/wfxr/forgit)
     ```sh
     mkdir $ZSH_CUSTOM/plugins/forgit/ && curl -Ss https://raw.githubusercontent.com/wfxr/forgit/master/forgit.plugin.zsh -o $ZSH_CUSTOM/plugins/forgit/forgit.plugin.zsh
-    ```
-    4. [`enhancd`](https://github.com/b4b4r07/enhancd)
-    ```sh
-    git clone --depth=1 https://github.com/b4b4r07/enhancd.git $ZSH_CUSTOM/plugins/enhancd &&\
-     mv $ZSH_CUSTOM/plugins/enhancd/init.sh $ZSH_CUSTOM/plugins/enhancd/enhancd.plugin.zsh
     ```
 
 ### VS Code

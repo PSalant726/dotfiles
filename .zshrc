@@ -23,11 +23,6 @@ export BAT_THEME="OneHalfDark"
 # Info on forgit: https://github.com/wfxr/forgit
 export FORGIT_FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --height=50% --border --preview='bat --color=always {}'"
 
-# Info on enhancd: https://github.com/b4b4r07/enhancd
-export ENHANCD_DIR="$ZSH/custom/plugins/enhancd"
-export ENHANCD_FILTER="fzf"
-export ENHANCD_HOOK_AFTER_CD="pwd && ls"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -96,7 +91,6 @@ plugins=(
   alias-tips
   bundler
   colored-man-pages
-  enhancd
   fast-syntax-highlighting
   git
   go
@@ -183,7 +177,7 @@ platform_start() {
   forego start
 }
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-[[ ! -f ~/.credentials ]] || source ~/.credentials
+for file in ~/.{p10k.zsh,credentials,fzf.zsh}; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
