@@ -19,9 +19,9 @@ brew cask install iterm2
 2. After cloning the bare `cfg` repo (details below), import the `iTerm_profile.json` file (Preferences > Other Actions... > Import JSON Profiles...)
 
 ### Additional Homebrew Services
-1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), and [`fzf`](https://github.com/junegunn/fzf) with:
+1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), and [jq](https://stedolan.github.io/jq/) with:
 ```sh
-brew install bat diff-so-fancy exa fzf
+brew install bat diff-so-fancy exa fzf jq
 $(brew --prefix)/opt/fzf/install
 ```
 
@@ -30,10 +30,15 @@ $(brew --prefix)/opt/fzf/install
 ```sh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-2. Install the `powerlevel10k` theme with:
+2. Install the `spaceship` theme with:
 ```sh
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+git clone --depth=1 https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ```
+> Optional: Install the `powerlevel10k` theme (currently configured, but unused by default) with:
+> ```sh
+> git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+> ```
 3. Install the following plugins:
     1. `fast-syntax-highlighting`
     ```sh

@@ -28,7 +28,8 @@ export FORGIT_FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --height=50% --border --previe
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -178,7 +179,7 @@ platform_start() {
   forego start
 }
 
-for file in ~/.{p10k.zsh,credentials,fzf.zsh}; do
+for file in ~/.{p10k.zsh,spaceship-config.zsh,credentials,fzf.zsh}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
