@@ -4,13 +4,13 @@
 
 export SPACESHIP_PROMPT_ORDER=(
   # time          # Time stamps section
-  battery       # Battery level and status
   user          # Username section
   host          # Hostname section
   dir           # Current directory section
   git           # Git section (git_branch + git_status)
   # hg            # Mercurial section (hg_branch  + hg_status)
   line_sep      # Line break
+  battery       # Battery level and status
   # vi_mode       # Vi-mode indicator
   jobs          # Background jobs indicator
   exec_time     # Execution time
@@ -40,6 +40,8 @@ export SPACESHIP_RPROMPT_ORDER=(
   kubecontext   # Kubectl context section
   terraform     # Terraform workspace section
 )
+
+export SPACESHIP_PROMPT_DEFAULT_PREFIX="&"
 
 export SPACESHIP_CHAR_SYMBOL="$"
 export SPACESHIP_CHAR_SUFFIX=" "
@@ -85,7 +87,7 @@ export SPACESHIP_GIT_STATUS_COLOR=yellow
 ###           Battery           ###
 ###################################
 
-export SPACESHIP_BATTERY_THRESHOLD=50
+export SPACESHIP_BATTERY_THRESHOLD=20
 
 ###################################
 ###       Execution Time        ###
