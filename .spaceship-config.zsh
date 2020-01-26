@@ -31,17 +31,15 @@ export SPACESHIP_RPROMPT_ORDER=(
   rust          # Rust section
   # haskell       # Haskell Stack section
   # julia         # Julia section
-  docker        # Docker section
   aws           # Amazon Web Services section
   pyenv         # Pyenv section
   venv          # virtualenv section
   # dotnet        # .NET section
   ember         # Ember.js section
+  docker        # Docker section
   kubecontext   # Kubectl context section
   terraform     # Terraform workspace section
 )
-
-export SPACESHIP_PROMPT_DEFAULT_PREFIX="&"
 
 export SPACESHIP_CHAR_SYMBOL="$"
 export SPACESHIP_CHAR_SUFFIX=" "
@@ -95,3 +93,9 @@ export SPACESHIP_BATTERY_THRESHOLD=20
 
 export SPACESHIP_EXEC_TIME_PREFIX="Took "
 export SPACESHIP_EXEC_TIME_ELAPSED=5
+
+###################################
+###      Docker/Kubernetes      ###
+###################################
+
+export SPACESHIP_KUBECONTEXT_SHOW=false
