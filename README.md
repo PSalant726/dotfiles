@@ -62,7 +62,7 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
     1. Find the "Profile Folder" section
     1. Navigate to the profile location using iTerm
     1. Create a new directory in the profile directory, called `chrome/`
-    1. Copy/Paste the `userChrome.css` file from this repo into the `chome/` directory
+    1. Copy/Paste the `userChrome.css` file from this repo into the `chrome/` directory
     1. Restart Firefox
 
 ### VS Code
