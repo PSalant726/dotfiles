@@ -143,6 +143,7 @@ alias dcjs='deploy_customjs -e production -c'
 alias mirepos='cd ~/Documents/MovableInk/'
 alias provisioning='cd ~/Documents/MovableInk/provisioning && git checkout master && git pull origin master && bundle install'
 export GOPRIVATE=github.com/movableink
+export MI_ENV='development'
 platform_start() {
   # Node v10.* is required
   nvm use 10
