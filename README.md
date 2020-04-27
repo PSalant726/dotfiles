@@ -19,10 +19,14 @@ brew cask install iterm2
 2. After cloning the bare `cfg` repo (details below), import the `iTerm_profile.json` file (Preferences > Other Actions... > Import JSON Profiles...)
 
 ### Additional Homebrew Services
-1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), and [`jq`](https://stedolan.github.io/jq/) with:
+1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [`jq`](https://stedolan.github.io/jq/), and [`zsh`](https://www.zsh.org/) with:
 ```sh
-brew install bat diff-so-fancy exa fzf jq
+brew install bat diff-so-fancy exa fzf jq zsh
 $(brew --prefix)/opt/fzf/install
+
+# Use the homebrew zsh installation
+sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
+chsh -s /usr/local/bin/zsh
 ```
 
 ### oh-my-zsh

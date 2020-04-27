@@ -134,6 +134,7 @@ alias ls='exa -ahlF --color-scale --git --group-directories-first'
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cfga="cfg add"
 alias cfgcm="cfg commit -v"
+alias cfgca="cfg add -u && cfg commit -v"
 alias cfgpl="cfg pull"
 alias cfgps="cfg push"
 alias cfgs="cfg status"
