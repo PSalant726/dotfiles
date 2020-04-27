@@ -19,10 +19,14 @@ brew cask install iterm2
 2. After cloning the bare `cfg` repo (details below), import the `iTerm_profile.json` file (Preferences > Other Actions... > Import JSON Profiles...)
 
 ### Additional Homebrew Services
-1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), and [`jq`](https://stedolan.github.io/jq/) with:
+1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [`jq`](https://stedolan.github.io/jq/), and [`zsh`](https://www.zsh.org/) with:
 ```sh
-brew install bat diff-so-fancy exa fzf jq
+brew install bat diff-so-fancy exa fzf jq zsh
 $(brew --prefix)/opt/fzf/install
+
+# Use the homebrew zsh installation
+sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
+chsh -s /usr/local/bin/zsh
 ```
 
 ### oh-my-zsh
@@ -52,6 +56,18 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
     ```sh
     mkdir $ZSH_CUSTOM/plugins/forgit/ && curl -Ss https://raw.githubusercontent.com/wfxr/forgit/master/forgit.plugin.zsh -o $ZSH_CUSTOM/plugins/forgit/forgit.plugin.zsh
     ```
+
+### Firefox
+1. Download Firefox Developer Edition [here](https://www.mozilla.org/en-US/firefox/developer/).
+1. Log in with Firefox account
+    1. This should sync bookmarks, extensions, etc.
+1. Open `about:config` and enable `toolkit.legacyUserProfileCustomizations.stylesheets`
+1. Open `about:support`
+    1. Find the "Profile Folder" section
+    1. Navigate to the profile location using iTerm
+    1. Create a new directory in the profile directory, called `chrome/`
+    1. Copy/Paste the `userChrome.css` file from this repo into the `chrome/` directory
+    1. Restart Firefox
 
 ### VS Code
 1. Download it [here](https://code.visualstudio.com/).

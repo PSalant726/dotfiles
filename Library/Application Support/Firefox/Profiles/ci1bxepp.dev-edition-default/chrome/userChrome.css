@@ -1,0 +1,62 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#sidebar-box[sidebarcommand^="containertabs"] #sidebar-header {
+	display: none;
+}
+
+#navigator-toolbox {
+  /* put titlebar and url bar next to each other */
+  -moz-box-orient: horizontal;
+  /* more places to allow dragging */
+  -moz-window-dragging: drag;
+}
+
+#urlbar-container {
+  /* more drag handles */
+  -moz-window-dragging: drag;
+}
+
+#urlbar {
+  /* but don't interfere with selecting text in the URL bar itself */
+  -moz-window-dragging: no-drag;
+}
+
+#TabsToolbar {
+  min-width: 90px;
+
+  /* blend with macos titlebar color */
+  background-color: transparent !important;
+}
+
+/* to hide the native tabs */
+#TabsToolbar .toolbar-items {
+  visibility: collapse;
+}
+
+#nav-bar {
+  /* flat style, to blend with native window */
+  background-color: transparent !important;
+  box-shadow: none !important;
+  /* let it breathe */
+  margin: 5px 0 !important;
+  /* allow dragging from the padding around the nav bar */
+  -moz-window-dragging: drag;
+  /* expand to fill space not taken by #TabsToolbar */
+  -moz-box-flex: 1000;
+}
+
+/* contains private browsing badge and fullscreen button */
+#titlebar-secondary-buttonbox {
+  margin-left: 4px;
+}
+
+.titlebar-spacer[type="pre-tabs"] {
+  display: none !important;
+  border-inline-end: none !important;
+}
+
+/* put a top-border on the main content rather than a bottom-border
+   on the toolbar, because the toolbar has -moz-appearance: none; */
+#content-deck {
+  border-top: 1px solid #cccccc;
+}
