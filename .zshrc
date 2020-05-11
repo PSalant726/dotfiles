@@ -94,11 +94,13 @@ plugins=(
   alias-tips
   bundler
   colored-man-pages
+  command-not-found
   fast-syntax-highlighting
   git
   go
   jsontools
   npm
+  rails
   urltools
   yarn
 
@@ -129,6 +131,8 @@ fi
 # Config guidelines for exa: https://the.exa.website/docs/colour-themes
 export EXA_COLORS="da=33:di=1;36:un=31:uu=34"
 alias ls='exa -ahlF --color-scale --git --group-directories-first'
+
+alias master='git checkout master && git pull'
 
 # dotfiles manipulation
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
