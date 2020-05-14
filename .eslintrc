@@ -1,6 +1,7 @@
 {
   "env": {
     "browser": true,
+    "es6": true,
     "node": true,
     "mocha": true,
     "jasmine": true,
@@ -10,7 +11,8 @@
   },
   "extends": "eslint:recommended",
   "parserOptions": {
-    "ecmaVersion": 2017
+    "ecmaVersion": 2018,
+    "sourceType": "module"
   },
   "rules": {
     "array-bracket-spacing": "warn",
