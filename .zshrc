@@ -1,9 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+SOURCE_FILES=(~/.credentials)
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
@@ -17,6 +12,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Info on fzf: https://github.com/junegunn/fzf
 export FZF_DEFAULT_OPTS="--layout=reverse --height=10%"
+SOURCE_FILES+=(~/.fzf.zsh)
 
 # Info on bat: https://github.com/sharkdp/bat
 export BAT_THEME="OneHalfDark"
@@ -29,8 +25,22 @@ export FORGIT_FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --height=50% --border --previe
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="powerlevel10k/powerlevel10k"
-export SPACESHIP_PROMPT_DEFAULT_PREFIX="& " # Must be defined before spaceship is sourced
 ZSH_THEME="spaceship"
+
+if [[ "$ZSH_THEME" = "spaceship" ]]; then
+  export SPACESHIP_PROMPT_DEFAULT_PREFIX="& " # Must be defined before spaceship is sourced
+  SOURCE_FILES+=(~/.spaceship-config.zsh)
+
+elif [[ "$ZSH_THEME" = "powerlevel10k/powerlevel10k" ]]; then
+  # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+  # Initialization code that may require console input (password prompts, [y/n]
+  # confirmations, etc.) must go above this block, everything else may go below.
+  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  fi
+
+  SOURCE_FILES+=(~/.p10k.zsh)
+fi
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -94,14 +104,11 @@ plugins=(
   alias-tips
   bundler
   colored-man-pages
-  command-not-found
   fast-syntax-highlighting
   git
+  gitfast
   go
-  jsontools
   npm
-  rails
-  urltools
   yarn
 
   forgit # must be loaded after git
@@ -186,7 +193,7 @@ platform_start() {
   forego start
 }
 
-for file in ~/.{p10k.zsh,spaceship-config.zsh,credentials,fzf.zsh}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+for file in $SOURCE_FILES; do
+  [ -r $file ] && [ -f $file ] && source $file;
 done;
 unset file;
