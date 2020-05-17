@@ -154,44 +154,11 @@ alias cfgs="cfg status"
 alias dcjs='deploy_customjs -e production -c'
 alias mirepos='cd ~/Documents/MovableInk/'
 alias provisioning='cd ~/Documents/MovableInk/provisioning && git checkout master && git pull origin master && bundle install'
+# Info on itomate: https://github.com/kamranahmedse/itomate
+alias dashboard_start='itomate -c ~/Documents/MovableInk/dashboard_start.yml'
+alias beagle_start='itomate -c ~/Documents/MovableInk/beagle_start.yml'
 export GOPRIVATE=github.com/movableink
 export MI_ENV='development'
-platform_start() {
-  # Node v10.* is required
-  nvm use 10
-
-  # Update Canvas and the relevant packages
-  cd ~/Documents/MovableInk/canvas/
-  git checkout master
-  git pull origin master
-  yarn install
-
-  cd ./packages/canvas/
-  git checkout master
-  git pull origin master
-  yarn install
-
-  cd ../kings-cross/
-  git checkout master
-  git pull origin master
-  yarn install
-
-  # Update Ojos
-  cd ~/Documents/MovableInk/ojos
-  git checkout master
-  git pull origin master
-  yarn install
-  bundle install
-
-  # Update rails
-  cd ~/Documents/MovableInk/movableink
-  git checkout master
-  git pull origin master
-  bundle install
-
-  # Start it all up!
-  forego start
-}
 
 for file in $SOURCE_FILES; do
   [ -r $file ] && [ -f $file ] && source $file;
