@@ -102,7 +102,6 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   alias-tips
-  bundler
   colored-man-pages
   fast-syntax-highlighting
   git
@@ -140,6 +139,8 @@ export EXA_COLORS="da=33:di=1;36:un=31:uu=34"
 alias ls='exa -ahlF --color-scale --git --group-directories-first'
 
 alias master='git checkout master && git pull'
+alias bi='bundle install'
+alias be='bundle exec'
 
 # dotfiles manipulation
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
