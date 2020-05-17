@@ -19,26 +19,26 @@ export SPACESHIP_PROMPT_ORDER=(
 )
 
 export SPACESHIP_RPROMPT_ORDER=(
-  package       # Package version
-  conda         # conda virtualenv section
-  node          # Node.js section
-  ruby          # Ruby section
-  # elixir        # Elixir section
-  xcode         # Xcode section
-  swift         # Swift section
-  golang        # Go section
-  # php           # PHP section
-  rust          # Rust section
-  # haskell       # Haskell Stack section
-  # julia         # Julia section
-  aws           # Amazon Web Services section
-  pyenv         # Pyenv section
-  venv          # virtualenv section
-  # dotnet        # .NET section
-  ember         # Ember.js section
-  docker        # Docker section
-  kubecontext   # Kubectl context section
-  terraform     # Terraform workspace section
+  package           # Package version
+  # conda             # conda virtualenv section
+  node              # Node.js section
+  ruby              # Ruby section
+  # elixir            # Elixir section
+  # xcode             # Xcode section
+  # swift             # Swift section
+  golang            # Go section
+  # php               # PHP section
+  # rust              # Rust section
+  # haskell           # Haskell Stack section
+  # julia             # Julia section
+  aws               # Amazon Web Services section
+  pyenv             # Pyenv section
+  # venv              # virtualenv section
+  # dotnet            # .NET section
+  ember             # Ember.js section
+  docker            # Docker section
+  kubectl_context   # Kubectl context section
+  terraform         # Terraform workspace section
 )
 
 export SPACESHIP_CHAR_SYMBOL="$"
