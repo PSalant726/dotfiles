@@ -1,4 +1,4 @@
-SOURCE_FILES=(~/.credentials)
+SOURCE_FILES=($HOME/.credentials)
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
@@ -12,7 +12,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Info on fzf: https://github.com/junegunn/fzf
 export FZF_DEFAULT_OPTS="--layout=reverse --height=10%"
-SOURCE_FILES+=(~/.fzf.zsh)
+SOURCE_FILES+=($HOME/.fzf.zsh)
 
 # Info on bat: https://github.com/sharkdp/bat
 export BAT_THEME="OneHalfDark"
@@ -29,7 +29,7 @@ ZSH_THEME="spaceship"
 
 if [[ "$ZSH_THEME" = "spaceship" ]]; then
   export SPACESHIP_PROMPT_DEFAULT_PREFIX="& " # Must be defined before spaceship is sourced
-  SOURCE_FILES+=(~/.spaceship-config.zsh)
+  SOURCE_FILES+=($HOME/.spaceship-config.zsh)
 
 elif [[ "$ZSH_THEME" = "powerlevel10k/powerlevel10k" ]]; then
   # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -39,7 +39,7 @@ elif [[ "$ZSH_THEME" = "powerlevel10k/powerlevel10k" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
   fi
 
-  SOURCE_FILES+=(~/.p10k.zsh)
+  SOURCE_FILES+=($HOME/.p10k.zsh)
 fi
 
 # Set list of themes to pick from when loading at random
@@ -153,11 +153,11 @@ alias cfgs="cfg status"
 
 # Movable Ink
 alias dcjs='deploy_customjs -e production -c'
-alias mirepos='cd ~/Documents/MovableInk/'
-alias provisioning='cd ~/Documents/MovableInk/provisioning && git checkout master && git pull origin master && bundle install'
+alias mirepos='cd $HOME/Documents/MovableInk/'
+alias provisioning='cd $HOME/Documents/MovableInk/provisioning && git checkout master && git pull origin master && bundle install'
 # Info on itomate: https://github.com/kamranahmedse/itomate
-alias dashboard_start='itomate -c ~/Documents/MovableInk/dashboard_start.yml'
-alias beagle_start='itomate -c ~/Documents/MovableInk/beagle_start.yml'
+alias dashboard_start='itomate -c $HOME/Documents/MovableInk/dashboard_start.yml'
+alias beagle_start='itomate -c $HOME/Documents/MovableInk/beagle_start.yml'
 export GOPRIVATE=github.com/movableink
 export MI_ENV='development'
 
