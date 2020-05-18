@@ -1,5 +1,3 @@
-SOURCE_FILES=($HOME/.credentials)
-
 # Placeholder nvm shell function, inspired by https://peterlyons.com/problog/2018/01/zsh-lazy-loading/
 # On first use, it will set nvm up properly which will replace the `nvm` shell function with the real one
 nvm() {
@@ -26,7 +24,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Info on fzf: https://github.com/junegunn/fzf
 export FZF_DEFAULT_OPTS="--layout=reverse --height=10%"
-SOURCE_FILES+=($HOME/.fzf.zsh)
+SOURCE_FILES=($HOME/.fzf.zsh)
 
 # Info on bat: https://github.com/sharkdp/bat
 export BAT_THEME="OneHalfDark"
@@ -165,16 +163,7 @@ alias cfgpl="cfg pull"
 alias cfgps="cfg push"
 alias cfgs="cfg status"
 
-# Movable Ink
-alias dcjs='deploy_customjs -e production -c'
-alias mirepos='cd $HOME/Documents/MovableInk/'
-alias provisioning='cd $HOME/Documents/MovableInk/provisioning && git checkout master && git pull origin master && bundle install'
-# Info on itomate: https://github.com/kamranahmedse/itomate
-alias dashboard_start='itomate -c $HOME/Documents/MovableInk/dashboard_start.yml'
-alias beagle_start='itomate -c $HOME/Documents/MovableInk/beagle_start.yml'
-alias ojos_staging_deploy='itomate -c $HOME/Documents/MovableInk/ojos_staging_deploy.yml'
-export GOPRIVATE=github.com/movableink
-export MI_ENV='development'
+SOURCE_FILES+=($HOME/.movable-ink)
 
 for file in $SOURCE_FILES; do
   [ -r $file ] && [ -f $file ] && source $file;
