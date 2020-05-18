@@ -172,6 +172,7 @@ alias provisioning='cd $HOME/Documents/MovableInk/provisioning && git checkout m
 # Info on itomate: https://github.com/kamranahmedse/itomate
 alias dashboard_start='itomate -c $HOME/Documents/MovableInk/dashboard_start.yml'
 alias beagle_start='itomate -c $HOME/Documents/MovableInk/beagle_start.yml'
+alias ojos_staging_deploy='itomate -c $HOME/Documents/MovableInk/ojos_staging_deploy.yml'
 export GOPRIVATE=github.com/movableink
 export MI_ENV='development'
 
