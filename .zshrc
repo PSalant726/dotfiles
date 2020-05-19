@@ -1,12 +1,15 @@
 # Placeholder nvm shell function, inspired by https://peterlyons.com/problog/2018/01/zsh-lazy-loading/
 # On first use, it will set nvm up properly which will replace the `nvm` shell function with the real one
 nvm() {
-  if [[ -d "$HOME/.nvm" ]]; then
+  if [[ "$NVM_DIR" = "$HOME/.nvm" ]]; then
+    nvm "$@"
+  elif [[ -d "$HOME/.nvm" ]]; then
     export NVM_DIR="$HOME/.nvm"
-      # Load nvm
-      [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
-      # Load nvm bash_completion
-      [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+
+    # Load nvm
+    [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+    # Load nvm bash_completion
+    [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 
     # Execute the real nvm function
     nvm "$@"
