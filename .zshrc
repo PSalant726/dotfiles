@@ -1,23 +1,6 @@
-# Placeholder nvm shell function, inspired by https://peterlyons.com/problog/2018/01/zsh-lazy-loading/
-# On first use, it will set nvm up properly which will replace the `nvm` shell function with the real one
-nvm() {
-  if [[ "$NVM_DIR" = "$HOME/.nvm" ]]; then
-    nvm "$@"
-  elif [[ -d "$HOME/.nvm" ]]; then
-    export NVM_DIR="$HOME/.nvm"
-
-    # Load nvm
-    [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
-    # Load nvm bash_completion
-    [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
-
-    # Execute the real nvm function
-    nvm "$@"
-  else
-    echo "nvm is not installed" >&2
-    return 1
-  fi
-}
+# Info on Volta: https://docs.volta.sh
+export VOLTA_HOME="/Users/psalant/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
