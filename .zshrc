@@ -1,3 +1,10 @@
+# Make Go binaries globally available
+if [[ -d "$HOME/go" ]]; then
+  export GOPATH="$(go env GOPATH)"
+  go env -w GOBIN="$GOPATH/bin"
+  PATH="$PATH:$GOPATH/bin"
+fi
+
 # Info on Volta: https://docs.volta.sh
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
