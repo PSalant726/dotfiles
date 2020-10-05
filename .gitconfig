@@ -29,3 +29,5 @@
 	# Print a diff without the pager:
 	# git --no-pager diff
 	pager = diff-so-fancy | less --tabs=4 -RFX
+[pull]
+	rebase = false
