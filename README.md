@@ -19,9 +19,9 @@ brew cask install --appdir="~/Applications" iterm2
 2. After cloning the bare `cfg` repo (details below), import the `iTerm_profile.json` file (Preferences > Other Actions... > Import JSON Profiles...)
 
 ### Additional Homebrew Services
-1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [`jq`](https://stedolan.github.io/jq/), and [`zsh`](https://www.zsh.org/) with:
+1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [`jq`](https://stedolan.github.io/jq/), [Go](https://golang.org/), and [`zsh`](https://www.zsh.org/) with:
 ```sh
-brew install bat diff-so-fancy exa fzf jq zsh
+brew install bat diff-so-fancy exa fzf jq go zsh
 $(brew --prefix)/opt/fzf/install
 
 # Use the homebrew zsh installation
@@ -73,6 +73,12 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 1. Download it [here](https://code.visualstudio.com/).
 1. Install the [Settings Sync](https://github.com/shanalikhan/code-settings-sync) extension.
 1. Follow the directions to add a GitHub token and synchronize settings with [this gist](https://gist.github.com/PSalant726/a179279267788effc1c4477cc069d04c).
+
+### Optional
+Install the [`gotest` binary](https://github.com/rakyll/gotest) (to colorize `go test` output) by running the following **outside of any Go modules**:
+```sh
+go get -u github.com/rakyll/gotest
+```
 
 ### Source `.zshrc`
 After completing the below steps to configure the `cfg` repo, restart iTerm or run:

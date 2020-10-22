@@ -152,6 +152,11 @@ alias master='git checkout master && git pull'
 alias bi='bundle install'
 alias be='bundle exec'
 
+if [[ -e "$GOPATH/bin/gotest" ]]; then
+  export GOTEST_PALETTE="red,higreen"
+  alias got='gotest'
+fi
+
 # dotfiles manipulation
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cfga="cfg add"
