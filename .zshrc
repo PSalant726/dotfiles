@@ -116,7 +116,7 @@ plugins=(
   fast-syntax-highlighting
   git
   gitfast
-  go
+  golang
   npm
   yarn
 
