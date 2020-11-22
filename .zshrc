@@ -2,18 +2,20 @@
 if [[ -d "$HOME/go" ]]; then
   export GOPATH="$(go env GOPATH)"
   go env -w GOBIN="$GOPATH/bin"
-  PATH="$PATH:$GOPATH/bin"
+  export PATH="$GOPATH/bin:$PATH"
 fi
 
 # Info on Volta: https://docs.volta.sh
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+if [[ -d "$HOME/.volta" ]]; then
+  export VOLTA_HOME="$HOME/.volta"
+  export PATH="$VOLTA_HOME/bin:$PATH"
+fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # Initialize pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
+if [[ -d "$HOME/.pyenv" ]]; then
   eval "$(pyenv init -)"
 fi
 
