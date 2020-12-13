@@ -57,7 +57,7 @@ brew cask install font-jetbrains-mono-nerd-font
 1. Install the `spaceship` theme with:
 
     ```sh
-    git clone --depth=1 https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+    git clone --depth=1 https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt
     ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
     ```
 
@@ -73,15 +73,23 @@ brew cask install font-jetbrains-mono-nerd-font
         ```sh
         git clone --depth=1 https://github.com/zdharma/fast-syntax-highlighting.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
         ```
+
     1. `alias-tips`
 
         ```sh
         git clone --depth=1 https://github.com/djui/alias-tips.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
         ```
+
     1. [`forgit`](https://github.com/wfxr/forgit)
 
         ```sh
         mkdir $ZSH_CUSTOM/plugins/forgit/ && curl -Ss https://raw.githubusercontent.com/wfxr/forgit/master/forgit.plugin.zsh -o $ZSH_CUSTOM/plugins/forgit/forgit.plugin.zsh
+        ```
+
+    1. [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
+
+        ```sh
+        git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
         ```
 
 ### Firefox Developer Edition
