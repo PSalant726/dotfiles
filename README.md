@@ -33,9 +33,9 @@ brew cask install font-jetbrains-mono-nerd-font
 
 1. After cloning the bare `cfg` repo (details below), import the `iTerm_profile.json` file (Preferences > Other Actions... > Import JSON Profiles...)
 
-### Additional Homebrew Services
+### Additional Tools
 
-1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [`jq`](https://stedolan.github.io/jq/), [Go](https://golang.org/), and [`zsh`](https://www.zsh.org/) with:
+1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [`jq`](https://stedolan.github.io/jq/), [Go](https://golang.org/), and [`zsh`](https://www.zsh.org/) via Homebrew with:
 
     ```sh
     brew install bat diff-so-fancy exa fzf jq go zsh
@@ -45,6 +45,24 @@ brew cask install font-jetbrains-mono-nerd-font
     sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
     chsh -s /usr/local/bin/zsh
     ```
+
+1. Install [Volta](https://volta.sh/) with:
+
+    ```sh
+    curl https://get.volta.sh | bash -s -- --skip-setup
+    ```
+
+    1. Install `npm`, `node`, and `yarn` with:
+
+        ```sh
+        volta install npm node yarn
+        ```
+
+    > Optional: Install [`emoj`](https://github.com/sindresorhus/emoj) via `yarn` with:
+    >
+    >   ```sh
+    >   yarn add emoj
+    >   ```
 
 ### oh-my-zsh
 
