@@ -115,7 +115,13 @@ brew cask install font-jetbrains-mono-nerd-font
 1. Download Firefox Developer Edition [here](https://www.mozilla.org/en-US/firefox/developer/).
 1. Log in with Firefox account
     1. This should sync bookmarks, extensions, etc.
-1. Open `about:config` and enable `toolkit.legacyUserProfileCustomizations.stylesheets`
+1. Open `about:config` and change the following:
+    1. `accessibility.typeaheadfind.matchesCountLimit` = `10000`
+        - Increases the maximum number of results shown when searching a page for text with ⌘-F
+    1. `dom.event.clipboardevents.enabled` = `false`
+        - Prevents websites from blocking clipboard usage; helpful when pasting passwords from a password manager
+    1. `toolkit.legacyUserProfileCustomizations.stylesheets` = `true`
+        - Enables custom `userChrome.css` usage
 1. Open `about:support`
     1. Find the "Profile Folder" section
     1. Navigate to the profile location using iTerm
