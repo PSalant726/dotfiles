@@ -153,6 +153,7 @@ alias ls='exa -ahlF --color-scale --git --group-directories-first'
 alias master='git checkout master && git pull'
 alias bi='bundle install'
 alias be='bundle exec'
+alias tree='tree --dirsfirst -C'
 
 if [[ -e "$GOPATH/bin/gotest" ]]; then
   export GOTEST_PALETTE="red,higreen"

@@ -35,10 +35,10 @@ brew cask install font-jetbrains-mono-nerd-font
 
 ### Additional Tools
 
-1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [`jq`](https://stedolan.github.io/jq/), [Go](https://golang.org/), and [`zsh`](https://www.zsh.org/) via Homebrew with:
+1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [`jq`](https://stedolan.github.io/jq/), [Go](https://golang.org/), `tree`, and [`zsh`](https://www.zsh.org/) via Homebrew, with:
 
     ```sh
-    brew install bat diff-so-fancy exa fzf jq go zsh
+    brew install bat diff-so-fancy exa fzf jq go tree zsh
     $(brew --prefix)/opt/fzf/install
 
     # Use the homebrew zsh installation
@@ -52,10 +52,10 @@ brew cask install font-jetbrains-mono-nerd-font
     curl https://get.volta.sh | bash -s -- --skip-setup
     ```
 
-    1. Install `npm`, `node`, and `yarn` with:
+    1. Install `node`, `npm`, and `yarn` with:
 
         ```sh
-        volta install npm node yarn
+        volta install node npm yarn
         ```
 
     > Optional: Install [`emoj`](https://github.com/sindresorhus/emoj) via `yarn` with:
