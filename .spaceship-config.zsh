@@ -95,6 +95,11 @@ export SPACESHIP_EXEC_TIME_PREFIX="Took "
 export SPACESHIP_EXEC_TIME_ELAPSED=5
 
 ###################################
+###             AWS             ###
+###################################
+export SPACESHIP_AWS_SYMBOL="☁️  "
+
+###################################
 ###      Docker/Kubernetes      ###
 ###################################
 
