@@ -146,6 +146,20 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# These `pasteinit` and `pastefinish` functions speed up pasting
+# with zsh-autosuggestions enabled
+# https://github.com/zsh-users/zsh-autosuggestions/issues/238
+pasteinit() {
+  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+}
+
+pastefinish() {
+  zle -N self-insert $OLD_SELF_INSERT
+}
+zstyle :bracketed-paste-magic paste-init pasteinit
+zstyle :bracketed-paste-magic paste-finish pastefinish
+
 # Config guidelines for exa: https://the.exa.website/docs/colour-themes
 export EXA_COLORS="da=33:di=1;36:un=31:uu=34"
 alias ls='exa -ahlF --color-scale --git --group-directories-first'
