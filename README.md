@@ -4,7 +4,7 @@
 Install with:
 
 ```sh
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ### Font
@@ -13,14 +13,14 @@ Install the `JetBrains Mono` nerd font:
 
 ```sh
 brew tap homebrew/cask-fonts
-brew cask install font-jetbrains-mono-nerd-font
+brew install font-jetbrains-mono-nerd-font
 ```
 
 > Optional: Install the `Hack` nerd font:
 >
 > ```sh
 > brew tap homebrew/cask-fonts
-> brew cask install font-hack-nerd-font
+> brew install font-hack-nerd-font
 > ```
 
 ### iTerm
@@ -28,17 +28,18 @@ brew cask install font-jetbrains-mono-nerd-font
 1. Install with:
 
     ```sh
-    brew cask install --appdir="~/Applications" iterm2
+    brew install --appdir="~/Applications" iterm2
     ```
 
-1. After cloning the bare `cfg` repo (details below), import the `iTerm_profile.json` file (Preferences > Other Actions... > Import JSON Profiles...)
+1. After cloning the bare `cfg` repo (details below), import the `iTerm_profile.json` file
+    > Preferences -> Profiles -> Other Actions... -> Import JSON Profiles...
 
 ### Additional Tools
 
-1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [`jq`](https://stedolan.github.io/jq/), [Go](https://golang.org/), `tree`, and [`zsh`](https://www.zsh.org/) via Homebrew, with:
+1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [git](https://git-scm.com/), [`jq`](https://stedolan.github.io/jq/), [Go](https://golang.org/), `tree`, and [`zsh`](https://www.zsh.org/) via Homebrew, with:
 
     ```sh
-    brew install bat diff-so-fancy exa fzf jq go tree zsh
+    brew install bat diff-so-fancy exa fzf git jq go tree zsh
     $(brew --prefix)/opt/fzf/install
 
     # Use the homebrew zsh installation
@@ -95,7 +96,7 @@ brew cask install font-jetbrains-mono-nerd-font
     1. `alias-tips`
 
         ```sh
-        git clone --depth=1 https://github.com/djui/alias-tips.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
+        git clone --depth=1 https://github.com/djui/alias-tips.git $ZSH_CUSTOM/plugins/alias-tips
         ```
 
     1. [`forgit`](https://github.com/wfxr/forgit)

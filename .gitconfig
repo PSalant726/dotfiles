@@ -22,7 +22,7 @@
 [user]
 	name = Phil Salant
 	email = PSalant@gmail.com
-	signingkey = 44AF77533D123906
+	signingkey = 210DBF9BBAF6FC45
 [gpg]
 	program = gpg
 [core]

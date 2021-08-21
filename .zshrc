@@ -1,8 +1,8 @@
 # Make Go binaries globally available
 if [[ -d "$HOME/go" ]]; then
   export GOPATH="$(go env GOPATH)"
-  go env -w GOBIN="$GOPATH/bin"
   export PATH="$GOPATH/bin:$PATH"
+  go env -w GOBIN="$GOPATH/bin"
 fi
 
 # Info on Volta: https://docs.volta.sh
@@ -18,15 +18,22 @@ if [[ -d "$HOME/.pyenv" ]]; then
   eval "$(pyenv init --path)"
 fi
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# Initialize rvm
+if [[ -d "$HOME/.rvm" ]]; then
+  # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+  export PATH="$PATH:$HOME/.rvm/bin"
+  SOURCE_FILES=($HOME/.rvm/scripts/rvm)
+fi
+
+# Disable Homebrew analytics
+export HOMEBREW_NO_ANALYTICS=1
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Info on fzf: https://github.com/junegunn/fzf
 export FZF_DEFAULT_OPTS="--layout=reverse --height=10%"
-SOURCE_FILES=($HOME/.fzf.zsh)
+SOURCE_FILES+=($HOME/.fzf.zsh)
 
 # Info on bat: https://github.com/sharkdp/bat
 export BAT_THEME="OneHalfDark"
@@ -153,7 +160,7 @@ fi
 # https://github.com/zsh-users/zsh-autosuggestions/issues/238
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
-  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+  zle -N self-insert url-quote-magic
 }
 
 pastefinish() {
