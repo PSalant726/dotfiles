@@ -25,7 +25,7 @@ brew install font-jetbrains-mono-nerd-font
 
 ### iTerm
 
-1. Install with:
+1. Get it from [the official site](https://iterm2.com/), or install via Homebrew with:
 
     ```sh
     brew install --appdir="~/Applications" iterm2
@@ -139,9 +139,7 @@ brew install font-jetbrains-mono-nerd-font
 
 ### VS Code
 
-1. Download it [here](https://code.visualstudio.com/).
-1. Install the [Settings Sync](https://github.com/shanalikhan/code-settings-sync) extension.
-1. Follow the directions to add a GitHub token and synchronize settings with [this gist](https://gist.github.com/PSalant726/a179279267788effc1c4477cc069d04c).
+Download it [here](https://code.visualstudio.com/). Sync extensions and preferences natively.
 
 ### Optional
 
@@ -206,7 +204,9 @@ source ~/.bash_profile
     ```sh
     cfg checkout
     ```
+
     > Note: The step above might fail with a message like:
+    >
     > ```sh
     > error: The following untracked working tree files would be overwritten by checkout:
     >     .zshrc # or .bash_profile
@@ -214,12 +214,14 @@ source ~/.bash_profile
     > Please move or remove them before you can switch branches.
     > Aborting
     > ```
+    >
     > This is because the `$HOME` directory might already contain some stock configuration files that would be overwritten by this opteration. To resolve:
     >   1. Back up the files (if necessary), or remove them
     >   2. Re-run the `checkout`:
-    > ```sh
-    > cfg checkout
-    > ```
+    >
+    >       ```sh
+    >       cfg checkout
+    >       ```
 
 1. Set the flag `showUntrackedFiles` to `no` for the local repository:
 
