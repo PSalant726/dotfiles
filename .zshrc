@@ -187,6 +187,7 @@ alias ls='exa -ahlF --color-scale --git --group-directories-first'
 # Config guidelines for jq colors: https://stedolan.github.io/jq/manual/#Colors
 export JQ_COLORS="1;31:0;35:0;35:0;33:0;32:1;37:1;37"
 
+alias main='git checkout main && git pull'
 alias master='git checkout master && git pull'
 alias bi='bundle install'
 alias be='bundle exec'
