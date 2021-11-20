@@ -18,6 +18,11 @@ if [[ -d "$HOME/.pyenv" ]]; then
   eval "$(pyenv init --path)"
 fi
 
+# Initialize poetry
+if [[ -d "$HOME/.local" ]]; then
+  export PATH="$HOME/.local/bin:$PATH"
+fi
+
 # Initialize rvm
 if [[ -d "$HOME/.rvm" ]]; then
   # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
@@ -128,6 +133,7 @@ plugins=(
   git
   golang
   npm
+  poetry
   yarn
   zsh-autosuggestions
 

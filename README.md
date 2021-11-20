@@ -36,10 +36,10 @@ brew install font-jetbrains-mono-nerd-font
 
 ### Additional Tools
 
-1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [git](https://git-scm.com/), [`jq`](https://stedolan.github.io/jq/), [Go](https://golang.org/), `tree`, and [`zsh`](https://www.zsh.org/) via Homebrew, with:
+1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [git](https://git-scm.com/), [`jq`](https://stedolan.github.io/jq/), [Go](https://golang.org/), [`pyenv`](https://github.com/pyenv/pyenv), `tree`, and [`zsh`](https://www.zsh.org/) via Homebrew, with:
 
     ```sh
-    brew install bat diff-so-fancy exa fzf git jq go tree zsh
+    brew install bat diff-so-fancy exa fzf git jq go pyenv tree zsh
     $(brew --prefix)/opt/fzf/install
 
     # Use the homebrew zsh installation
@@ -64,6 +64,12 @@ brew install font-jetbrains-mono-nerd-font
     >   ```sh
     >   yarn add emoj
     >   ```
+
+1. Install [Poetry](https://github.com/python-poetry/poetry) with:
+
+    ```sh
+    curl -sSL https://install.python-poetry.org | python -
+    ```
 
 ### oh-my-zsh
 
