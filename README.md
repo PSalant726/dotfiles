@@ -43,8 +43,9 @@ brew install font-jetbrains-mono-nerd-font
     $(brew --prefix)/opt/fzf/install
 
     # Use the homebrew zsh installation
-    sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
-    chsh -s /usr/local/bin/zsh
+    # Ensure $HOMEBREW_PREFIX is set
+    sudo sh -c "echo $HOMEBREW_PREFIX/bin/zsh >> /etc/shells"
+    chsh -s $HOMEBREW_PREFIX/bin/zsh
     ```
 
 1. Install [Volta](https://volta.sh/) with:
@@ -165,7 +166,7 @@ source ~/.zshrc
 Prior to installation, make sure to include the `cfg` alias in the local `.bash_profile` or `.zshrc`:
 
 ```sh
-alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cfg="$HOMEBREW_PREFIX/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 ```
 
 Then, in the command line, run:
@@ -197,7 +198,7 @@ source ~/.bash_profile
 1. Define the `alias` in the current shell scope (only required if not included in the local `.zshrc` or `.bash_profile`):
 
     ```sh
-    alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+    alias cfg="$HOMEBREW_PREFIX/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
     ```
 
 1. Checkout the content from the bare repository in the `$HOME` directory:

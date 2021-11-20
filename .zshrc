@@ -1,3 +1,8 @@
+# Setup homebrew env
+if [[ -d "/opt/homebrew" ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # Make Go binaries globally available
 if [[ -d "$HOME/go" ]]; then
   export GOPATH="$(go env GOPATH)"
@@ -193,7 +198,7 @@ if [[ -e "$GOPATH/bin/gotest" ]]; then
 fi
 
 # dotfiles manipulation
-alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cfg="$HOMEBREW_PREFIX/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias cfga="cfg add"
 alias cfgcm="cfg commit -v"
 alias cfgca="cfg add -u && cfg commit -v"
