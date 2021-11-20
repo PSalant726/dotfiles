@@ -49,7 +49,7 @@ SOURCE_FILES+=($HOME/.fzf.zsh)
 export BAT_THEME="OneHalfDark"
 
 # Info on forgit: https://github.com/wfxr/forgit
-export FORGIT_FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --height=50% --border --preview='bat --color=always {}'"
+export FORGIT_FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --height=90% --border --preview='bat --color=always {}'"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -206,8 +206,6 @@ alias cfgca="cfg add -u && cfg commit -v"
 alias cfgpl="cfg pull"
 alias cfgps="cfg push"
 alias cfgs="cfg status"
-
-SOURCE_FILES+=($HOME/.movable-ink)
 
 for file in $SOURCE_FILES; do
   [ -r $file ] && [ -f $file ] && source $file;
