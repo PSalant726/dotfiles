@@ -1,6 +1,7 @@
 # Setup homebrew env
-if [[ -d "/opt/homebrew" ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+if command -v brew &> /dev/null; then
+  BREW_PREFIX=$(brew --prefix)
+  eval "$($BREW_PREFIX/bin/brew shellenv)"
 fi
 
 # Make Go binaries globally available
