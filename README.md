@@ -36,10 +36,10 @@ brew install font-jetbrains-mono-nerd-font
 
 ### Additional Tools
 
-1. Install [`bat`](https://github.com/sharkdp/bat), [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [git](https://git-scm.com/), [`jq`](https://stedolan.github.io/jq/), [Go](https://golang.org/), [`pyenv`](https://github.com/pyenv/pyenv), `tree`, and [`zsh`](https://www.zsh.org/) via Homebrew, with:
+1. Install [`bat`](https://github.com/sharkdp/bat), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [git](https://git-scm.com/), [`git-delta`](https://github.com/dandavison/delta), [Go](https://golang.org/), [`jq`](https://stedolan.github.io/jq/), [`pyenv`](https://github.com/pyenv/pyenv), `tree`, and [`zsh`](https://www.zsh.org/) via Homebrew, with:
 
     ```sh
-    brew install bat diff-so-fancy exa fzf git jq go pyenv tree zsh
+    brew install bat exa fzf git git-delta go jq pyenv tree zsh
     $(brew --prefix)/opt/fzf/install
 
     # Use the homebrew zsh installation

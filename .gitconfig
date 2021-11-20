@@ -2,32 +2,62 @@
 	branch = auto
 	diff = auto
 	status = auto
+
 [color "branch"]
 	current = yellow reverse
 	local = yellow
 	remote = green
+
 [color "diff"]
-	meta = yellow bold
 	frag = magenta bold
-	old = red bold
+	meta = yellow bold
 	new = green bold
+	old = red bold
+
 [color "status"]
 	added = green
 	changed = yellow
 	untracked = cyan
+
 [commit]
 	gpgsign = true
-[push]
-	default = current
-[user]
-	name = Phil Salant
-	email = PSalant@gmail.com
-	signingkey = 210DBF9BBAF6FC45
+
+[interactive]
+	diffFilter = delta --color-only --features=interactive
+
 [gpg]
 	program = gpg
-[core]
-	# Print a diff without the pager:
-	# git --no-pager diff
-	pager = diff-so-fancy | less --tabs=4 -RFX
+
+[pager]
+	# Print a diff without the pager: git --no-pager diff
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+
 [pull]
 	rebase = false
+
+[push]
+	default = current
+
+[user]
+	email = PSalant@gmail.com
+	name = Phil Salant
+	signingkey = 210DBF9BBAF6FC45
+
+# Delta diff viewer config
+[delta]
+	features = decorations line-numbers
+
+[delta "decorations"]
+		file-decoration-style = magenta ul ol
+    file-style = magenta
+		hunk-header-style = omit
+		minus-style = syntax bold auto
+		plus-style = syntax bold auto
+
+[delta "line-numbers"]
+	line-numbers = true
+	line-numbers-left-style = syntax
+	line-numbers-right-style = syntax
