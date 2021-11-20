@@ -69,6 +69,7 @@ brew install font-jetbrains-mono-nerd-font
 1. Install [Poetry](https://github.com/python-poetry/poetry) with:
 
     ```sh
+    # Requires Python v3.5+
     curl -sSL https://install.python-poetry.org | python -
     ```
 
@@ -116,6 +117,12 @@ brew install font-jetbrains-mono-nerd-font
 
         ```sh
         git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+        ```
+
+    1. [`poetry`](https://github.com/python-poetry/poetry#enable-tab-completion-for-bash-fish-or-zsh)
+
+        ```sh
+        mkdir $ZSH_CUSTOM/plugins/poetry && poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
         ```
 
 ### Firefox Developer Edition
