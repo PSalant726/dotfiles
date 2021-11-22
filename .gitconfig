@@ -33,10 +33,10 @@
 
 [pager]
 	# Print a diff without the pager: git --no-pager diff
-	diff = delta --side-by-side
-	log = delta --side-by-side
-	reflog = delta --side-by-side
-	show = delta --side-by-side
+	diff = delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}
+	log = delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}
+	reflog = delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}
+	show = delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}
 
 [pull]
 	rebase = false
