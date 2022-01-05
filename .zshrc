@@ -209,6 +209,8 @@ alias cfgpl="cfg pull"
 alias cfgps="cfg push"
 alias cfgs="cfg status"
 
+SOURCE_FILES+=($HOME/.ethyca)
+
 for file in $SOURCE_FILES; do
   [ -r $file ] && [ -f $file ] && source $file;
 done;
