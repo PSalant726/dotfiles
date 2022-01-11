@@ -4,6 +4,10 @@
 	display: none;
 }
 
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  display: none;
+}
+
 #navigator-toolbox {
   /* put titlebar and url bar next to each other */
   -moz-box-orient: horizontal;
