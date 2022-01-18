@@ -36,10 +36,10 @@ brew install font-jetbrains-mono-nerd-font
 
 ### Additional Tools
 
-1. Install [`bat`](https://github.com/sharkdp/bat), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [git](https://git-scm.com/), [`git-delta`](https://github.com/dandavison/delta), [Go](https://golang.org/), [`jq`](https://stedolan.github.io/jq/), [`pyenv`](https://github.com/pyenv/pyenv), `tree`, and [`zsh`](https://www.zsh.org/) via Homebrew, with:
+1. Install [`bat`](https://github.com/sharkdp/bat), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [git](https://git-scm.com/), [`git-delta`](https://github.com/dandavison/delta), [Go](https://golang.org/), [`jq`](https://stedolan.github.io/jq/), [`pyenv`](https://github.com/pyenv/pyenv), [`pyenv-virtualenv`](https://github.com/pyenv/pyenv-virtualenv). `tree`, and [`zsh`](https://www.zsh.org/) via Homebrew, with:
 
     ```sh
-    brew install bat exa fzf git git-delta go jq pyenv tree zsh
+    brew install bat exa fzf git git-delta go jq pyenv pyenv-virtualenv tree zsh
     $(brew --prefix)/opt/fzf/install
 
     # Use the homebrew zsh installation
@@ -65,13 +65,6 @@ brew install font-jetbrains-mono-nerd-font
     >   ```sh
     >   yarn add emoj
     >   ```
-
-1. Install [Poetry](https://github.com/python-poetry/poetry) with:
-
-    ```sh
-    # Requires Python v3.5+
-    curl -sSL https://install.python-poetry.org | python -
-    ```
 
 ### oh-my-zsh
 
@@ -117,12 +110,6 @@ brew install font-jetbrains-mono-nerd-font
 
         ```sh
         git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-        ```
-
-    1. [`poetry`](https://github.com/python-poetry/poetry#enable-tab-completion-for-bash-fish-or-zsh)
-
-        ```sh
-        mkdir $ZSH_CUSTOM/plugins/poetry && poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
         ```
 
 ### Firefox Developer Edition
