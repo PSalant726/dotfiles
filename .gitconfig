@@ -25,11 +25,17 @@
 [core]
 	pager = delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}
 
+[diff]
+    colorMoved = default
+
 [interactive]
 	diffFilter = delta --color-only --features=interactive
 
 [gpg]
 	program = gpg
+
+[merge]
+    conflictstyle = diff3
 
 [pager]
 	# Print a diff without the pager: git --no-pager diff
@@ -54,11 +60,11 @@
 	features = decorations line-numbers
 
 [delta "decorations"]
-		file-decoration-style = magenta ul ol
-		file-style = magenta
-		hunk-header-style = omit
-		minus-style = syntax bold auto
-		plus-style = syntax bold auto
+	file-decoration-style = magenta ul ol
+	file-style = magenta
+	hunk-header-style = omit
+	minus-style = syntax bold auto
+	plus-style = syntax bold auto
 
 [delta "line-numbers"]
 	line-numbers = true
