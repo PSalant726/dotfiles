@@ -36,6 +36,10 @@
 
 [merge]
     conflictstyle = diff3
+	tool = code
+
+[mergetool "code"]
+	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
 
 [pager]
 	# Print a diff without the pager: git --no-pager diff
