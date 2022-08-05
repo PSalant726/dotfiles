@@ -36,7 +36,18 @@ brew install font-jetbrains-mono-nerd-font
 
 ### Additional Tools
 
-1. Install [`bat`](https://github.com/sharkdp/bat), [`exa`](https://the.exa.website/), [`fzf`](https://github.com/junegunn/fzf), [git](https://git-scm.com/), [`git-delta`](https://github.com/dandavison/delta), [Go](https://golang.org/), [`jq`](https://stedolan.github.io/jq/), [`pyenv`](https://github.com/pyenv/pyenv), [`pyenv-virtualenv`](https://github.com/pyenv/pyenv-virtualenv). `tree`, and [`zsh`](https://www.zsh.org/) via Homebrew, with:
+1. Install the following with Homebrew:
+    - [`bat`](https://github.com/sharkdp/bat)
+    - [`exa`](https://the.exa.website/)
+    - [`fzf`](https://github.com/junegunn/fzf)
+    - [git](https://git-scm.com/)
+    - [`git-delta`](https://github.com/dandavison/delta)
+    - [Go](https://golang.org/)
+    - [`jq`](https://stedolan.github.io/jq/)
+    - [`pyenv`](https://github.com/pyenv/pyenv)
+    - [`pyenv-virtualenv`](https://github.com/pyenv/pyenv-virtualenv)
+    - [`tree`](https://gitlab.com/OldManProgrammer/unix-tree)
+    - [`zsh`](https://www.zsh.org/)
 
     ```sh
     brew install bat exa fzf git git-delta go jq pyenv pyenv-virtualenv tree zsh
@@ -88,29 +99,18 @@ brew install font-jetbrains-mono-nerd-font
     > ```
 
 1. Install the following plugins:
-    1. `fast-syntax-highlighting`
+    - [`alias-tips`](https://github.com/djui/alias-tips)
+    - [`fast-syntax-highlighting`](https://github.com/zdharma/fast-syntax-highlighting)
+    - [`forgit`](https://github.com/wfxr/forgit)
+    - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
 
-        ```sh
-        git clone --depth=1 https://github.com/zdharma/fast-syntax-highlighting.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
-        ```
-
-    1. `alias-tips`
-
-        ```sh
-        git clone --depth=1 https://github.com/djui/alias-tips.git $ZSH_CUSTOM/plugins/alias-tips
-        ```
-
-    1. [`forgit`](https://github.com/wfxr/forgit)
-
-        ```sh
-        mkdir $ZSH_CUSTOM/plugins/forgit/ && curl -Ss https://raw.githubusercontent.com/wfxr/forgit/master/forgit.plugin.zsh -o $ZSH_CUSTOM/plugins/forgit/forgit.plugin.zsh
-        ```
-
-    1. [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
-
-        ```sh
-        git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-        ```
+    ```sh
+    git clone --depth=1 https://github.com/djui/alias-tips.git $ZSH_CUSTOM/plugins/alias-tips &&\
+    git clone --depth=1 https://github.com/zdharma/fast-syntax-highlighting.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting &&\
+    git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions &&\
+    mkdir $ZSH_CUSTOM/plugins/forgit/ &&\
+        curl --show-error --silent https://raw.githubusercontent.com/wfxr/forgit/master/forgit.plugin.zsh --output $ZSH_CUSTOM/plugins/forgit/forgit.plugin.zsh
+    ```
 
 ### Firefox Developer Edition
 
