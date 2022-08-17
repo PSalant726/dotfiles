@@ -31,11 +31,11 @@ export SPACESHIP_RPROMPT_ORDER=(
   # rust              # Rust section
   # haskell           # Haskell Stack section
   # julia             # Julia section
-  aws               # Amazon Web Services section
   pyenv             # Pyenv section
   # venv              # virtualenv section
   # dotnet            # .NET section
   ember             # Ember.js section
+  aws               # Amazon Web Services section
   docker            # Docker section
   kubectl_context   # Kubectl context section
   terraform         # Terraform workspace section
@@ -97,10 +97,11 @@ export SPACESHIP_EXEC_TIME_ELAPSED=5
 ###################################
 ###             AWS             ###
 ###################################
+
 export SPACESHIP_AWS_SYMBOL="☁️  "
 
 ###################################
 ###      Docker/Kubernetes      ###
 ###################################
 
-export SPACESHIP_KUBECONTEXT_SHOW=false
+export SPACESHIP_KUBECONTEXT_PREFIX="at "
