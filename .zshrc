@@ -137,7 +137,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   alias-tips
   colored-man-pages
-  fast-syntax-highlighting
+  F-Sy-H
   git
   golang
   npm
