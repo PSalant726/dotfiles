@@ -58,22 +58,16 @@ export FORGIT_FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --height=90% --border --previe
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_THEME="spaceship"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="spaceship"
 
 if [[ "$ZSH_THEME" = "spaceship" ]]; then
   export SPACESHIP_CONFIG_FILE="$HOME/.spaceship-config.zsh"
   SOURCE_FILES+=($HOME/.spaceship-config.zsh)
 
 elif [[ "$ZSH_THEME" = "powerlevel10k/powerlevel10k" ]]; then
-  # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-  # Initialization code that may require console input (password prompts, [y/n]
-  # confirmations, etc.) must go above this block, everything else may go below.
-  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-  fi
-
-  SOURCE_FILES+=($HOME/.p10k.zsh)
+  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 
 # Set list of themes to pick from when loading at random
