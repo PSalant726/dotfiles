@@ -62,7 +62,7 @@ export FORGIT_FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --height=90% --border --previe
 ZSH_THEME="spaceship"
 
 if [[ "$ZSH_THEME" = "spaceship" ]]; then
-  export SPACESHIP_PROMPT_DEFAULT_PREFIX="& " # Must be defined before spaceship is sourced
+  export SPACESHIP_CONFIG_FILE="$HOME/.spaceship-config.zsh"
   SOURCE_FILES+=($HOME/.spaceship-config.zsh)
 
 elif [[ "$ZSH_THEME" = "powerlevel10k/powerlevel10k" ]]; then
