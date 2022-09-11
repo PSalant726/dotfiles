@@ -1072,6 +1072,8 @@
   typeset -g POWERLEVEL9K_RVM_SHOW_PREFIX=false
   # Custom icon.
   # typeset -g POWERLEVEL9K_RVM_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  # Only display this element when the below files are present in the current directory.
+  typeset -g POWERLEVEL9K_RVM_SHOW_ON_UPGLOB='Gemfile|Rakefile|*.rb'
 
   ###########[ fvm: flutter version management (https://github.com/leoafarias/fvm) ]############
   # Fvm color.
