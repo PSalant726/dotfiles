@@ -39,8 +39,9 @@
     vcs                     # git status
     # =========================[ Line #2 ]=========================
     newline                 # \n
-    status                  # exit code of the last command
+    # battery                 # internal battery
     command_execution_time  # duration of the last command
+    status                  # exit code of the last command
     prompt_char             # prompt symbol
   )
 
@@ -107,7 +108,6 @@
     # ip                    # ip address and bandwidth usage for a specified network interface
     # public_ip             # public IP address
     # proxy                 # system-wide http/https/ftp proxy
-    battery                 # internal battery
     # wifi                  # wifi speed
     # example               # example user-defined segment (see prompt_example function below)
   )
