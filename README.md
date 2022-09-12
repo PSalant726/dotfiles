@@ -85,22 +85,22 @@ brew install font-jetbrains-mono-nerd-font
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ```
 
-1. Install the `spaceship` theme with:
+1. Install the `powerlevel10k` theme with:
 
     ```sh
-    git clone --depth=1 https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt
-    ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
     ```
 
-    > Optional: Install the `powerlevel10k` theme (currently configured, but unused by default) with:
+    > Optional: Install the `spaceship` theme (currently configured, but unused by default) with:
     >
     > ```sh
-    > git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+    > git clone --depth=1 https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt
+    > ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
     > ```
 
 1. Install the following plugins:
     - [`alias-tips`](https://github.com/djui/alias-tips)
-    - [`fast-syntax-highlighting`](https://github.com/zdharma/fast-syntax-highlighting)
+    - [`F-Sy-H`](https://github.com/z-shell/F-Sy-H) (Fast Syntax Highlighting)
     - [`forgit`](https://github.com/wfxr/forgit)
     - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
 
