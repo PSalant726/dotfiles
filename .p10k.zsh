@@ -39,7 +39,7 @@
     vcs                     # git status
     # =========================[ Line #2 ]=========================
     newline                 # \n
-    # battery                 # internal battery
+    battery                 # internal battery
     command_execution_time  # duration of the last command
     status                  # exit code of the last command
     prompt_char             # prompt symbol
@@ -1511,6 +1511,10 @@
   # typeset -g POWERLEVEL9K_PROXY_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
   ################################[ battery: internal battery ]#################################
+  # Hide the battery element when the battery is charged above the below amounts
+  typeset -g POWERLEVEL9K_BATTERY_DISCONNECTED_HIDE_ABOVE_THRESHOLD=25
+  typeset -g POWERLEVEL9K_BATTERY_{CHARGING,CHARGED}_HIDE_ABOVE_THRESHOLD=0
+
   # Show battery in red when it's below this level and not connected to power supply.
   typeset -g POWERLEVEL9K_BATTERY_LOW_THRESHOLD=20
   typeset -g POWERLEVEL9K_BATTERY_LOW_FOREGROUND=160
