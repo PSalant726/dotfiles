@@ -37,7 +37,6 @@
 [interactive]
 	diffFilter = delta --color-only --features=interactive
 
-
 [merge]
     conflictstyle = diff3
 	tool = code
@@ -57,6 +56,10 @@
 
 [push]
 	default = current
+
+[rebase]
+	autosquash = true
+	autostash = true
 
 [user]
 	email = PSalant@gmail.com
