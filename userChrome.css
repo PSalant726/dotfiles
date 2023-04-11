@@ -1,7 +1,5 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
 #sidebar-box[sidebarcommand^="containertabs"] #sidebar-header {
-	display: none;
+  display: none;
 }
 
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
@@ -10,7 +8,7 @@
 
 #navigator-toolbox {
   /* put titlebar and url bar next to each other */
-  -moz-box-orient: horizontal;
+  display: -webkit-box !important;
   /* more places to allow dragging */
   -moz-window-dragging: drag;
 }
