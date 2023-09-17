@@ -176,9 +176,8 @@ pastefinish() {
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
-# Config guidelines for exa: https://the.exa.website/docs/colour-themes
-export EXA_COLORS="da=33:di=1;36:un=31:uu=34"
-alias ls='exa -ahlF --color-scale --git --group-directories-first'
+# Config guidelines for eza: https://github.com/eza-community/eza#command-line-options
+alias ls='eza --all --classify --color-scale --git --group-directories-first --header --icons --long --no-permissions --no-user --sort=name --time-style=iso'
 
 # Config guidelines for jq colors: https://stedolan.github.io/jq/manual/#Colors
 export JQ_COLORS="1;31:0;35:0;35:0;33:0;32:1;37:1;37"

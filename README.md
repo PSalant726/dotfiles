@@ -38,7 +38,7 @@ brew install font-jetbrains-mono-nerd-font
 
 1. Install the following with Homebrew:
     - [`bat`](https://github.com/sharkdp/bat)
-    - [`exa`](https://the.exa.website/)
+    - [`eza`](https://github.com/eza-community/eza)
     - [`fzf`](https://github.com/junegunn/fzf)
     - [git](https://git-scm.com/)
     - [`git-delta`](https://github.com/dandavison/delta)
@@ -50,7 +50,7 @@ brew install font-jetbrains-mono-nerd-font
     - [`zsh`](https://www.zsh.org/)
 
     ```sh
-    brew install bat exa fzf git git-delta go jq pyenv pyenv-virtualenv tree zsh
+    brew install bat eza fzf git git-delta go jq pyenv pyenv-virtualenv tree zsh
     $(brew --prefix)/opt/fzf/install
 
     # Use the homebrew zsh installation
