@@ -135,7 +135,7 @@ Download it [here](https://code.visualstudio.com/). Sync extensions and preferen
 Install the [`gotest` binary](https://github.com/rakyll/gotest) (to colorize `go test` output) by running the following **outside of any Go modules**:
 
 ```sh
-go get -u github.com/rakyll/gotest
+go install github.com/rakyll/gotest@latest
 ```
 
 ### Source `.zshrc`
