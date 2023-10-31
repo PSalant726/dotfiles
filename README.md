@@ -107,9 +107,8 @@ brew install font-jetbrains-mono-nerd-font
     ```sh
     git clone --depth=1 https://github.com/djui/alias-tips.git $ZSH_CUSTOM/plugins/alias-tips &&\
     git clone --depth=1 https://github.com/z-shell/F-Sy-H.git $ZSH_CUSTOM/plugins/F-Sy-H &&\
-    git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions &&\
-    mkdir $ZSH_CUSTOM/plugins/forgit/ &&\
-        curl --show-error --silent https://raw.githubusercontent.com/wfxr/forgit/master/forgit.plugin.zsh --output $ZSH_CUSTOM/plugins/forgit/forgit.plugin.zsh
+    git clone --depth=1 https://github.com/wfxr/forgit.git $ZSH_CUSTOM/plugins/forgit &&\
+    git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
     ```
 
 ### Firefox Developer Edition
