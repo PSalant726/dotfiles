@@ -1335,7 +1335,7 @@
   #
   # - P9K_AWS_PROFILE  The name of the current AWS profile.
   # - P9K_AWS_REGION   The region associated with the current AWS profile.
-  typeset -g POWERLEVEL9K_AWS_CONTENT_EXPANSION='${P9K_AWS_PROFILE//\%/%%}${P9K_AWS_REGION:+ (${P9K_AWS_REGION//\%/%%}})'
+  typeset -g POWERLEVEL9K_AWS_CONTENT_EXPANSION='${P9K_AWS_PROFILE//\%/%%}${P9K_AWS_REGION:+ (${P9K_AWS_REGION//\%/%%})}'
 
   # Custom prefix.
   typeset -g POWERLEVEL9K_AWS_PREFIX='%fas '
