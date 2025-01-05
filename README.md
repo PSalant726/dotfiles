@@ -23,16 +23,19 @@ brew install font-jetbrains-mono-nerd-font
 > brew install font-hack-nerd-font
 > ```
 
-### iTerm
+### Ghostty
 
-1. Get it from [the official site](https://iterm2.com/), or install via Homebrew with:
+1. Get it from [the official site](https://ghostty.org), or install via Homebrew with:
 
     ```sh
-    brew install --appdir="~/Applications" iterm2
+    brew install --cask ghostty
     ```
 
-1. After cloning the bare `cfg` repo (details below), import the `iTerm_profile.json` file
-    > Preferences -> Profiles -> Other Actions... -> Import JSON Profiles...
+1. After cloning the bare `cfg` repo (details below), add the following line to the default Ghostty config file:
+
+    ```
+    config-file = /path/to/.ghostty
+    ```
 
 ### Additional Tools
 

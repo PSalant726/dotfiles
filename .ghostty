@@ -1,0 +1,19 @@
+font-family = JetBrainsMono Nerd Font Mono
+font-family = Hack Nerd Font Mono
+
+# Disable ligatures
+font-feature = -calt
+font-feature = -dlig
+font-feature = -liga
+
+font-size = 14
+
+theme = Abernathy
+
+unfocused-split-opacity = 0.85
+
+window-padding-x = 10
+
+# Maximize the window by default
+window-height = 99999
+window-width = 99999
