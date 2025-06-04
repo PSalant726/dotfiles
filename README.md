@@ -16,7 +16,8 @@ brew tap homebrew/cask-fonts
 brew install font-jetbrains-mono-nerd-font
 ```
 
-> Optional: Install the `Hack` nerd font:
+> [!TIP]
+> Optionally, install the `Hack` nerd font:
 >
 > ```sh
 > brew tap homebrew/cask-fonts
@@ -74,11 +75,12 @@ brew install font-jetbrains-mono-nerd-font
         volta install node npm yarn
         ```
 
-    > Optional: Install [`emoj`](https://github.com/sindresorhus/emoj) via `yarn` with:
-    >
-    >   ```sh
-    >   yarn add emoj
-    >   ```
+> [!TIP]
+> Optionally, install [`emoj`](https://github.com/sindresorhus/emoj) via `yarn` with:
+>
+>   ```sh
+>   yarn add emoj
+>   ```
 
 ### oh-my-zsh
 
@@ -94,12 +96,13 @@ brew install font-jetbrains-mono-nerd-font
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
     ```
 
-    > Optional: Install the `spaceship` theme (currently configured, but unused by default) with:
-    >
-    > ```sh
-    > git clone --depth=1 https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt
-    > ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-    > ```
+> [!TIP]
+> Optionally, install the `spaceship` theme (currently configured, but unused by default) with:
+>
+> ```sh
+> git clone --depth=1 https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt
+> ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+> ```
 
 1. Install the following plugins:
     - [`alias-tips`](https://github.com/djui/alias-tips)
@@ -174,47 +177,51 @@ source ~/.bash_profile
     echo ".cfg" >> .gitignore
     ```
 
-1. Clone this repo into a "bare" repo in a hidden folder in the `$HOME` directory:
+2. Clone this repo into a "bare" repo in a hidden folder in the `$HOME` directory:
 
     ```sh
     git clone --bare git@github.com:PSalant726/dotfiles.git $HOME/.cfg
     ```
-    > Alternative: Clone via HTTPS
-    > ```sh
-    > git clone --bare https://github.com/PSalant726/dotfiles.git $HOME/.cfg
-    > ```
 
-1. Define the `alias` in the current shell scope (only required if not included in the local `.zshrc` or `.bash_profile`):
+> [!TIP]
+> To clone via HTTPS:
+>
+> ```sh
+> git clone --bare https://github.com/PSalant726/dotfiles.git $HOME/.cfg
+> ```
+
+3. Define the `alias` in the current shell scope (only required if not included in the local `.zshrc` or `.bash_profile`):
 
     ```sh
     alias cfg="$HOMEBREW_PREFIX/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
     ```
 
-1. Checkout the content from the bare repository in the `$HOME` directory:
+4. Checkout the content from the bare repository in the `$HOME` directory:
 
     ```sh
     cfg checkout
     ```
 
-    > Note: The step above might fail with a message like:
-    >
-    > ```sh
-    > error: The following untracked working tree files would be overwritten by checkout:
-    >     .zshrc # or .bash_profile
-    >     .gitconfig
-    > Please move or remove them before you can switch branches.
-    > Aborting
-    > ```
-    >
-    > This is because the `$HOME` directory might already contain some stock configuration files that would be overwritten by this opteration. To resolve:
-    >   1. Back up the files (if necessary), or remove them
-    >   2. Re-run the `checkout`:
-    >
-    >       ```sh
-    >       cfg checkout
-    >       ```
+> [!NOTE]
+> The step above might fail with a message like:
+>
+> ```sh
+> error: The following untracked working tree files would be overwritten by checkout:
+>     .zshrc # or .bash_profile
+>     .gitconfig
+> Please move or remove them before you can switch branches.
+> Aborting
+> ```
+>
+> This is because the `$HOME` directory might already contain some stock configuration files that would be overwritten by this opteration. To resolve:
+>   1. Back up the files (if necessary), or remove them
+>   2. Re-run the `checkout`:
+>
+>       ```sh
+>       cfg checkout
+>       ```
 
-1. Set the flag `showUntrackedFiles` to `no` for the local repository:
+5. Set the flag `showUntrackedFiles` to `no` for the local repository:
 
     This hides files that are not explicitly tracked. This is so that when running `cfg status` and other commands, files that are not of concern will not show up as `untracked`.
 
