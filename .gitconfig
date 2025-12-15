@@ -1,3 +1,9 @@
+[branch]
+	autoSetupMerge = true
+
+[checkout]
+	defaultRemote = origin
+
 [color]
 	branch = auto
 	diff = auto
@@ -23,10 +29,11 @@
 	gpgsign = true
 
 [core]
+	excludesfile = ~/.gitignore_global
 	pager = delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}
 
 [diff]
-    colorMoved = default
+	colorMoved = default
 
 [gpg]
 	program = gpg
@@ -81,3 +88,7 @@
 	line-numbers = true
 	line-numbers-left-style = syntax
 	line-numbers-right-style = syntax
+
+# Psychology Today
+[includeIf "gitdir:/Users/philsalant/Documents/Work/Psychology Today/"]
+	path = ~/Documents/Work/Psychology Today/.gitconfig-psychology-today
