@@ -38,6 +38,11 @@ if [[ -d "$HOME/.rvm" ]]; then
   SOURCE_FILES=($HOME/.rvm/scripts/rvm)
 fi
 
+# Initialize mysql
+if [[ -d "$(brew --prefix mysql-client)/bin" ]]; then
+  export PATH="$(brew --prefix mysql-client)/bin:$PATH"
+fi
+
 # Disable Homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
 
