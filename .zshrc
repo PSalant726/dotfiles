@@ -1,8 +1,8 @@
 # Setup homebrew env
 if [[ -d "/opt/homebrew" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
-elif command -v brew &> /dev/null; then
-  eval "$(/usr/local/bin/brew shellenv)"
+  export HOMEBREW_NO_ANALYTICS=1
+  export HOMEBREW_NO_ENV_HINTS=1
 fi
 
 # Make Go binaries globally available
@@ -42,9 +42,6 @@ fi
 if [[ -d "$(brew --prefix mysql-client)/bin" ]]; then
   export PATH="$(brew --prefix mysql-client)/bin:$PATH"
 fi
-
-# Disable Homebrew analytics
-export HOMEBREW_NO_ANALYTICS=1
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
