@@ -64,9 +64,9 @@ brew install font-jetbrains-mono-nerd-font
 > - [`pyenv`](https://github.com/pyenv/pyenv)
 > - [`pyenv-virtualenv`](https://github.com/pyenv/pyenv-virtualenv)
 >
->   ```sh
->   brew install pyenv pyenv-virtualenv
->   ```
+> ```sh
+> brew install pyenv pyenv-virtualenv
+> ```
 
 1. Install [Volta](https://volta.sh/) with:
 
