@@ -94,13 +94,13 @@ brew install font-jetbrains-mono-nerd-font
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
     ```
 
-> [!TIP]
-> Optionally, install the `spaceship` theme (currently configured, but unused by default) with:
->
-> ```sh
-> git clone --depth=1 https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt
-> ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-> ```
+    > [!NOTE]
+    > Optionally, install the `spaceship` theme (currently configured, but unused by default) with:
+    >
+    > ```sh
+    > git clone --depth=1 https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt
+    > ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+    > ```
 
 1. Install the following plugins:
     - [`alias-tips`](https://github.com/djui/alias-tips)
@@ -181,12 +181,12 @@ source ~/.bash_profile
     git clone --bare git@github.com:PSalant726/dotfiles.git $HOME/.cfg
     ```
 
-> [!TIP]
-> To clone via HTTPS:
->
-> ```sh
-> git clone --bare https://github.com/PSalant726/dotfiles.git $HOME/.cfg
-> ```
+    > [!TIP]
+    > To clone via HTTPS:
+    >
+    > ```sh
+    > git clone --bare https://github.com/PSalant726/dotfiles.git $HOME/.cfg
+    > ```
 
 3. Define the `alias` in the current shell scope (only required if not included in the local `.zshrc` or `.bash_profile`):
 
@@ -200,24 +200,24 @@ source ~/.bash_profile
     cfg checkout
     ```
 
-> [!NOTE]
-> The step above might fail with a message like:
->
-> ```sh
-> error: The following untracked working tree files would be overwritten by checkout:
->     .zshrc # or .bash_profile
->     .gitconfig
-> Please move or remove them before you can switch branches.
-> Aborting
-> ```
->
-> This is because the `$HOME` directory might already contain some stock configuration files that would be overwritten by this opteration. To resolve:
->   1. Back up the files (if necessary), or remove them
->   2. Re-run the `checkout`:
->
->       ```sh
->       cfg checkout
->       ```
+    > [!WARNING]
+    > The above command might fail with a message like:
+    >
+    > ```sh
+    > error: The following untracked working tree files would be overwritten by checkout:
+    >     .zshrc # or .bash_profile
+    >     .gitconfig
+    > Please move or remove them before you can switch branches.
+    > Aborting
+    > ```
+    >
+    > This is because the `$HOME` directory might already contain some stock configuration files that would be overwritten by this opteration. To resolve:
+    >   1. Back up the files (if necessary), or remove them
+    >   2. Re-run the `checkout`:
+    >
+    >       ```sh
+    >       cfg checkout
+    >       ```
 
 5. Set the flag `showUntrackedFiles` to `no` for the local repository:
 
