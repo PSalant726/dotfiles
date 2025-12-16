@@ -12,7 +12,6 @@ Install with:
 Install the `JetBrains Mono` nerd font:
 
 ```sh
-brew tap homebrew/cask-fonts
 brew install font-jetbrains-mono-nerd-font
 ```
 
@@ -20,7 +19,6 @@ brew install font-jetbrains-mono-nerd-font
 > Optionally, install the `Hack` nerd font:
 >
 > ```sh
-> brew tap homebrew/cask-fonts
 > brew install font-hack-nerd-font
 > ```
 
