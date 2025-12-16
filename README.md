@@ -40,26 +40,33 @@ brew install font-jetbrains-mono-nerd-font
 
 1. Install the following with Homebrew:
     - [`bat`](https://github.com/sharkdp/bat)
+    - [`direnv`](https://direnv.net/)
     - [`eza`](https://github.com/eza-community/eza)
     - [`fzf`](https://github.com/junegunn/fzf)
     - [git](https://git-scm.com/)
     - [`git-delta`](https://github.com/dandavison/delta)
     - [Go](https://golang.org/)
     - [`jq`](https://stedolan.github.io/jq/)
-    - [`pyenv`](https://github.com/pyenv/pyenv)
-    - [`pyenv-virtualenv`](https://github.com/pyenv/pyenv-virtualenv)
     - [`tree`](https://gitlab.com/OldManProgrammer/unix-tree)
     - [`zsh`](https://www.zsh.org/)
 
     ```sh
-    brew install bat eza fzf git git-delta go jq pyenv pyenv-virtualenv tree zsh
+    brew install bat direnv eza fzf git git-delta go jq tree zsh
     $(brew --prefix)/opt/fzf/install
 
-    # Use the homebrew zsh installation
-    # Ensure $HOMEBREW_PREFIX is set
+    # Use the homebrew zsh installation (ensure $HOMEBREW_PREFIX is set first!)
     sudo sh -c "echo $HOMEBREW_PREFIX/bin/zsh >> /etc/shells"
     chsh -s $HOMEBREW_PREFIX/bin/zsh
     ```
+
+    > [!TIP]
+    > Optionally, install the following additional tools with Homebrew:
+    > - [`pyenv`](https://github.com/pyenv/pyenv)
+    > - [`pyenv-virtualenv`](https://github.com/pyenv/pyenv-virtualenv)
+    >
+    >   ```sh
+    >   brew install pyenv pyenv-virtualenv
+    >   ```
 
 1. Install [Volta](https://volta.sh/) with:
 
@@ -72,13 +79,6 @@ brew install font-jetbrains-mono-nerd-font
         ```sh
         volta install node npm yarn
         ```
-
-> [!TIP]
-> Optionally, install [`emoj`](https://github.com/sindresorhus/emoj) via `yarn` with:
->
->   ```sh
->   yarn add emoj
->   ```
 
 ### oh-my-zsh
 
