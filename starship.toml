@@ -1,0 +1,106 @@
+format = """
+$username\
+$hostname\
+$jobs\
+$directory\
+$git_branch\
+$git_status\
+$fill
+${custom.vpn}\
+$cmd_duration\
+$status\
+$character\
+"""
+
+right_format = """
+$python\
+$nodejs\
+$golang\
+$rust\
+$ruby\
+$lua\
+$kubernetes\
+$terraform\
+$aws\
+"""
+
+add_newline = true
+
+[character]
+error_symbol = "[❯](bold red)"
+success_symbol = "[❯](bold green)"
+vimcmd_symbol = "[❮](bold green)"
+
+[fill]
+style = "244"
+symbol = "─"
+
+[username]
+show_always = false
+
+[hostname]
+format = "[@$hostname]($style) "
+ssh_only = true
+
+[directory]
+repo_root_style = "bold fg:160"
+truncate_to_repo = true
+truncation_length = 0
+
+[git_branch]
+format = "on [$branch(:$remote_branch)]($style) "
+style = "202"
+
+[git_status]
+format = "$ahead$behind$diverged$untracked$conflicted$staged$modified$renamed$deleted"
+
+ahead = "[⇡${count}](bright-yellow)"
+behind = "[⇣${count}](bright-yellow)"
+conflicted = "[~${count}](purple) "
+deleted = "[✘${count}](red) "
+diverged = "[⇡${ahead_count}⇣${behind_count}](bright-yellow) "
+modified = "[!${count}](yellow) "
+renamed = "[»${count}](green) "
+staged = "[+${count}](yellow) "
+stashed = "[*${count}](bright-yellow) "
+untracked = "[?${count}](green) "
+
+[golang]
+format = "[$symbol($version )]($style)"
+
+[cmd_duration]
+format = "took [$duration]($style) "
+min_time = 3000
+
+[nodejs]
+format = '[$symbol($version )]($style)'
+
+[status]
+disabled = false
+format = "[$symbol$status]($style) "
+
+[battery]
+disabled = true
+
+[python]
+pyenv_version_name = true
+
+[kubernetes]
+disabled = false
+
+[aws]
+format = 'as [$symbol$profile (\($region\)) (\[$duration\])]($style) '
+symbol = "☁️ "
+
+[aws.region_aliases]
+eu-west-1 = "qa/prod"
+us-east-1 = "dev"
+
+[aws.profile_aliases]
+psychology-today = "Psychology Today"
+
+[custom.vpn]
+command = "echo '🔒'"
+format = "[$output]($style) "
+style = "fg:2"
+when = 'osascript -e "tell application \"Tunnelblick\" to get state of first configuration where name = \"Psychology Today US\"" | grep -q CONNECTED'

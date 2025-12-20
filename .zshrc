@@ -12,10 +12,9 @@ if [[ -d "$HOME/go" ]]; then
   go env -w GOBIN="$GOPATH/bin"
 fi
 
-# Info on Volta: https://docs.volta.sh
-if [[ -d "$HOME/.volta" ]]; then
-  export VOLTA_HOME="$HOME/.volta"
-  export PATH="$VOLTA_HOME/bin:$PATH"
+# Initialize fnm: https://github.com/Schniz/fnm
+if command -v fnm >/dev/null 2>&1; then
+  eval "$(fnm env --use-on-cd)"
 fi
 
 # Initialize pyenv
@@ -60,7 +59,8 @@ export FORGIT_FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --height=90% --border --previe
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="starship"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME="spaceship"
 
 if [[ "$ZSH_THEME" = "spaceship" ]]; then
@@ -70,6 +70,28 @@ if [[ "$ZSH_THEME" = "spaceship" ]]; then
 elif [[ "$ZSH_THEME" = "powerlevel10k/powerlevel10k" ]]; then
   # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+elif [[ "$ZSH_THEME" = "starship" ]] && command -v starship >/dev/null 2>&1; then
+  export STARSHIP_CONFIG=$HOME/starship.toml
+  eval "$(starship init zsh)"
+
+  # Store the original starship prompt
+  _ORIG_PROMPT=$PROMPT
+  _ORIG_RPROMPT=$RPROMPT
+
+  # Transient prompt
+  function accept-line-with-transient() {
+    # Set transient prompt for the current line
+    PROMPT='$(starship module character)'
+    RPROMPT=''
+    zle reset-prompt
+    zle .accept-line
+
+    # Restore full prompt for next command
+    PROMPT=$_ORIG_PROMPT
+    RPROMPT=$_ORIG_RPROMPT
+  }
+
+  zle -N accept-line accept-line-with-transient
 fi
 
 # Set list of themes to pick from when loading at random

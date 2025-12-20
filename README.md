@@ -42,16 +42,18 @@ brew install font-jetbrains-mono-nerd-font
     - [`bat`](https://github.com/sharkdp/bat)
     - [`direnv`](https://direnv.net/)
     - [`eza`](https://github.com/eza-community/eza)
+    - [`fnm`](https://github.com/Schniz/fnm)
     - [`fzf`](https://github.com/junegunn/fzf)
     - [git](https://git-scm.com/)
     - [`git-delta`](https://github.com/dandavison/delta)
     - [Go](https://golang.org/)
     - [`jq`](https://stedolan.github.io/jq/)
+    - [starship](https://starship.rs/)
     - [`tree`](https://gitlab.com/OldManProgrammer/unix-tree)
     - [`zsh`](https://www.zsh.org/)
-
+    <br/><br/>
     ```sh
-    brew install bat direnv eza fzf git git-delta go jq tree zsh
+    brew install bat direnv eza fnm fzf git git-delta go jq starship tree zsh
     $(brew --prefix)/opt/fzf/install
 
     # Use the homebrew zsh installation (ensure $HOMEBREW_PREFIX is set first!)
@@ -68,18 +70,6 @@ brew install font-jetbrains-mono-nerd-font
 > brew install pyenv pyenv-virtualenv
 > ```
 
-1. Install [Volta](https://volta.sh/) with:
-
-    ```sh
-    curl https://get.volta.sh | bash -s -- --skip-setup
-    ```
-
-    1. Install `node`, `npm`, and `yarn` with:
-
-        ```sh
-        volta install node npm yarn
-        ```
-
 ### oh-my-zsh
 
 1. Install with:
@@ -87,20 +77,6 @@ brew install font-jetbrains-mono-nerd-font
     ```sh
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ```
-
-1. Install the `powerlevel10k` theme with:
-
-    ```sh
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-    ```
-
-> [!NOTE]
-> Optionally, install the `spaceship` theme (currently configured, but unused by default) with:
->
-> ```sh
-> git clone --depth=1 https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt
-> ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-> ```
 
 1. Install the following plugins:
     - [`alias-tips`](https://github.com/djui/alias-tips)
@@ -114,6 +90,20 @@ brew install font-jetbrains-mono-nerd-font
     git clone --depth=1 https://github.com/wfxr/forgit.git $ZSH_CUSTOM/plugins/forgit &&\
     git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
     ```
+
+> [!NOTE]
+> Optionally, install the `powerlevel10k` and/or `spaceship` theme(s) (currently configured, but unused by default) with:
+>
+> Powerlevel10k:
+> ```sh
+> git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+> ```
+>
+> Spaceship:
+> ```sh
+> git clone --depth=1 https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt
+> ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+> ```
 
 ### Firefox Developer Edition
 
@@ -214,7 +204,7 @@ source ~/.bash_profile
 > This is because the `$HOME` directory might already contain some stock configuration files that would be overwritten by this opteration. To resolve:
 >   1. Back up the files (if necessary), or remove them
 >   2. Re-run the `checkout`:
->
+>   <br/><br/>
 >       ```sh
 >       cfg checkout
 >       ```
