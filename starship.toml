@@ -4,6 +4,7 @@ $hostname\
 $jobs\
 $directory\
 $git_branch\
+$git_state\
 $git_status\
 $fill
 ${custom.vpn}\
@@ -13,46 +14,87 @@ $character\
 """
 
 right_format = """
-$python\
-$nodejs\
+$direnv\
 $golang\
-$rust\
-$ruby\
-$lua\
-$kubernetes\
+$nodejs\
 $terraform\
+${custom.terraform}\
+$docker_context\
 $aws\
 """
 
 add_newline = true
+
+[aws]
+format = 'as [$symbol$profile (\($region\)) (\[$duration\])]($style) '
+style = "bold #FF9900"
+symbol = " "
+
+[aws.profile_aliases]
+psychology-today = "Psychology Today"
+
+[aws.region_aliases]
+eu-west-1 = "qa/prod"
+us-east-1 = "dev"
+
+[battery]
+disabled = true
 
 [character]
 error_symbol = "[❯](bold red)"
 success_symbol = "[❯](bold green)"
 vimcmd_symbol = "[❮](bold green)"
 
+[cmd_duration]
+format = "took [$duration]($style) "
+min_time = 3000
+
+[custom.terraform]
+command = "terraform -chdir=terraform version -json | jq -r '.terraform_version'"
+description = "The currently selected terraform version, when in a Sussex infrastructure repository"
+detect_folders = ["terraform"]
+format = "with [$symbol $output]($style) "
+require_repo = true
+style = "bold #B457FF"
+symbol = ""
+
+[custom.vpn]
+command = "echo ''"
+description = "Whether the 'Psychology Today US' Tunnelblick VPN configuration is connected"
+format = "$output "
+when = 'osascript -e "tell application \"Tunnelblick\" to get state of first configuration where name = \"Psychology Today US\"" | grep -q CONNECTED'
+
+[directory]
+repo_root_style = "bold red underline"
+style = "bold red"
+truncate_to_repo = true
+truncation_length = 0
+
+[direnv]
+allowed_msg = ""
+disabled = false
+format = '[$symbol[$loaded](bold green)([$allowed](bold red))]($style) '
+unloaded_msg = ""
+
+[docker_context]
+format = 'as [$symbol$context]($style) '
+style = "bold #007CBA"
+symbol = "  "
+
 [fill]
 style = "244"
 symbol = "─"
-
-[username]
-show_always = false
-
-[hostname]
-format = "[@$hostname]($style) "
-ssh_only = true
-
-[directory]
-repo_root_style = "bold fg:160"
-truncate_to_repo = true
-truncation_length = 0
 
 [git_branch]
 format = "on [$branch(:$remote_branch)]($style) "
 style = "202"
 
+[git_state]
+format = '[\($state( $progress_current/$progress_total)\)]($style) '
+style = "bold purple"
+
 [git_status]
-format = "$ahead$behind$diverged$untracked$conflicted$staged$modified$renamed$deleted"
+format = "$ahead$behind$diverged$stashed$conflicted$staged$renamed$untracked$modified$deleted"
 
 ahead = "[⇡${count}](bright-yellow)"
 behind = "[⇣${count}](bright-yellow)"
@@ -61,46 +103,32 @@ deleted = "[✘${count}](red) "
 diverged = "[⇡${ahead_count}⇣${behind_count}](bright-yellow) "
 modified = "[!${count}](yellow) "
 renamed = "[»${count}](green) "
-staged = "[+${count}](yellow) "
-stashed = "[*${count}](bright-yellow) "
-untracked = "[?${count}](green) "
+staged = "[+${count}](202) "
+stashed = "[*${count}](blue) "
+untracked = "[?${count}](cyan) "
 
 [golang]
-format = "[$symbol($version )]($style)"
+format = "with [$symbol($version )]($style)"
+style = "bold #5DC9E2"
+symbol = " "
 
-[cmd_duration]
-format = "took [$duration]($style) "
-min_time = 3000
+[hostname]
+format = "[@$hostname]($style) "
+ssh_only = true
 
 [nodejs]
-format = '[$symbol($version )]($style)'
+detect_folders = ["node_modules", "!.ssh"]
+format = 'with [$symbol($version )]($style)'
+style = "bold #84BA64"
+symbol = "󰎙 "
 
 [status]
 disabled = false
-format = "[$symbol$status]($style) "
 
-[battery]
-disabled = true
+[terraform]
+format = 'with [$symbol$version \($workspace\)]($style) '
+style = "bold #B457FF"
+symbol = ""
 
-[python]
-pyenv_version_name = true
-
-[kubernetes]
-disabled = false
-
-[aws]
-format = 'as [$symbol$profile (\($region\)) (\[$duration\])]($style) '
-symbol = "☁️ "
-
-[aws.region_aliases]
-eu-west-1 = "qa/prod"
-us-east-1 = "dev"
-
-[aws.profile_aliases]
-psychology-today = "Psychology Today"
-
-[custom.vpn]
-command = "echo '🔒'"
-format = "[$output]($style) "
-style = "fg:2"
-when = 'osascript -e "tell application \"Tunnelblick\" to get state of first configuration where name = \"Psychology Today US\"" | grep -q CONNECTED'
+[username]
+show_always = false
