@@ -226,6 +226,9 @@ alias cfgpl="cfg pull"
 alias cfgps="cfg push"
 alias cfgs="cfg status"
 
+# Psychology Today
+SOURCE_FILES+=($HOME/.psychology-today.zsh)
+
 for file in $SOURCE_FILES; do
   [ -r $file ] && [ -f $file ] && source $file;
 done;
