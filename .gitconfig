@@ -1,5 +1,6 @@
 [branch]
 	autoSetupMerge = true
+	sort = -committerdate
 
 [checkout]
 	defaultRemote = origin
@@ -27,16 +28,28 @@
 
 [commit]
 	gpgsign = true
+	verbose = true
 
 [core]
 	excludesfile = ~/.gitignore_global
 	pager = delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}
 
 [diff]
-	colorMoved = default
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+
+[fetch]
+	all = true
+	prune = true
+	pruneTags = true
 
 [gpg]
 	program = gpg
+
+[help]
+	autocorrect = prompt
 
 [init]
 	defaultBranch = main
@@ -45,7 +58,7 @@
 	diffFilter = delta --color-only --features=interactive
 
 [merge]
-    conflictstyle = diff3
+	conflictstyle = zdiff3
 	tool = code
 
 [mergetool "code"]
@@ -62,11 +75,16 @@
 	rebase = false
 
 [push]
-	default = current
+	autoSetupRemote = true
+	default = simple
 
 [rebase]
-	autosquash = true
-	autostash = true
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+
+[tag]
+	sort = version:refname
 
 [user]
 	email = PSalant@gmail.com
