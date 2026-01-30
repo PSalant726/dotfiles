@@ -1,15 +1,12 @@
-confirm-close-surface = false
+app-notifications = config-reload,no-clipboard-copy
+auto-update = check
+auto-update-channel = stable
 
 font-family = JetBrainsMono Nerd Font
 font-family = Hack Nerd Font
 font-size = 14
-
+fullscreen = false
+maximize = true
 theme = Abernathy
-
 unfocused-split-opacity = 0.3
-
 window-padding-x = 10
-
-# Maximize the window by default
-window-height = 99999
-window-width = 99999
