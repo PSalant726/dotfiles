@@ -231,6 +231,9 @@ alias cfgs="cfg status"
 # Psychology Today
 SOURCE_FILES+=($HOME/.psychology-today.zsh)
 
+# Mercury Business Banking CLI
+SOURCE_FILES+=($HOME/.config/mercury-cli/env.sh)
+
 for file in $SOURCE_FILES; do
   [ -r $file ] && [ -f $file ] && source $file;
 done;
