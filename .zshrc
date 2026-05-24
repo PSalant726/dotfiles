@@ -183,6 +183,8 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+export CLAUDE_CONFIG_DIR=$HOME/.claude-personal
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.

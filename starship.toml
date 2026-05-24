@@ -43,7 +43,37 @@ disabled = true
 [character]
 error_symbol   = "[❯](bold red)"
 success_symbol = "[❯](bold green)"
-vimcmd_symbol = "[❮](bold green)"
+vimcmd_symbol  = "[❮](bold green)"
+
+[claude_context]
+format               = "[$gauge $percentage used]($style) "
+symbol               = ""
+gauge_width          = 10
+gauge_full_symbol    = "█"
+gauge_partial_symbol = "▒"
+gauge_empty_symbol   = "░"
+
+[[claude_context.display]]
+threshold = 0
+hidden    = false
+style     = "bold white"
+
+[[claude_context.display]]
+threshold = 30
+style     = "bold green"
+
+[[claude_context.display]]
+threshold = 60
+style     = "bold yellow"
+
+[[claude_context.display]]
+threshold = 80
+style     = "bold red"
+
+[claude_model]
+format = "[$symbol\\[$model\\]]($style) "
+symbol = ""
+style  = "bold blue"
 
 [cmd_duration]
 format   = "took [$duration]($style) "
