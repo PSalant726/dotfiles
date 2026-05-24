@@ -127,9 +127,9 @@ brew install font-jetbrains-mono-nerd-font
     1. Copy/Paste the `userChrome.css` file from this repo into the `chrome/` directory
     1. Open Firefox
 
-### VS Code
+### Zed Editor
 
-Download it [here](https://code.visualstudio.com/). Sync extensions and preferences natively.
+Download it from [the official source](https://zed.dev/download).
 
 ### Optional
 
