@@ -189,20 +189,6 @@ export CLAUDE_CONFIG_DIR=$HOME/.claude-personal
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# These `pasteinit` and `pastefinish` functions speed up pasting
-# with zsh-autosuggestions enabled
-# https://github.com/zsh-users/zsh-autosuggestions/issues/238
-pasteinit() {
-  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
-  zle -N self-insert url-quote-magic
-}
-
-pastefinish() {
-  zle -N self-insert $OLD_SELF_INSERT
-}
-zstyle :bracketed-paste-magic paste-init pasteinit
-zstyle :bracketed-paste-magic paste-finish pastefinish
-
 # Config guidelines for eza: https://github.com/eza-community/eza#command-line-options
 alias ls='eza --all --classify --color-scale --git --group-directories-first --header --icons --long --no-permissions --no-user --sort=name --time-style=iso'
 
