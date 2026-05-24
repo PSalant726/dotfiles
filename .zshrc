@@ -33,7 +33,7 @@ fi
 if [[ -d "$HOME/.rvm" ]]; then
   # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
   export PATH="$PATH:$HOME/.rvm/bin"
-  SOURCE_FILES=($HOME/.rvm/scripts/rvm)
+  SOURCE_FILES=("$HOME/.rvm/scripts/rvm")
 fi
 
 # Initialize mysql
@@ -46,7 +46,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Info on fzf: https://github.com/junegunn/fzf
 export FZF_DEFAULT_OPTS="--layout=reverse --height=10%"
-SOURCE_FILES+=($HOME/.fzf.zsh)
+SOURCE_FILES+=("$HOME/.fzf.zsh")
 
 # Info on bat: https://github.com/sharkdp/bat
 export BAT_THEME="OneHalfDark"
@@ -64,11 +64,11 @@ ZSH_THEME=""
 
 if [[ "$ZSH_THEME" = "spaceship" ]]; then
   export SPACESHIP_CONFIG_FILE="$HOME/.spaceship-config.zsh"
-  SOURCE_FILES+=($HOME/.spaceship-config.zsh)
+  SOURCE_FILES+=("$HOME/.spaceship-config.zsh")
 
 elif [[ "$ZSH_THEME" = "powerlevel10k/powerlevel10k" ]]; then
   # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+  [[ ! -f "$HOME/.p10k.zsh" ]] || source "$HOME/.p10k.zsh"
 elif [[ -z "$ZSH_THEME" ]] && command -v starship >/dev/null 2>&1; then
   export STARSHIP_CONFIG=$HOME/starship.toml
   eval "$(starship init zsh)"
@@ -80,7 +80,7 @@ elif [[ -z "$ZSH_THEME" ]] && command -v starship >/dev/null 2>&1; then
   # Transient prompt
   function accept-line-with-transient() {
     # Set transient prompt for the current line
-    PROMPT='$(starship module character)'
+    PROMPT="$(starship module character)"
     RPROMPT=''
     zle reset-prompt
     zle .accept-line
@@ -110,6 +110,7 @@ fi
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
+# shellcheck disable=SC2034  # Used by oh-my-zsh
 DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
@@ -128,6 +129,7 @@ export UPDATE_ZSH_DAYS=7
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# shellcheck disable=SC2034  # Used by oh-my-zsh
 COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -151,6 +153,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# shellcheck disable=SC2034  # Used by oh-my-zsh
 plugins=(
   alias-tips
   colored-man-pages
@@ -166,7 +169,8 @@ plugins=(
   forgit # must be loaded after git
 )
 
-source $ZSH/oh-my-zsh.sh
+# shellcheck source=/dev/null
+source "$ZSH/oh-my-zsh.sh"
 
 # User configuration
 
@@ -205,7 +209,7 @@ if [[ -e "$GOPATH/bin/gotest" ]]; then
 fi
 
 # dotfiles manipulation
-alias cfg="$HOMEBREW_PREFIX/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+alias cfg='$HOMEBREW_PREFIX/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cfga="cfg add"
 alias cfgcm="cfg commit -v"
 alias cfgca="cfg add -u && cfg commit -v"
@@ -214,13 +218,14 @@ alias cfgps="cfg push"
 alias cfgs="cfg status"
 
 # Psychology Today
-SOURCE_FILES+=($HOME/.psychology-today.zsh)
+SOURCE_FILES+=("$HOME/.psychology-today.zsh")
 
 # Mercury Business Banking CLI
-SOURCE_FILES+=($HOME/.config/mercury-cli/env.sh)
+SOURCE_FILES+=("$HOME/.config/mercury-cli/env.sh")
 
-for file in $SOURCE_FILES; do
-  [ -r $file ] && [ -f $file ] && source $file;
+for file in "${SOURCE_FILES[@]}"; do
+    # shellcheck source=/dev/null
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
