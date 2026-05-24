@@ -111,5 +111,8 @@
 	line-numbers-right-style = syntax
 
 # Psychology Today
-[includeIf "gitdir:/Users/philsalant/Documents/Work/Psychology Today/"]
+[includeIf "gitdir:/Users/philsalant/Documents/Work/Psychology Today/**"]
 	path = ~/Documents/Work/Psychology Today/.gitconfig-psychology-today
+
+[url "git@git.sussexdirectories.com:"]
+	insteadOf = https://git.sussexdirectories.com/
