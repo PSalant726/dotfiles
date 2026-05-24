@@ -238,3 +238,5 @@ for file in $SOURCE_FILES; do
   [ -r $file ] && [ -f $file ] && source $file;
 done;
 unset file;
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
