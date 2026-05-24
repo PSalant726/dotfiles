@@ -1,13 +1,18 @@
-# Required Software & Settings
+# dotfiles
+
+My environment configuration.
+
+## Required Software & Settings
 
 ### Homebrew
+
 Install with:
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### Font
+### Fonts
 
 Install the `JetBrains Mono` nerd font:
 
@@ -32,7 +37,7 @@ brew install font-jetbrains-mono-nerd-font
 
 1. After cloning the bare `cfg` repo (details below), add the following line to the default Ghostty config file:
 
-    ```
+    ```ghostty
     config-file = /path/to/.ghostty
     ```
 
@@ -51,7 +56,7 @@ brew install font-jetbrains-mono-nerd-font
     - [starship](https://starship.rs/)
     - [`tree`](https://gitlab.com/OldManProgrammer/unix-tree)
     - [`zsh`](https://www.zsh.org/)
-    <br/><br/>
+
     ```sh
     brew install bat direnv eza fnm fzf git git-delta go jq starship tree zsh
     $(brew --prefix)/opt/fzf/install
@@ -63,6 +68,7 @@ brew install font-jetbrains-mono-nerd-font
 
 > [!TIP]
 > Optionally, install the following additional tools with Homebrew:
+>
 > - [`pyenv`](https://github.com/pyenv/pyenv)
 > - [`pyenv-virtualenv`](https://github.com/pyenv/pyenv-virtualenv)
 >
@@ -83,7 +89,7 @@ brew install font-jetbrains-mono-nerd-font
     - [`F-Sy-H`](https://github.com/z-shell/F-Sy-H) (Fast Syntax Highlighting)
     - [`forgit`](https://github.com/wfxr/forgit)
     - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
-    <br/><br/>
+
     ```sh
     git clone --depth=1 https://github.com/djui/alias-tips.git $ZSH_CUSTOM/plugins/alias-tips &&\
     git clone --depth=1 https://github.com/z-shell/F-Sy-H.git $ZSH_CUSTOM/plugins/F-Sy-H &&\
@@ -95,11 +101,13 @@ brew install font-jetbrains-mono-nerd-font
 > Optionally, install the `powerlevel10k` and/or `spaceship` theme(s) (currently configured, but unused by default) with:
 >
 > Powerlevel10k:
+>
 > ```sh
 > git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 > ```
 >
 > Spaceship:
+>
 > ```sh
 > git clone --depth=1 https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt
 > ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
@@ -107,7 +115,7 @@ brew install font-jetbrains-mono-nerd-font
 
 ### Firefox Developer Edition
 
-1. Download Firefox Developer Edition [here](https://www.mozilla.org/en-US/firefox/developer/).
+1. Download Firefox Developer Edition from [the official source](https://www.mozilla.org/en-US/firefox/developer/).
 1. Log in with Firefox account
     1. This should sync bookmarks, extensions, etc.
 1. Open `about:support`
@@ -131,15 +139,15 @@ Install the [`gotest` binary](https://github.com/rakyll/gotest) (to colorize `go
 go install github.com/rakyll/gotest@latest
 ```
 
-### Source `.zshrc`
+## Source `.zshrc`
 
-After completing the below steps to configure the `cfg` repo, restart iTerm or run:
+After completing the below steps to configure the `cfg` repo, restart the terminal or run:
 
 ```sh
 source ~/.zshrc
 ```
 
-# `dotfiles` Management with a Bare Git Repository
+## `dotfiles` Management with a Bare Git Repository
 
 ### Prerequisite
 
@@ -202,12 +210,13 @@ source ~/.bash_profile
 > ```
 >
 > This is because the `$HOME` directory might already contain some stock configuration files that would be overwritten by this opteration. To resolve:
->   1. Back up the files (if necessary), or remove them
->   2. Re-run the `checkout`:
->   <br/><br/>
->       ```sh
->       cfg checkout
->       ```
+>
+> 1. Back up the files (if necessary), or remove them
+> 2. Re-run the `checkout`:
+>
+>    ```sh
+>    cfg checkout
+>    ```
 
 5. Set the flag `showUntrackedFiles` to `no` for the local repository:
 
@@ -217,7 +226,7 @@ source ~/.bash_profile
     cfg config --local status.showUntrackedFiles no
     ```
 
-### That's it! Type `cfg` commands to add and update `dotfiles`:
+### That's it! Type `cfg` commands to add and update `dotfiles`
 
 ```sh
 cfgs                                         # cfg status
