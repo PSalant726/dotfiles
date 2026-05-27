@@ -7,6 +7,7 @@ fi
 
 # Make Go binaries globally available
 if [[ -d "$HOME/go" ]]; then
+  export GOPATH="$(go env GOPATH)"
   export PATH="$GOPATH/bin:$PATH"
   go env -w GOBIN="$GOPATH/bin"
 fi
