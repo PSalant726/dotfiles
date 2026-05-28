@@ -26,9 +26,9 @@ $aws\
 add_newline = true
 
 [aws]
-format = 'as [$symbol$profile (\($region\)) (\[$duration\])]($style) '
-style  = "bold #FF9900"
-symbol = " "
+format = 'as [$symbol [$profile \($region\) \[$duration\]](bold $style)]($style)'
+style  = "#FF9900"
+symbol = ""
 
 [aws.profile_aliases]
 psychology-today = "Psychology Today"
@@ -83,9 +83,10 @@ min_time = 3000
 command        = "terraform -chdir=terraform version -json | jq -r '.terraform_version'"
 description    = "The currently selected terraform version, when in a Sussex infrastructure repository"
 detect_folders = ["terraform"]
-format         = "with [$symbol $output]($style) "
+format         = "with [$symbol [$output](bold $style)]($style) "
+ignore_timeout = true
 require_repo   = true
-style          = "bold #B457FF"
+style          = "#B457FF"
 symbol         = ""
 
 [custom.vpn]
@@ -107,8 +108,8 @@ format       = "[$symbol[$loaded](bold green)([$allowed](bold red))]($style) "
 unloaded_msg = ""
 
 [docker_context]
-format = "as [$symbol$context]($style) "
-style  = "bold #007CBA"
+format = "as [$symbol[$context](bold $style)]($style) "
+style  = "#007CBA"
 symbol = "  "
 
 [fill]
@@ -137,8 +138,8 @@ stashed    = "[*${count}](blue) "
 untracked  = "[?${count}](cyan) "
 
 [golang]
-format = "with [$symbol($version )]($style)"
-style  = "bold #5DC9E2"
+format = "with [$symbol[$version](bold $style)]($style) "
+style  = "#5DC9E2"
 symbol = " "
 
 [hostname]
@@ -147,8 +148,8 @@ ssh_only = true
 
 [nodejs]
 detect_folders = ["node_modules", "!.ssh"]
-format         = "with [$symbol($version )]($style)"
-style          = "bold #84BA64"
+format         = "with [$symbol[$version](bold $style)]($style) "
+style          = "#84BA64"
 symbol         = "󰎙 "
 
 [profiles]
@@ -158,8 +159,8 @@ claude-code = "$claude_model$git_branch$claude_context"
 disabled = false
 
 [terraform]
-format = 'with [$symbol$version \($workspace\)]($style) '
-style  = "bold #B457FF"
+format = 'with [$symbol[$version \($workspace\)](bold $style)]($style) '
+style  = "#B457FF"
 symbol = ""
 
 [username]
