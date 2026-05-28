@@ -90,10 +90,11 @@ style          = "#B457FF"
 symbol         = ""
 
 [custom.vpn]
-command     = "echo ''"
-description = "Whether the 'Psychology Today US' Tunnelblick VPN configuration is connected"
-format      = "$output "
-when        = 'osascript -e "tell application \"Tunnelblick\" to get state of first configuration where name = \"Psychology Today US\"" | grep -q CONNECTED'
+command        = "echo ''"
+description    = "Whether the 'Psychology Today US' Tunnelblick VPN configuration is connected"
+format         = "$output "
+ignore_timeout = true
+when           = 'osascript -e "tell application \"Tunnelblick\" to get state of first configuration where name = \"Psychology Today US\"" | grep -q CONNECTED'
 
 [directory]
 repo_root_style   = "bold red underline"
