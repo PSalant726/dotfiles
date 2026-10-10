@@ -54,6 +54,7 @@ export BAT_THEME="OneHalfDark"
 
 # Info on forgit: https://github.com/wfxr/forgit
 export FORGIT_FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --height=90% --border --preview='bat --color=always {}'"
+export FORGIT_NO_ALIASES=1
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -217,6 +218,12 @@ alias cfgca="cfg add -u && cfg commit -v"
 alias cfgpl="cfg pull"
 alias cfgps="cfg push"
 alias cfgs="cfg status"
+
+# replace some git aliases with forgit
+alias ga='forgit::add'
+alias gd='forgit::diff'
+alias glo='forgit::log'
+alias gcb='forgit::checkout::branch'
 
 # Psychology Today
 SOURCE_FILES+=("$HOME/.psychology-today.zsh")
