@@ -171,6 +171,13 @@ plugins=(
   forgit # must be loaded after git
 )
 
+fpath+=~/.zfunc
+fpath=(
+    "$HOMEBREW_PREFIX/share/zsh/functions"
+    $fpath
+    "$ZSH/custom/plugins/forgit/completions"
+)
+
 # shellcheck source=/dev/null
 source "$ZSH/oh-my-zsh.sh"
 
@@ -236,5 +243,3 @@ for file in "${SOURCE_FILES[@]}"; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
-
-fpath+=~/.zfunc; autoload -Uz compinit; compinit
