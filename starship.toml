@@ -65,12 +65,13 @@ symbol = ""
 min_time = 3000
 
 [custom.terraform]
-command        = "terraform -chdir=terraform version -json | jq -r '.terraform_version'"
+command        = "CHECKPOINT_DISABLE=1 terraform -chdir=terraform version -json | jq -r '.terraform_version'"
 description    = "The currently selected terraform version, when in a Sussex infrastructure repository"
 detect_folders = ["terraform"]
 format         = "with [$symbol [$output](bold $style)]($style) "
 ignore_timeout = true
 require_repo   = true
+shell          = ["sh"]
 style          = "#B457FF"
 symbol         = ""
 
