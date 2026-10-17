@@ -23,8 +23,6 @@ $docker_context\
 $aws\
 """
 
-add_newline = true
-
 [aws]
 format = 'as [$symbol [$profile \($region\) \[$duration\]](bold $style)]($style)'
 style  = "#FF9900"
@@ -37,21 +35,9 @@ psychology-today = "Psychology Today"
 eu-west-1 = "qa/prod"
 us-east-1 = "dev"
 
-[battery]
-disabled = true
-
-[character]
-error_symbol   = "[❯](bold red)"
-success_symbol = "[❯](bold green)"
-vimcmd_symbol  = "[❮](bold green)"
-
 [claude_context]
-format               = "[$gauge $percentage used]($style) "
-symbol               = ""
-gauge_width          = 10
-gauge_full_symbol    = "█"
-gauge_partial_symbol = "▒"
-gauge_empty_symbol   = "░"
+format      = "[$gauge $percentage used]($style) "
+gauge_width = 10
 
 [[claude_context.display]]
 threshold = 0
@@ -73,10 +59,8 @@ style     = "bold red"
 [claude_model]
 format = "[$symbol\\[$model\\]]($style) "
 symbol = ""
-style  = "bold blue"
 
 [cmd_duration]
-format   = "took [$duration]($style) "
 min_time = 3000
 
 [custom.terraform]
@@ -99,7 +83,6 @@ when           = 'osascript -e "tell application \"Tunnelblick\" to get state of
 [directory]
 repo_root_style   = "bold red underline"
 style             = "bold red"
-truncate_to_repo  = true
 truncation_length = 0
 
 [direnv]
@@ -144,8 +127,7 @@ style  = "#5DC9E2"
 symbol = " "
 
 [hostname]
-format   = "[@$hostname]($style) "
-ssh_only = true
+format = "[@$hostname]($style) "
 
 [nodejs]
 detect_folders = ["node_modules", "!.ssh"]
@@ -163,6 +145,3 @@ disabled = false
 format = 'with [$symbol[$version \($workspace\)](bold $style)]($style) '
 style  = "#B457FF"
 symbol = ""
-
-[username]
-show_always = false
