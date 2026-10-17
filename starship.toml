@@ -8,7 +8,8 @@ $git_branch\
 $git_state\
 $git_status\
 $fill
-${custom.vpn}\
+${custom.vpn_mullvad}\
+${custom.vpn_pt}\
 $cmd_duration\
 $status\
 $character\
@@ -75,12 +76,23 @@ shell          = ["sh"]
 style          = "#B457FF"
 symbol         = ""
 
-[custom.vpn]
-command        = "echo ''"
-description    = "Whether the 'Psychology Today US' Tunnelblick VPN configuration is connected"
-format         = "$output "
+[custom.vpn_mullvad]
+description    = "Whether the Mullvad VPN is connected"
+format         = "[$symbol]($style) "
 ignore_timeout = true
-when           = 'osascript -e "tell application \"Tunnelblick\" to get state of first configuration where name = \"Psychology Today US\"" | grep -q CONNECTED'
+shell          = ["sh"]
+style          = "#44AD4D"
+symbol         = ""
+when           = "mullvad status | grep -qx Connected"
+
+[custom.vpn_pt]
+description    = "Whether the 'Psychology Today US' Tunnelblick VPN configuration is connected"
+format         = "[$symbol]($style) "
+ignore_timeout = true
+shell          = ["sh"]
+style          = "#0060DF"
+symbol         = ""
+when           = 'pgrep -qf "openvpn.*Psychology Today US\.tblk"'
 
 [directory]
 repo_root_style   = "bold red underline"
