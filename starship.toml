@@ -1,4 +1,5 @@
-format = """
+command_timeout = 1000
+format          = """
 $username\
 $hostname\
 $jobs\
@@ -12,8 +13,7 @@ $cmd_duration\
 $status\
 $character\
 """
-
-right_format = """
+right_format    = """
 $direnv\
 $golang\
 $nodejs\
@@ -22,6 +22,7 @@ ${custom.terraform}\
 $docker_context\
 $aws\
 """
+scan_timeout    = 100
 
 [aws]
 format = 'as [$symbol [$profile \($region\) \[$duration\]](bold $style)]($style)'
