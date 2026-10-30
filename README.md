@@ -31,31 +31,19 @@ brew install font-jetbrains-mono-nerd-font
 
 1. Get it from [the official site](https://ghostty.org), or install via Homebrew with:
 
-    ```sh
-    brew install --cask ghostty
-    ```
+   ```sh
+   brew install --cask ghostty
+   ```
 
 1. After cloning the bare `cfg` repo (details below), add the following line to the default Ghostty config file:
 
-    ```ghostty
-    config-file = /path/to/.ghostty
-    ```
+   ```ghostty
+   config-file = /path/to/.ghostty
+   ```
 
 ### Additional Tools
 
-1. Install the following with Homebrew:
-    - [`bat`](https://github.com/sharkdp/bat)
-    - [`direnv`](https://direnv.net/)
-    - [`eza`](https://github.com/eza-community/eza)
-    - [`fnm`](https://github.com/Schniz/fnm)
-    - [`fzf`](https://github.com/junegunn/fzf)
-    - [git](https://git-scm.com/)
-    - [`git-delta`](https://github.com/dandavison/delta)
-    - [Go](https://golang.org/)
-    - [`jq`](https://stedolan.github.io/jq/)
-    - [starship](https://starship.rs/)
-    - [`tree`](https://gitlab.com/OldManProgrammer/unix-tree)
-    - [`zsh`](https://www.zsh.org/)
+Install the following with Homebrew:
 
 - [`bat`](https://github.com/sharkdp/bat)
 - [`direnv`](https://direnv.net/)
@@ -96,15 +84,15 @@ chsh -s $HOMEBREW_PREFIX/bin/zsh
 
 1. Download Firefox Developer Edition from [the official source](https://www.mozilla.org/en-US/firefox/developer/).
 1. Log in with Firefox account
-    1. This should sync bookmarks, extensions, etc.
+   1. This should sync bookmarks, extensions, etc.
 1. Open `about:support`
-    1. Find the "Profile Folder" section
-    1. Navigate to the profile location using iTerm
-    1. Close Firefox
-    1. Copy/Paste the `user.js` file from this repo into the profile directory
-    1. Create a new directory in the profile directory, called `chrome/`
-    1. Copy/Paste the `userChrome.css` file from this repo into the `chrome/` directory
-    1. Open Firefox
+   1. Find the "Profile Folder" section
+   1. Navigate to the profile directory using the terminal
+   1. Close Firefox
+   1. Copy/Paste the `user.js` file from this repo into the profile directory
+   1. Create a new directory in the profile directory, called `chrome/`
+   1. Copy/Paste the `userChrome.css` file from this repo into the `chrome/` directory
+   1. Open Firefox
 
 ### Zed Editor
 
@@ -148,15 +136,15 @@ source ~/.bash_profile
 
 1. Ensure that the source repo `.gitignore`'s the folder where `.cfg` will be cloned:
 
-    ```sh
-    echo ".cfg" >> .gitignore
-    ```
+   ```sh
+   echo ".cfg" >> .gitignore
+   ```
 
 2. Clone this repo into a "bare" repo in a hidden folder in the `$HOME` directory:
 
-    ```sh
-    git clone --bare git@github.com:PSalant726/dotfiles.git $HOME/.cfg
-    ```
+   ```sh
+   git clone --bare git@github.com:PSalant726/dotfiles.git $HOME/.cfg
+   ```
 
 > [!TIP]
 > To clone via HTTPS:
@@ -167,15 +155,15 @@ source ~/.bash_profile
 
 3. Define the `alias` in the current shell scope (only required if not included in the local `.zshrc` or `.bash_profile`):
 
-    ```sh
-    alias cfg="$HOMEBREW_PREFIX/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-    ```
+   ```sh
+   alias cfg="$HOMEBREW_PREFIX/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+   ```
 
 4. Checkout the content from the bare repository in the `$HOME` directory:
 
-    ```sh
-    cfg checkout
-    ```
+   ```sh
+   cfg checkout
+   ```
 
 > [!WARNING]
 > The above command might fail with a message like:
@@ -199,11 +187,11 @@ source ~/.bash_profile
 
 5. Set the flag `showUntrackedFiles` to `no` for the local repository:
 
-    This hides files that are not explicitly tracked. This is so that when running `cfg status` and other commands, files that are not of concern will not show up as `untracked`.
+   This hides files that are not explicitly tracked. This is so that when running `cfg status` and other commands, files that are not of concern will not show up as `untracked`.
 
-    ```sh
-    cfg config --local status.showUntrackedFiles no
-    ```
+   ```sh
+   cfg config --local status.showUntrackedFiles no
+   ```
 
 ### That's it! Type `cfg` commands to add and update `dotfiles`
 
