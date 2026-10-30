@@ -9,7 +9,6 @@ fi
 if [[ -d "$HOME/go" ]]; then
   export GOPATH="$(go env GOPATH)"
   export PATH="$GOPATH/bin:$PATH"
-  go env -w GOBIN="$GOPATH/bin"
 fi
 
 # Initialize fnm: https://github.com/Schniz/fnm
@@ -67,23 +66,18 @@ setopt extended_history hist_expire_dups_first hist_ignore_dups hist_ignore_spac
 
 # Shell options
 setopt auto_cd auto_pushd pushd_ignore_dups pushdminus
-setopt interactive_comments long_list_jobs multios
-setopt always_to_end auto_menu complete_in_word
-unsetopt flowcontrol menu_complete
+setopt interactive_comments long_list_jobs
+setopt always_to_end complete_in_word
+unsetopt flowcontrol
 
 # Completion
 fpath+=~/.zfunc
-fpath=(
-    "$HOMEBREW_PREFIX/share/zsh/functions"
-    "$HOME/.docker/completions"
-    $fpath
-)
+fpath=("$HOME/.docker/completions" $fpath)
 
 ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
 [[ -d "$ZSH_CACHE_DIR" ]] || mkdir -p "$ZSH_CACHE_DIR"
 
 autoload -Uz compinit && compinit -d "$ZSH_CACHE_DIR/zcompdump-$ZSH_VERSION"
-autoload -U +X bashcompinit && bashcompinit
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*' 'l:|=* r:|=*'
