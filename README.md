@@ -70,16 +70,6 @@ sudo sh -c "echo $HOMEBREW_PREFIX/bin/zsh >> /etc/shells"
 chsh -s $HOMEBREW_PREFIX/bin/zsh
 ```
 
-> [!TIP]
-> Optionally, install the following additional tools with Homebrew:
->
-> - [`pyenv`](https://github.com/pyenv/pyenv)
-> - [`pyenv-virtualenv`](https://github.com/pyenv/pyenv-virtualenv)
->
-> ```sh
-> brew install pyenv pyenv-virtualenv
-> ```
-
 ### Firefox Developer Edition
 
 1. Download Firefox Developer Edition from [the official source](https://www.mozilla.org/en-US/firefox/developer/).

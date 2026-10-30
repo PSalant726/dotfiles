@@ -17,26 +17,6 @@ if command -v fnm >/dev/null 2>&1; then
   eval "$(fnm env --use-on-cd)"
 fi
 
-# Initialize pyenv
-if [[ -d "$HOME/.pyenv" ]]; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init --path)"
-  eval "$(pyenv init -)"
-
-  # Initialize pyenv-virtualenv
-  if command -v pyenv-virtualenv-init &> /dev/null; then
-    eval "$(pyenv virtualenv-init -)"
-  fi
-fi
-
-# Initialize rvm
-if [[ -d "$HOME/.rvm" ]]; then
-  # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-  export PATH="$PATH:$HOME/.rvm/bin"
-  SOURCE_FILES=("$HOME/.rvm/scripts/rvm")
-fi
-
 # Initialize mysql
 if [[ -d "$(brew --prefix mysql-client)/bin" ]]; then
   export PATH="$(brew --prefix mysql-client)/bin:$PATH"
