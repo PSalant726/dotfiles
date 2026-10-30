@@ -57,14 +57,30 @@ brew install font-jetbrains-mono-nerd-font
     - [`tree`](https://gitlab.com/OldManProgrammer/unix-tree)
     - [`zsh`](https://www.zsh.org/)
 
-    ```sh
-    brew install bat direnv eza fnm fzf git git-delta go jq starship tree zsh
-    $(brew --prefix)/opt/fzf/install
+- [`bat`](https://github.com/sharkdp/bat)
+- [`direnv`](https://direnv.net/)
+- [`eza`](https://github.com/eza-community/eza)
+- [`fnm`](https://github.com/Schniz/fnm)
+- [forgit](https://github.com/wfxr/forgit)
+- [`fzf`](https://github.com/junegunn/fzf)
+- [git](https://git-scm.com/)
+- [`git-delta`](https://github.com/dandavison/delta)
+- [Go](https://golang.org/)
+- [`jq`](https://stedolan.github.io/jq/)
+- [starship](https://starship.rs/)
+- [`tree`](https://gitlab.com/OldManProgrammer/unix-tree)
+- [`zsh`](https://www.zsh.org/)
+- [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
+- [`zsh-fast-syntax-highlighting`](https://github.com/zdharma-continuum/fast-syntax-highlighting)
 
-    # Use the homebrew zsh installation (ensure $HOMEBREW_PREFIX is set first!)
-    sudo sh -c "echo $HOMEBREW_PREFIX/bin/zsh >> /etc/shells"
-    chsh -s $HOMEBREW_PREFIX/bin/zsh
-    ```
+```sh
+brew install bat direnv eza fnm forgit fzf git git-delta go jq starship tree zsh zsh-autosuggestions zsh-fast-syntax-highlighting
+$(brew --prefix)/opt/fzf/install
+
+# Use the homebrew zsh installation (ensure $HOMEBREW_PREFIX is set first!)
+sudo sh -c "echo $HOMEBREW_PREFIX/bin/zsh >> /etc/shells"
+chsh -s $HOMEBREW_PREFIX/bin/zsh
+```
 
 > [!TIP]
 > Optionally, install the following additional tools with Homebrew:
@@ -74,43 +90,6 @@ brew install font-jetbrains-mono-nerd-font
 >
 > ```sh
 > brew install pyenv pyenv-virtualenv
-> ```
-
-### oh-my-zsh
-
-1. Install with:
-
-    ```sh
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    ```
-
-1. Install the following plugins:
-    - [`alias-tips`](https://github.com/djui/alias-tips)
-    - [`F-Sy-H`](https://github.com/z-shell/F-Sy-H) (Fast Syntax Highlighting)
-    - [`forgit`](https://github.com/wfxr/forgit)
-    - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
-
-    ```sh
-    git clone --depth=1 https://github.com/djui/alias-tips.git $ZSH_CUSTOM/plugins/alias-tips &&\
-    git clone --depth=1 https://github.com/z-shell/F-Sy-H.git $ZSH_CUSTOM/plugins/F-Sy-H &&\
-    git clone --depth=1 https://github.com/wfxr/forgit.git $ZSH_CUSTOM/plugins/forgit &&\
-    git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-    ```
-
-> [!NOTE]
-> Optionally, install the `powerlevel10k` and/or `spaceship` theme(s) (currently configured, but unused by default) with:
->
-> Powerlevel10k:
->
-> ```sh
-> git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-> ```
->
-> Spaceship:
->
-> ```sh
-> git clone --depth=1 https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt
-> ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 > ```
 
 ### Firefox Developer Edition
