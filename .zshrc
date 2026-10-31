@@ -6,11 +6,9 @@ fi
 # Info on starship: https://starship.rs
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
-  RPROMPT=''
 
   # Store the original starship prompt
   _ORIG_PROMPT=$PROMPT
-  _ORIG_RPROMPT=$RPROMPT
 
   # Exit status of the last command, for the transient prompt
   _transient_status=0
@@ -31,7 +29,6 @@ if command -v starship >/dev/null 2>&1; then
 
     # Restore full prompt for next command
     PROMPT=$_ORIG_PROMPT
-    RPROMPT=$_ORIG_RPROMPT
   }
 
   zle -N accept-line accept-line-with-transient
