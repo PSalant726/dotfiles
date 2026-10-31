@@ -125,19 +125,11 @@ alias glo='forgit::log'
 alias gcb='forgit::checkout::branch'
 
 # Info on fzf: https://github.com/junegunn/fzf
-SOURCE_FILES+=("$HOME/.fzf.zsh")
+source "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh"
 
-# Psychology Today
-SOURCE_FILES+=("$HOME/.psychology-today.zsh")
-
-# Mercury Business Banking CLI
-SOURCE_FILES+=("$HOME/.config/mercury-cli/env.sh")
-
-for file in "${SOURCE_FILES[@]}"; do
-    # shellcheck source=/dev/null
-    [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
+# Machine-local config, not tracked in dotfiles
+for file in "$HOME"/.config/zsh/local/*.zsh(N-.); do source "$file"; done
+unset file
 
 # Must be sourced last
 [[ -r "$HOMEBREW_PREFIX/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh" ]] && source "$HOMEBREW_PREFIX/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"

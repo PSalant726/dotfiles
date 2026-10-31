@@ -57,7 +57,6 @@ Install the following with Homebrew:
 
 ```sh
 brew install bat direnv eza fnm forgit fzf git git-delta go jq starship tree zsh zsh-autosuggestions zsh-fast-syntax-highlighting
-$(brew --prefix)/opt/fzf/install
 
 # Use the homebrew zsh installation (ensure $HOMEBREW_PREFIX is set first!)
 sudo sh -c "echo $HOMEBREW_PREFIX/bin/zsh >> /etc/shells"
