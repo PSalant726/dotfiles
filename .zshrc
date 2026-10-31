@@ -85,7 +85,6 @@ zle -N bracketed-paste bracketed-paste-magic
 zle -N self-insert url-quote-magic
 
 # Plugins
-[[ -r "$HOMEBREW_PREFIX/opt/forgit/share/forgit/forgit.plugin.zsh" ]] && source "$HOMEBREW_PREFIX/opt/forgit/share/forgit/forgit.plugin.zsh"
 [[ -r "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 if command -v direnv >/dev/null 2>&1; then
@@ -130,10 +129,10 @@ alias cfgps="cfg push"
 alias cfgs="cfg status"
 
 # replace some git aliases with forgit
-alias ga='forgit::add'
-alias gd='forgit::diff'
-alias glo='forgit::log'
-alias gcb='forgit::checkout::branch'
+alias ga='git-forgit add'
+alias gd='git-forgit diff'
+alias glo='git-forgit log'
+alias gcb='git-forgit checkout_branch'
 
 # Info on fzf: https://github.com/junegunn/fzf
 source "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh"

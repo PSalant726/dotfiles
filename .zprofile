@@ -35,8 +35,6 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Info on forgit: https://github.com/wfxr/forgit
 export FORGIT_FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --height=90% --border --preview='bat --color=always {}'"
-export FORGIT_NO_ALIASES=1
-
 # Info on starship: https://starship.rs
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
