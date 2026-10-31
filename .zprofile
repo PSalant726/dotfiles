@@ -1,6 +1,9 @@
 # Setup homebrew env
 if [[ -d "/opt/homebrew" ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+  _brew_env="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/brew-shellenv.zsh"
+  [[ "$_brew_env" -nt /opt/homebrew/Library/Homebrew/cmd/shellenv.sh ]] || { mkdir -p "${_brew_env:h}"; /opt/homebrew/bin/brew shellenv > "$_brew_env"; }
+  source "$_brew_env"
+  unset _brew_env
   export HOMEBREW_NO_ANALYTICS=1
   export HOMEBREW_NO_ENV_HINTS=1
 fi
