@@ -64,15 +64,12 @@ HISTSIZE=50000
 SAVEHIST=10000
 setopt extended_history hist_expire_dups_first hist_ignore_dups hist_ignore_space hist_verify share_history
 
-# Shell options
-setopt auto_cd auto_pushd pushd_ignore_dups pushdminus
-setopt interactive_comments long_list_jobs
-setopt always_to_end complete_in_word
-unsetopt flowcontrol
 
-# Completion
-fpath+=~/.zfunc
-fpath=("$HOME/.docker/completions" $fpath)
+setopt auto_cd auto_pushd pushd_ignore_dups pushdminus # Directories
+setopt interactive_comments long_list_jobs             # Shell options
+setopt always_to_end complete_in_word                  # Completion
+
+fpath=("$HOME/.docker/completions" $fpath "$HOME/.zfunc")
 
 ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
 [[ -d "$ZSH_CACHE_DIR" ]] || mkdir -p "$ZSH_CACHE_DIR"
@@ -89,6 +86,7 @@ zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-dir
 
 # Key bindings
 bindkey -e
+unsetopt flowcontrol
 
 autoload -U up-line-or-beginning-search down-line-or-beginning-search edit-command-line
 zle -N up-line-or-beginning-search
@@ -96,17 +94,11 @@ zle -N down-line-or-beginning-search
 zle -N edit-command-line
 
 bindkey '^[[A' up-line-or-beginning-search
-bindkey '^[OA' up-line-or-beginning-search
 bindkey '^[[B' down-line-or-beginning-search
-bindkey '^[OB' down-line-or-beginning-search
 bindkey '^[[H' beginning-of-line
-bindkey '^[OH' beginning-of-line
 bindkey '^[[F' end-of-line
-bindkey '^[OF' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^[[Z' reverse-menu-complete
-bindkey '^[[1;5C' forward-word
-bindkey '^[[1;5D' backward-word
 bindkey '^X^E' edit-command-line
 
 autoload -Uz bracketed-paste-magic url-quote-magic
@@ -121,16 +113,7 @@ if command -v direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
 
-# Generate Zed completions
-eval "$(zed --completions zsh)"
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='zed --wait'
-fi
-
+export EDITOR='zed --wait'
 export CLAUDE_CONFIG_DIR=$HOME/.claude-personal
 
 # Config guidelines for eza: https://github.com/eza-community/eza#command-line-options
