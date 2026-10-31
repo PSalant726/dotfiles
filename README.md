@@ -38,7 +38,7 @@ brew install font-jetbrains-mono-nerd-font
 1. After cloning the bare `cfg` repo (details below), add the following line to the default Ghostty config file:
 
    ```ghostty
-   config-file = /path/to/.ghostty
+   config-file = ~/.config/ghostty/.ghostty
    ```
 
 ### Additional Tools
