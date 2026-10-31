@@ -73,9 +73,9 @@ chsh -s $HOMEBREW_PREFIX/bin/zsh
    1. Find the "Profile Folder" section
    1. Navigate to the profile directory using the terminal
    1. Close Firefox
-   1. Copy/Paste the `user.js` file from this repo into the profile directory
+   1. Copy/Paste the `.config/firefox/user.js` file from this repo into the profile directory
    1. Create a new directory in the profile directory, called `chrome/`
-   1. Copy/Paste the `userChrome.css` file from this repo into the `chrome/` directory
+   1. Copy/Paste the `.config/firefox/userChrome.css` file from this repo into the `chrome/` directory
    1. Open Firefox
 
 ### Zed Editor
