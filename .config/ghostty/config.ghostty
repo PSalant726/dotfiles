@@ -13,6 +13,8 @@ font-family-italic = Hack Nerd Font Mono Italic
 font-size = 14
 
 maximize = true
+mouse-hide-while-typing = true
 theme = Abernathy
 unfocused-split-opacity = 0.3
 window-padding-x = 10
+window-save-state = always
