@@ -31,7 +31,7 @@ export FORGIT_FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --height=90% --border --previe
 export FORGIT_NO_ALIASES=1
 
 # Info on starship: https://starship.rs
-export STARSHIP_CONFIG=$HOME/starship.toml
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
 # Config guidelines for jq colors: https://stedolan.github.io/jq/manual/#Colors
 export JQ_COLORS="1;31:0;35:0;35:0;33:0;32:1;37:1;37"
@@ -41,4 +41,3 @@ export GOTEST_PALETTE="red,higreen"
 # The following lines were added by Docker Desktop to add commands to your PATH.
 export PATH="$PATH:/Users/philsalant/.docker/bin"
 # End of Docker Desktop section.
-
