@@ -88,6 +88,7 @@ alias ls='eza --all --classify --color-scale --git --group-directories-first --h
 alias main='git checkout main && git pull'
 alias master='git checkout master && git pull'
 alias tree='tree --dirsfirst -C'
+alias gmailctl='gmailctl --config "$HOME/.config/gmailctl"'
 
 # git
 alias gb='git branch'
