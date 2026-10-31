@@ -31,7 +31,6 @@
 	verbose = true
 
 [core]
-	excludesfile = ~/.gitignore_global
 	pager = delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}
 
 [diff]
