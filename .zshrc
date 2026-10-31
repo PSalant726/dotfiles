@@ -6,6 +6,7 @@ fi
 # Info on starship: https://starship.rs
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
+  RPROMPT=''
 
   # Store the original starship prompt
   _ORIG_PROMPT=$PROMPT
@@ -25,7 +26,6 @@ if command -v starship >/dev/null 2>&1; then
       PROMPT='%B%F{green}❯%f%b '
     fi
 
-    RPROMPT=''
     zle reset-prompt
     zle .accept-line
 
@@ -42,7 +42,6 @@ HISTFILE="$HOME/.local/state/zsh/history"
 HISTSIZE=50000
 SAVEHIST=10000
 setopt extended_history hist_expire_dups_first hist_ignore_dups hist_ignore_space hist_verify share_history
-
 
 setopt auto_cd auto_pushd pushd_ignore_dups pushdminus # Directories
 setopt interactive_comments long_list_jobs             # Shell options

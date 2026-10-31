@@ -7,22 +7,21 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
-$fill
-${custom.vpn_mullvad}\
-${custom.vpn_pt}\
-$cmd_duration\
-$status\
-$character\
-"""
-right_format    = """
+$fill \
 $direnv\
 $golang\
 $nodejs\
 $terraform\
 ${custom.terraform}\
 $docker_context\
-$aws\
+$aws
+${custom.vpn_mullvad}\
+${custom.vpn_pt}\
+$cmd_duration\
+$status\
+$character\
 """
+
 scan_timeout    = 100
 
 [aws]
