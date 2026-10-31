@@ -47,6 +47,7 @@ setopt auto_cd auto_pushd pushd_ignore_dups pushdminus # Directories
 setopt interactive_comments long_list_jobs             # Shell options
 setopt always_to_end complete_in_word                  # Completion
 
+typeset -U fpath
 fpath=("$HOME/.zfunc" "$HOME/.docker/completions" $fpath)
 
 ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
