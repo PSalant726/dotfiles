@@ -1,41 +1,10 @@
-# Setup homebrew env
-if [[ -d "/opt/homebrew" ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-  export HOMEBREW_NO_ANALYTICS=1
-  export HOMEBREW_NO_ENV_HINTS=1
-fi
-
-# Make Go binaries globally available
-if [[ -d "$HOME/go" ]]; then
-  export GOPATH="$(go env GOPATH)"
-  export PATH="$GOPATH/bin:$PATH"
-fi
-
 # Initialize fnm: https://github.com/Schniz/fnm
 if command -v fnm >/dev/null 2>&1; then
   eval "$(fnm env --use-on-cd)"
 fi
 
-# Initialize mysql
-if [[ -d "$(brew --prefix mysql-client)/bin" ]]; then
-  export PATH="$(brew --prefix mysql-client)/bin:$PATH"
-fi
-
-# Info on fzf: https://github.com/junegunn/fzf
-export FZF_DEFAULT_OPTS="--layout=reverse --height=10%"
-SOURCE_FILES+=("$HOME/.fzf.zsh")
-
-# Info on bat: https://github.com/sharkdp/bat
-export BAT_THEME="OneHalfDark"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
-# Info on forgit: https://github.com/wfxr/forgit
-export FORGIT_FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --height=90% --border --preview='bat --color=always {}'"
-export FORGIT_NO_ALIASES=1
-
 # Info on starship: https://starship.rs
 if command -v starship >/dev/null 2>&1; then
-  export STARSHIP_CONFIG=$HOME/starship.toml
   eval "$(starship init zsh)"
 
   # Store the original starship prompt
@@ -69,7 +38,7 @@ setopt auto_cd auto_pushd pushd_ignore_dups pushdminus # Directories
 setopt interactive_comments long_list_jobs             # Shell options
 setopt always_to_end complete_in_word                  # Completion
 
-fpath=("$HOME/.docker/completions" $fpath "$HOME/.zfunc")
+fpath=("$HOME/.zfunc" "$HOME/.docker/completions" $fpath)
 
 ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
 [[ -d "$ZSH_CACHE_DIR" ]] || mkdir -p "$ZSH_CACHE_DIR"
@@ -113,14 +82,8 @@ if command -v direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
 
-export EDITOR='zed --wait'
-export CLAUDE_CONFIG_DIR=$HOME/.claude-personal
-
 # Config guidelines for eza: https://github.com/eza-community/eza#command-line-options
 alias ls='eza --all --classify --color-scale --git --group-directories-first --header --icons --long --no-permissions --no-user --sort=name --time-style=iso'
-
-# Config guidelines for jq colors: https://stedolan.github.io/jq/manual/#Colors
-export JQ_COLORS="1;31:0;35:0;35:0;33:0;32:1;37:1;37"
 
 alias main='git checkout main && git pull'
 alias master='git checkout master && git pull'
@@ -143,7 +106,6 @@ alias gog='go get'
 alias gomt='go mod tidy'
 
 if [[ -e "$GOPATH/bin/gotest" ]]; then
-  export GOTEST_PALETTE="red,higreen"
   alias got='gotest'
 fi
 
@@ -161,6 +123,9 @@ alias ga='forgit::add'
 alias gd='forgit::diff'
 alias glo='forgit::log'
 alias gcb='forgit::checkout::branch'
+
+# Info on fzf: https://github.com/junegunn/fzf
+SOURCE_FILES+=("$HOME/.fzf.zsh")
 
 # Psychology Today
 SOURCE_FILES+=("$HOME/.psychology-today.zsh")
