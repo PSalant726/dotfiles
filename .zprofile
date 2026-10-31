@@ -22,7 +22,7 @@ if [[ -d "$HOMEBREW_PREFIX/opt/mysql-client/bin" ]]; then
 fi
 
 export EDITOR='zed --wait'
-export CLAUDE_CONFIG_DIR=$HOME/.claude-personal
+export CLAUDE_CONFIG_DIR=$HOME/.config/claude-code
 
 export npm_config_cache="$HOME/.cache/npm"
 
