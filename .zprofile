@@ -1,11 +1,13 @@
 # Setup homebrew env
 if [[ -d "/opt/homebrew" ]]; then
+  export HOMEBREW_NO_ANALYTICS=1
+  export HOMEBREW_NO_ENV_HINTS=1
+  export HOMEBREW_XDG_CONFIG_HOME="$HOME/.config"
+
   _brew_env="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/brew-shellenv.zsh"
   [[ "$_brew_env" -nt /opt/homebrew/Library/Homebrew/cmd/shellenv.sh ]] || { mkdir -p "${_brew_env:h}"; /opt/homebrew/bin/brew shellenv > "$_brew_env"; }
   source "$_brew_env"
   unset _brew_env
-  export HOMEBREW_NO_ANALYTICS=1
-  export HOMEBREW_NO_ENV_HINTS=1
 fi
 
 # Make Go binaries globally available
@@ -21,6 +23,8 @@ fi
 
 export EDITOR='zed --wait'
 export CLAUDE_CONFIG_DIR=$HOME/.claude-personal
+
+export npm_config_cache="$HOME/.cache/npm"
 
 # Info on fzf: https://github.com/junegunn/fzf
 export FZF_DEFAULT_OPTS="--layout=reverse --height=10%"

@@ -24,6 +24,7 @@ if command -v starship >/dev/null 2>&1; then
     else
       PROMPT='%B%F{green}❯%f%b '
     fi
+
     RPROMPT=''
     zle reset-prompt
     zle .accept-line
