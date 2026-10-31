@@ -29,17 +29,11 @@ brew install font-jetbrains-mono-nerd-font
 
 ### Ghostty
 
-1. Get it from [the official site](https://ghostty.org), or install via Homebrew with:
+Get it from [the official site](https://ghostty.org), or install via Homebrew with:
 
-   ```sh
-   brew install --cask ghostty
-   ```
-
-1. After cloning the bare `cfg` repo (details below), add the following line to the default Ghostty config file:
-
-   ```ghostty
-   config-file = ~/.config/ghostty/.ghostty
-   ```
+```sh
+brew install --cask ghostty
+```
 
 ### Additional Tools
 
