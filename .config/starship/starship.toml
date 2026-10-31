@@ -154,6 +154,7 @@ claude-code = "$claude_model$git_branch$claude_context"
 
 [status]
 disabled = false
+symbol   = ""
 
 [terraform]
 format = 'with [$symbol[$version \($workspace\)](bold $style)]($style) '

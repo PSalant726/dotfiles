@@ -11,10 +11,19 @@ if command -v starship >/dev/null 2>&1; then
   _ORIG_PROMPT=$PROMPT
   _ORIG_RPROMPT=$RPROMPT
 
+  # Exit status of the last command, for the transient prompt
+  _transient_status=0
+  function _transient_save_status() { _transient_status=$? }
+  precmd_functions=(_transient_save_status $precmd_functions)
+
   # Transient prompt
   function accept-line-with-transient() {
     # Set transient prompt for the current line
-    PROMPT="$(starship module character)"
+    if (( _transient_status )); then
+      PROMPT='%B%F{red}❯%f%b '
+    else
+      PROMPT='%B%F{green}❯%f%b '
+    fi
     RPROMPT=''
     zle reset-prompt
     zle .accept-line
