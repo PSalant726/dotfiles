@@ -45,6 +45,7 @@ Install the following with Homebrew:
 - [`fnm`](https://github.com/Schniz/fnm)
 - [forgit](https://github.com/wfxr/forgit)
 - [`fzf`](https://github.com/junegunn/fzf)
+- [`fzf-tab`](https://github.com/Aloxaf/fzf-tab)
 - [git](https://git-scm.com/)
 - [`git-delta`](https://github.com/dandavison/delta)
 - [Go](https://golang.org/)
@@ -56,7 +57,7 @@ Install the following with Homebrew:
 - [`zsh-fast-syntax-highlighting`](https://github.com/zdharma-continuum/fast-syntax-highlighting)
 
 ```sh
-brew install bat direnv eza fnm forgit fzf git git-delta go jq starship tree zsh zsh-autosuggestions zsh-fast-syntax-highlighting
+brew install bat direnv eza fnm forgit fzf fzf-tab git git-delta go jq starship tree zsh zsh-autosuggestions zsh-fast-syntax-highlighting
 
 # Use the homebrew zsh installation (ensure $HOMEBREW_PREFIX is set first!)
 sudo sh -c "echo $HOMEBREW_PREFIX/bin/zsh >> /etc/shells"
