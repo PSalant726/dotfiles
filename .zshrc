@@ -54,7 +54,7 @@ autoload -Uz compinit && compinit -d "$ZSH_CACHE_DIR/zcompdump-$ZSH_VERSION"
 
 zstyle ':completion:*' menu no
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*' 'l:|=* r:|=*'
-zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' use-cache yes
 zstyle ':completion:*' cache-path "$ZSH_CACHE_DIR"

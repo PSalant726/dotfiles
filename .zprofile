@@ -23,8 +23,10 @@ fi
 
 export EDITOR='zed --wait'
 export CLAUDE_CONFIG_DIR=$HOME/.config/claude-code
-
 export npm_config_cache="$HOME/.cache/npm"
+
+export LS_COLORS='di=1;31:ln=36:pi=35:so=33:bd=1;33:cd=1;33:ex=1;32'
+export EZA_COLORS='reset'
 
 # Info on bat: https://github.com/sharkdp/bat
 export BAT_THEME="OneHalfDark"
