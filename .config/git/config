@@ -1,19 +1,13 @@
 [branch]
-	autoSetupMerge = true
 	sort = -committerdate
 
 [checkout]
 	defaultRemote = origin
 
-[color]
-	branch = auto
-	diff = auto
-	status = auto
-
 [color "branch"]
 	current = yellow reverse
 	local = yellow
-	remote = green
+	remote = cyan
 
 [color "diff"]
 	frag = magenta bold
@@ -37,15 +31,11 @@
 	algorithm = histogram
 	colorMoved = plain
 	mnemonicPrefix = true
-	renames = true
 
 [fetch]
 	all = true
 	prune = true
 	pruneTags = true
-
-[gpg]
-	program = gpg
 
 [help]
 	autocorrect = prompt
@@ -63,22 +53,11 @@
 [mergetool "zed"]
 	cmd = zed --wait "$MERGED"
 
-; [mergetool "code"]
-; cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
-
-[pager]
-	# Print a diff without the pager: git --no-pager diff
-	diff = delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}
-	log = delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}
-	reflog = delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}
-	show = delta --side-by-side -w ${FZF_PREVIEW_COLUMNS:-$COLUMNS}
-
 [pull]
 	rebase = false
 
 [push]
 	autoSetupRemote = true
-	default = simple
 
 [rebase]
 	autoSquash = true

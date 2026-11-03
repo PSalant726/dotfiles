@@ -105,8 +105,8 @@ alias gmailctl='gmailctl --config "$HOME/.config/gmailctl"'
 # git
 alias gb='git branch'
 alias gbs='git bisect'
-alias gc='git commit --verbose'
-alias gca='git commit --verbose --all'
+alias gc='git commit'
+alias gca='git commit --all'
 alias gco='git checkout'
 alias gl='git pull'
 alias gm='git merge'
@@ -125,8 +125,8 @@ fi
 # dotfiles manipulation
 alias cfg='$HOMEBREW_PREFIX/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cfga="cfg add"
-alias cfgcm="cfg commit -v"
-alias cfgca="cfg add -u && cfg commit -v"
+alias cfgcm="cfg commit"
+alias cfgca="cfg commit --all"
 alias cfgpl="cfg pull"
 alias cfgps="cfg push"
 alias cfgs="cfg status"
