@@ -60,7 +60,11 @@ zstyle ':completion:*' use-cache yes
 zstyle ':completion:*' cache-path "$ZSH_CACHE_DIR"
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 zstyle ':completion:*:descriptions' format '[%d]'
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:*' fzf-preview 'if [[ -d $realpath ]]; then eza -1 --color=always -- $realpath; elif [[ -f $realpath ]]; then bat --color=always --style=numbers --line-range=:500 -- $realpath; fi'
+zstyle ':fzf-tab:*' fzf-flags --border --height=95%
+zstyle ':fzf-tab:*' fzf-bindings '?:toggle-preview' 'alt-w:toggle-preview-wrap' 'ctrl-r:toggle-all' 'ctrl-s:toggle-sort'
+zstyle ':fzf-tab:*' fzf-bindings-default 'change:top' 'btab:toggle' 'bspace:backward-delete-char/eof'
+zstyle ':fzf-tab:*' continuous-trigger tab
 
 # Key bindings
 bindkey -e
@@ -76,7 +80,6 @@ bindkey '^[[B' down-line-or-beginning-search
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 bindkey '^[[3~' delete-char
-bindkey '^[[Z' reverse-menu-complete
 bindkey '^X^E' edit-command-line
 
 autoload -Uz bracketed-paste-magic url-quote-magic
@@ -133,9 +136,6 @@ alias ga='git-forgit add'
 alias gd='git-forgit diff'
 alias glo='git-forgit log'
 alias gcb='git-forgit checkout_branch'
-
-# Info on fzf: https://github.com/junegunn/fzf
-source "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh"
 
 # Machine-local config, not tracked in dotfiles
 for file in "$HOME"/.config/zsh/local/*.zsh(N-.); do source "$file"; done

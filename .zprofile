@@ -33,7 +33,7 @@ export BAT_THEME="OneHalfDark"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Info on forgit: https://github.com/wfxr/forgit
-export FORGIT_FZF_DEFAULT_OPTS="--border --height=90% --layout=reverse --preview='bat --color=always {}'"
+export FORGIT_FZF_DEFAULT_OPTS="--border --height=95% --layout=reverse --preview='bat --color=always {}'"
 
 # Info on starship: https://starship.rs
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
