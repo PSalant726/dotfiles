@@ -99,10 +99,13 @@ style             = "bold red"
 truncation_length = 0
 
 [direnv]
-allowed_msg  = ""
-disabled     = false
-format       = "[$symbol[$loaded](bold green)([$allowed](bold red))]($style) "
-unloaded_msg = ""
+allowed_msg     = ""
+denied_msg      = "⊘"
+disabled        = false
+format          = "[$symbol[$loaded](bold green)([$allowed](bold red))]($style) "
+loaded_msg      = "✓"
+not_allowed_msg = "✗"
+unloaded_msg    = ""
 
 [docker_context]
 format = "as [$symbol[$context](bold $style)]($style) "
