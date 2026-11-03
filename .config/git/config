@@ -21,6 +21,7 @@
 	untracked = cyan
 
 [commit]
+	branch = true
 	gpgsign = true
 	verbose = true
 
