@@ -25,7 +25,7 @@ $character\
 scan_timeout    = 100
 
 [aws]
-format = 'as [$symbol [$profile \($region\) \[$duration\]](bold $style)]($style)'
+format = 'as [$symbol [$profile \($region\)](bold $style)]($style)'
 style  = "#FF9900"
 symbol = ""
 
