@@ -314,29 +314,3 @@ user_pref("dom.disable_open_during_load", true);
 
 // limit events that can cause a popup
 user_pref("dom.popup_allowed_events", "click dblclick mousedown pointerdown");
-
-// RFP (RESIST FINGERPRINTING)
-
-// enable privacy.resistFingerprinting
-// user_pref("privacy.resistFingerprinting", true);
-
-// set the window size
-// user_pref("privacy.window.maxInnerWidth", 1600);
-// user_pref("privacy.window.maxInnerHeight", 900);
-
-// enable RFP letterboxing
-// user_pref("privacy.resistFingerprinting.letterboxing", true);
-// user_pref("privacy.resistFingerprinting.letterboxing.dimensions", "");
-
-// experimental RFP
-// user_pref("privacy.resistFingerprinting.exemptedDomains", "*.example.invalid");
-// user_pref("privacy.resistFingerprinting.testGranularityMask", 0);
-
-// set RFP's font visibility level
-// user_pref("layout.css.font-visibility.resistFingerprinting", 1);
-
-// disable using system colors
-// user_pref("browser.display.use_system_colors", false);
-
-// enforce non-native widget theme
-// user_pref("widget.non-native-theme.enabled", true);
