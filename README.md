@@ -67,16 +67,16 @@ chsh -s $HOMEBREW_PREFIX/bin/zsh
 ### Firefox Developer Edition
 
 1. Download Firefox Developer Edition from [the official source](https://www.mozilla.org/en-US/firefox/developer/).
-1. Log in with Firefox account
-   1. This should sync bookmarks, extensions, etc.
-1. Open `about:support`
-   1. Find the "Profile Folder" section
-   1. Navigate to the profile directory using the terminal
-   1. Close Firefox
-   1. Copy/Paste the `.config/firefox/user.js` file from this repo into the profile directory
-   1. Create a new directory in the profile directory, called `chrome/`
-   1. Copy/Paste the `.config/firefox/userChrome.css` file from this repo into the `chrome/` directory
-   1. Open Firefox
+1. Log in with Firefox account. This should sync bookmarks, extensions, etc.
+1. Open `about:support` and copy the path from the "Profile Folder" section.
+1. Grant the terminal app Full Disk Access (System Settings → Privacy & Security → Full Disk Access), so it can access the profile folder.
+1. Close Firefox, then symlink `user.js` and `userChrome.css` from this repo into the profile folder:
+
+```sh
+P="<profile folder path>"; mkdir -p "$P/chrome" &&\
+    ln -sf "$HOME/.config/firefox/user.js" "$P/user.js" &&\
+    ln -sf "$HOME/.config/firefox/userChrome.css" "$P/chrome/userChrome.css"
+```
 
 ### Zed Editor
 
