@@ -1,5 +1,6 @@
-#sidebar-box[sidebarcommand^="containertabs"] #sidebar-header {
-    display: none;
+/* hide the sidebar header above extension panels (Sidebery's vertical tabs) */
+#sidebar-box:has(#sidebar[src="chrome://browser/content/webext-panels.xhtml"]) > #sidebar-panel-header {
+    display: none !important;
 }
 
 #navigator-toolbox {
@@ -30,7 +31,6 @@
     background-color: transparent !important;
     box-shadow: none !important;
     margin: 5px 0 !important;
-    -moz-window-dragging: drag; /* allow dragging from the padding around the nav bar */
     -moz-box-flex: 1000; /* expand to fill space not taken by #TabsToolbar */
 }
 
