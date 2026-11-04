@@ -1,19 +1,6 @@
-/* hide the sidebar header above extension panels (Sidebery's vertical tabs) */
-#sidebar-box:has(#sidebar[src="chrome://browser/content/webext-panels.xhtml"]) > #sidebar-panel-header {
-    display: none !important;
-}
-
 #navigator-toolbox {
     display: -webkit-box !important; /* put titlebar and url bar next to each other */
     -moz-window-dragging: drag; /* more places to allow dragging */
-}
-
-#urlbar-container {
-    -moz-window-dragging: drag; /* more drag handles */
-}
-
-#urlbar {
-    -moz-window-dragging: no-drag; /* but don't interfere with selecting text in the URL bar itself */
 }
 
 #TabsToolbar {
@@ -26,6 +13,10 @@
     visibility: collapse;
 }
 
+.titlebar-spacer[type="pre-tabs"] {
+    display: none !important;
+}
+
 #nav-bar {
     /* flat style, to blend with native window */
     background-color: transparent !important;
@@ -34,6 +25,15 @@
     -moz-box-flex: 1000; /* expand to fill space not taken by #TabsToolbar */
 }
 
-.titlebar-spacer[type="pre-tabs"] {
+#urlbar-container {
+    -moz-window-dragging: drag; /* more drag handles */
+}
+
+#urlbar {
+    -moz-window-dragging: no-drag; /* don't interfere with selecting text in the URL bar itself */
+}
+
+/* hide the sidebar header above extension panels (Sidebery's vertical tabs) */
+#sidebar-box:has(#sidebar[src="chrome://browser/content/webext-panels.xhtml"]) > #sidebar-panel-header {
     display: none !important;
 }
