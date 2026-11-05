@@ -117,10 +117,7 @@ alias gst='git status'
 # go
 alias gog='go get'
 alias gomt='go mod tidy'
-
-if [[ -e "$GOPATH/bin/gotest" ]]; then
-  alias got='gotest'
-fi
+alias got='gotestsum -- -cover'
 
 # dotfiles manipulation
 alias cfg='$HOMEBREW_PREFIX/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

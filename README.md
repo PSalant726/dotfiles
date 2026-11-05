@@ -49,6 +49,7 @@ Install the following with Homebrew:
 - [git](https://git-scm.com/)
 - [`git-delta`](https://github.com/dandavison/delta)
 - [Go](https://golang.org/)
+- [`gotestsum`](https://github.com/gotestyourself/gotestsum)
 - [`jq`](https://stedolan.github.io/jq/)
 - [starship](https://starship.rs/)
 - [`tree`](https://gitlab.com/OldManProgrammer/unix-tree)
@@ -57,7 +58,7 @@ Install the following with Homebrew:
 - [`zsh-fast-syntax-highlighting`](https://github.com/zdharma-continuum/fast-syntax-highlighting)
 
 ```sh
-brew install bat direnv eza fnm forgit fzf fzf-tab git git-delta go jq starship tree zsh zsh-autosuggestions zsh-fast-syntax-highlighting
+brew install bat direnv eza fnm forgit fzf fzf-tab git git-delta go gotestsum jq starship tree zsh zsh-autosuggestions zsh-fast-syntax-highlighting
 
 # Use the homebrew zsh installation (ensure $HOMEBREW_PREFIX is set first!)
 sudo sh -c "echo $HOMEBREW_PREFIX/bin/zsh >> /etc/shells"
@@ -81,14 +82,6 @@ P="<profile folder path>"; mkdir -p "$P/chrome" &&\
 ### Zed Editor
 
 Download it from [the official source](https://zed.dev/download).
-
-### Optional
-
-Install the [`gotest` binary](https://github.com/rakyll/gotest) (to colorize `go test` output) by running the following **outside of any Go modules**:
-
-```sh
-go install github.com/rakyll/gotest@latest
-```
 
 ## Source `.zshrc`
 
