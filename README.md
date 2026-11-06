@@ -2,6 +2,98 @@
 
 My environment configuration.
 
+## Management with a Bare Git Repository
+
+### Prerequisite
+
+Prior to installation, make sure to include the `cfg` alias in the local `.zshrc`:
+
+```sh
+alias cfg="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+```
+
+Then, in the command line, run:
+
+```sh
+source ~/.zshrc
+```
+
+### Installation
+
+1. Ensure that the source repo `.gitignore`'s the folder where `.cfg` will be cloned:
+
+   ```sh
+   echo ".cfg" >> .gitignore
+   ```
+
+2. Clone this repo into a "bare" repo in a hidden folder in the `$HOME` directory:
+
+   ```sh
+   git clone --bare git@github.com:PSalant726/dotfiles.git $HOME/.cfg
+   ```
+
+> [!TIP]
+> To clone via HTTPS:
+>
+> ```sh
+> git clone --bare https://github.com/PSalant726/dotfiles.git $HOME/.cfg
+> ```
+
+3. Define the `alias` in the current shell scope (only required if not included in the local `.zshrc`):
+
+   ```sh
+   alias cfg="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+   ```
+
+4. Checkout the content from the bare repository in the `$HOME` directory:
+
+   ```sh
+   cfg checkout
+   ```
+
+> [!WARNING]
+> The above command might fail with a message like:
+>
+> ```txt
+> error: The following untracked working tree files would be overwritten by checkout:
+>     .zshrc
+>     .gitconfig
+> Please move or remove them before you can switch branches.
+> Aborting
+> ```
+>
+> This is because the `$HOME` directory might already contain some stock configuration files that would be overwritten by this opteration. To resolve:
+>
+> 1. Back up the files (if necessary), or remove them
+> 2. Re-run the `checkout`:
+>
+>    ```sh
+>    cfg checkout
+>    ```
+
+5. Set the `showUntrackedFiles` flag to `no` for the local repository:
+
+   ```sh
+   cfg config --local status.showUntrackedFiles no
+   ```
+
+   This hides files that are not explicitly tracked. This prevents `cfg` commands (see below) from showing files that are not of concern as `untracked`.
+
+### Usage
+
+Use `cfg` commands and aliases in place of `git` commands to manage and modify `dotfiles`:
+
+```sh
+cfgs                                         # cfg status
+...
+cfga .zshrc                                  # cfg add
+cfgcm -m "Add an awesome new alias"          # cfg commit
+...
+cfga .config/starship/starship.toml
+cfgcm -m "Make an awesome new bash prompt"
+cfgps                                        # cfg push
+```
+
 ## Required Software & Settings
 
 ### Homebrew
@@ -58,102 +150,6 @@ P="<profile folder path>"; mkdir -p "$P/chrome" &&\
 
 Download it from [the official source](https://zed.dev/download).
 
-## Source `.zshrc`
+## Restart the Terminal
 
-After completing the below steps to configure the `cfg` repo, restart the terminal or run:
-
-```sh
-source ~/.zshrc
-```
-
-## `dotfiles` Management with a Bare Git Repository
-
-### Prerequisite
-
-Prior to installation, make sure to include the `cfg` alias in the local `.bash_profile` or `.zshrc`:
-
-```sh
-alias cfg="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-```
-
-Then, in the command line, run:
-
-```sh
-source ~/.zshrc
-# or
-source ~/.bash_profile
-```
-
-### Installation
-
-1. Ensure that the source repo `.gitignore`'s the folder where `.cfg` will be cloned:
-
-   ```sh
-   echo ".cfg" >> .gitignore
-   ```
-
-2. Clone this repo into a "bare" repo in a hidden folder in the `$HOME` directory:
-
-   ```sh
-   git clone --bare git@github.com:PSalant726/dotfiles.git $HOME/.cfg
-   ```
-
-> [!TIP]
-> To clone via HTTPS:
->
-> ```sh
-> git clone --bare https://github.com/PSalant726/dotfiles.git $HOME/.cfg
-> ```
-
-3. Define the `alias` in the current shell scope (only required if not included in the local `.zshrc` or `.bash_profile`):
-
-   ```sh
-   alias cfg="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-   ```
-
-4. Checkout the content from the bare repository in the `$HOME` directory:
-
-   ```sh
-   cfg checkout
-   ```
-
-> [!WARNING]
-> The above command might fail with a message like:
->
-> ```sh
-> error: The following untracked working tree files would be overwritten by checkout:
->     .zshrc # or .bash_profile
->     .gitconfig
-> Please move or remove them before you can switch branches.
-> Aborting
-> ```
->
-> This is because the `$HOME` directory might already contain some stock configuration files that would be overwritten by this opteration. To resolve:
->
-> 1. Back up the files (if necessary), or remove them
-> 2. Re-run the `checkout`:
->
->    ```sh
->    cfg checkout
->    ```
-
-5. Set the flag `showUntrackedFiles` to `no` for the local repository:
-
-   This hides files that are not explicitly tracked. This is so that when running `cfg status` and other commands, files that are not of concern will not show up as `untracked`.
-
-   ```sh
-   cfg config --local status.showUntrackedFiles no
-   ```
-
-### That's it! Type `cfg` commands to add and update `dotfiles`
-
-```sh
-cfgs                                         # cfg status
-...
-cfga .zshrc                                  # cfg add
-cfgcm -m "Add an awesome new alias"          # cfg commit
-...
-cfga .p10k.zsh
-cfgcm -m "Make an awesome new bash prompt"
-cfgps                                        # cfg push
-```
+After completing the steps above, restart the terminal so the new login shell loads `.zprofile` and `.zshrc`.
