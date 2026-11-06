@@ -12,19 +12,24 @@ Install with:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### Fonts
+#### Homebrew Packages
 
-Install the `JetBrains Mono` nerd font:
+Install everything in [the `Brewfile`](.config/homebrew/Brewfile):
 
 ```sh
-brew install font-jetbrains-mono-nerd-font
+brew bundle --file=~/.config/homebrew/Brewfile
+
+# Use the homebrew zsh installation (ensure $HOMEBREW_PREFIX is set first!)
+sudo sh -c "echo $HOMEBREW_PREFIX/bin/zsh >> /etc/shells"
+chsh -s $HOMEBREW_PREFIX/bin/zsh
 ```
 
 > [!TIP]
-> Optionally, install the `Hack` nerd font:
+> Run `brewup` to upgrade and clean up Homebrew, then check for installed packages missing from the `Brewfile`. Add new packages with:
 >
 > ```sh
-> brew install font-hack-nerd-font
+> brew bundle add --file=~/.config/homebrew/Brewfile <formula>
+> brew bundle add --cask --file=~/.config/homebrew/Brewfile <cask>
 > ```
 
 ### Ghostty
@@ -33,36 +38,6 @@ Get it from [the official site](https://ghostty.org), or install via Homebrew wi
 
 ```sh
 brew install --cask ghostty
-```
-
-### Additional Tools
-
-Install the following with Homebrew:
-
-- [`bat`](https://github.com/sharkdp/bat)
-- [`direnv`](https://direnv.net/)
-- [`eza`](https://github.com/eza-community/eza)
-- [`fnm`](https://github.com/Schniz/fnm)
-- [forgit](https://github.com/wfxr/forgit)
-- [`fzf`](https://github.com/junegunn/fzf)
-- [`fzf-tab`](https://github.com/Aloxaf/fzf-tab)
-- [git](https://git-scm.com/)
-- [`git-delta`](https://github.com/dandavison/delta)
-- [Go](https://golang.org/)
-- [`gotestsum`](https://github.com/gotestyourself/gotestsum)
-- [`jq`](https://stedolan.github.io/jq/)
-- [starship](https://starship.rs/)
-- [`tree`](https://gitlab.com/OldManProgrammer/unix-tree)
-- [`zsh`](https://www.zsh.org/)
-- [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
-- [`zsh-fast-syntax-highlighting`](https://github.com/zdharma-continuum/fast-syntax-highlighting)
-
-```sh
-brew install bat direnv eza fnm forgit fzf fzf-tab git git-delta go gotestsum jq starship tree zsh zsh-autosuggestions zsh-fast-syntax-highlighting
-
-# Use the homebrew zsh installation (ensure $HOMEBREW_PREFIX is set first!)
-sudo sh -c "echo $HOMEBREW_PREFIX/bin/zsh >> /etc/shells"
-chsh -s $HOMEBREW_PREFIX/bin/zsh
 ```
 
 ### Firefox Developer Edition
@@ -98,7 +73,7 @@ source ~/.zshrc
 Prior to installation, make sure to include the `cfg` alias in the local `.bash_profile` or `.zshrc`:
 
 ```sh
-alias cfg="$HOMEBREW_PREFIX/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+alias cfg="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 ```
 
 Then, in the command line, run:
@@ -133,7 +108,7 @@ source ~/.bash_profile
 3. Define the `alias` in the current shell scope (only required if not included in the local `.zshrc` or `.bash_profile`):
 
    ```sh
-   alias cfg="$HOMEBREW_PREFIX/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+   alias cfg="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
    ```
 
 4. Checkout the content from the bare repository in the `$HOME` directory:

@@ -1,0 +1,50 @@
+tap "xykong/tap"
+
+# Shell
+brew "zsh"
+brew "zsh-autosuggestions"
+brew "zsh-fast-syntax-highlighting"
+brew "starship"
+brew "fzf"
+brew "fzf-tab"
+brew "direnv"
+brew "fnm"
+
+# Command-line tools
+brew "bat"
+brew "eza"
+brew "jq"
+brew "yq"
+brew "tree"
+brew "shellcheck"
+brew "uv"
+brew "awscli"
+
+# Git
+brew "git"
+brew "git-delta"
+brew "forgit"
+
+# Go
+brew "go"
+brew "golangci-lint"
+brew "gopls"
+brew "gotestsum"
+
+# Media
+brew "ffmpeg"
+brew "imagemagick"
+
+# Accounts
+brew "bitwarden-cli"
+brew "gmailctl"
+brew "mercury-cli"
+
+# Apps
+cask "claude-code@latest"
+cask "xykong/tap/flux-markdown", trusted: true
+cask "libreoffice"
+
+# Fonts
+cask "font-hack-nerd-font"
+cask "font-jetbrains-mono-nerd-font"

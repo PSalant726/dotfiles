@@ -120,7 +120,7 @@ alias gomt='go mod tidy'
 alias got='gotestsum -- -cover'
 
 # dotfiles manipulation
-alias cfg='$HOMEBREW_PREFIX/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cfg='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cfga="cfg add"
 alias cfgcm="cfg commit"
 alias cfgca="cfg commit --all"
@@ -133,6 +133,15 @@ alias ga='git-forgit add'
 alias gd='git-forgit diff'
 alias glo='git-forgit log'
 alias gcb='git-forgit checkout_branch'
+
+# Homebrew maintenance; pass extra Brewfiles (e.g. a work Brewfile) to include them in the untracked-package check
+function brewup() {
+  brew upgrade --no-ask --greedy &&
+    brew autoremove &&
+    brew cleanup --prune=all &&
+    brew doctor
+  brew bundle cleanup --file=<(cat "$HOME/.config/homebrew/Brewfile" "$@")
+}
 
 # Machine-local config, not tracked in dotfiles
 for file in "$HOME"/.config/zsh/local/*.zsh(N-.); do source "$file"; done
