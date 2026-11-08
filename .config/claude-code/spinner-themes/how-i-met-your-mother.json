@@ -1,0 +1,53 @@
+{
+  "spinnerTipsEnabled": true,
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Accepting the challenge",
+      "Checking the hot-crazy scale",
+      "Consulting the Bro Code",
+      "Consulting the Playbook",
+      "Eating a 'sandwich'",
+      "Finding the yellow umbrella",
+      "Going to the mall",
+      "Making it LEGEN-wait for it... DARY! ",
+      "Pausing the fight with Lily",
+      "Saving the booth at MacLaren's",
+      "Slap betting",
+      "Spotting doppelgangers",
+      "Stealing the blue french horn",
+      "Suiting up",
+      "Telling the kids an incredible story",
+      "Trying The Naked Man",
+      "Waiting for it",
+      "Waking up next to a pineapple"
+    ]
+  },
+  "spinnerTipsOverride": {
+    "excludeDefault": true,
+    "tips": [
+      "A bro never leaves another bro hanging on a high five.",
+      "Always know where your yellow umbrella is.",
+      "Always save the good booth at MacLaren's.",
+      "Check the Olive Theory before moving in together.",
+      "Don't call your ex after last call.",
+      "Five Red Dragon shots is four too many. Ask the pineapple.",
+      "Grand romantic gestures are great until someone gets a $1,500 french horn bill.",
+      "If someone says 'Kids, I'm going to tell you an incredible story', clear your schedule.",
+      "If you see your doppelganger, take a picture.",
+      "Jim Nantz is a keen observer of the human condition.",
+      "Never date a girl with a crazy-eyes rating above the hot line.",
+      "Never sign a lease with a roommate who owns a sword.",
+      "Never steal a blue French horn on a first date.",
+      "Never trust a Canadian with a mall-themed music video.",
+      "Never wager what you can't afford to lose in a slap bet.",
+      "Nothing good happens after 2 AM. Go home and go to sleep.",
+      "Pause for important moments. Lily can only pause for so long.",
+      "Suit up!",
+      "The Naked Man works two-out-of-three times. Guaranteed.",
+      "Wait for it...",
+      "When in doubt, have a 'sandwich'. Purely for the munchies.",
+      "When you get sad, stop being sad and be awesome instead."
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "spinnerTipsEnabled": true,
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Assisting the regional manager",
+      "Burning my foot on a George Foreman grill",
+      "Celebrating Pretzel Day",
+      "Declaring bankruptcy",
+      "Faking a fire drill",
+      "Faxing Dwight from future Dwight",
+      "Handing out Dundies",
+      "Hiding a stapler in Jell-O",
+      "Increasing threat level to midnight",
+      "Making Kevin's famous chili",
+      "Parkouring",
+      "Running a fun run",
+      "Schruting it",
+      "Selling paper",
+      "Spending Schrute Bucks",
+      "Starting a sentence with no idea where it's going",
+      "That's what she said",
+      "Watching Threat Level Midnight",
+      "Writing Somehow I Manage"
+    ]
+  },
+  "spinnerTipsOverride": {
+    "excludeDefault": true,
+    "tips": [
+      "When making Kevin's famous chili, always undercook the onions. Let them get to know each other in the pot.",
+      "Never microwave fish in the break room.",
+      "Check your desk for Jell-O before you reach for your stapler.",
+      "Identity theft is not a joke. Millions of families suffer every year.",
+      "Declaring bankruptcy out loud does not count. There's paperwork.",
+      "Never trust the GPS when it says to turn into a lake.",
+      "Always keep an extra pair of socks in your desk, in case of parkour.",
+      "If the fire alarm goes off, let people leave in an orderly fashion.",
+      "Never keep a George Foreman grill next to your bed.",
+      "Don't bring a hidden camera to the Dundies.",
+      "Address all security concerns with the assistant to the regional manager.",
+      "Know the difference between a desk and a 'learning workstation'.",
+      "When in doubt, there's a 'that's what she said' for that.",
+      "Never hold a pretzel day without the full toppings bar.",
+      "Use the conference room for meetings, not for Office Olympics.",
+      "Keep your Schrute Bucks. They're worth 1/1000 of a Stanley Nickel.",
+      "Never schedule a fun run for a disease you can't spell.",
+      "Never promise to pay for anyone's college unless you've checked your savings first.",
+      "Wikipedia is the best thing ever. Anyone can write anything about anything, so you know you are getting the best possible information.",
+      "Would you rather be feared or loved? Easy. Both."
+    ]
+  }
+}

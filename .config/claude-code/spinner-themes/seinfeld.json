@@ -1,0 +1,56 @@
+{
+  "spinnerTipsEnabled": true,
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Airing Festivus grievances",
+      "Avoiding the close talker",
+      "Beboppin' and scattin'",
+      "Doing the opposite",
+      "Double-dipping",
+      "Explaining shrinkage",
+      "Finding a latex salesman",
+      "Giddying up",
+      "Mastering my domain",
+      "Not that there's anything wrong with that",
+      "Ordering from the Soup Nazi",
+      "Ordering the big salad",
+      "Performing feats of strength",
+      "Searching the parking garage",
+      "Serenity now!",
+      "Taking a reservation. Possibly holding it as well",
+      "Testing sponge-worthiness",
+      "These pretzels are making me thirsty",
+      "Wearing the puffy shirt",
+      "Working at Vandelay Industries",
+      "Yada yada yada"
+    ]
+  },
+  "spinnerTipsOverride": {
+    "excludeDefault": true,
+    "tips": [
+      "Always tip the delivery guy. Don't make him wait for the dumb bell.",
+      "At the Soup Nazi's, step to the extreme left, state your order, and don't make eye contact. Otherwise, NO SOUP FOR YOU!",
+      "Avoid the close talker. Back away slowly.",
+      "Be careful with your wallet: keep it thin, or your back will pay.",
+      "Don't double-dip a chip. That's like putting your whole mouth right in the dip!",
+      "Don't eat Junior Mints while watching a surgical procedure.",
+      "Don't wear the puffy shirt on national television.",
+      "Festivus requires the pole from the crawlspace. Tinsel is distracting.",
+      "If someone offers you their astronaut pen, think twice before accepting it.",
+      "If you order the big salad, make sure everyone knows who paid for it.",
+      "If you're going to yada yada, never yada yada the best part.",
+      "If you're sitting in someone else's car, don't eat a black-and-white cookie in it.",
+      "Know your limits on the Kenny Rogers Roasters chicken.",
+      "Never leave a car in a parking garage without remembering the level.",
+      "Never take the last parking space someone was already backing into.",
+      "Never trust the mailman.",
+      "Serenity now, insanity later.",
+      "Stock up on sponges, but save them. Not everyone is sponge-worthy.",
+      "Taking a reservation is easy. Holding the reservation is the important part.",
+      "The coffee table book about coffee tables should come with legs.",
+      "When in doubt, do the opposite of every instinct you have.",
+      "When you control the mail, you control...information!"
+    ]
+  }
+}

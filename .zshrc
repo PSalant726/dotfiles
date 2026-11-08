@@ -143,6 +143,13 @@ function brewup() {
   brew bundle cleanup --file=<(cat "$HOME/.config/homebrew/Brewfile" "$@")
 }
 
+# Start Claude Code with a random spinner theme (verbs + tips)
+function claude() {
+  local themes=("$HOME"/.config/claude-code/spinner-themes/*.json(N))
+  (( $#themes )) || { command claude "$@"; return }
+  command claude --settings "$themes[RANDOM % $#themes + 1]" "$@"
+}
+
 # Machine-local config, not tracked in dotfiles
 for file in "$HOME"/.config/zsh/local/*.zsh(N-.); do source "$file"; done
 unset file

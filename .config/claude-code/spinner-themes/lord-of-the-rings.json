@@ -1,0 +1,54 @@
+{
+  "spinnerTipsEnabled": true,
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Admiring the precious",
+      "Answering riddles in the dark",
+      "Boiling, mashing, and stewing po-tay-toes",
+      "Climbing Mount Doom",
+      "Consulting Gandalf",
+      "Consulting the Ents",
+      "Consulting the Palantir",
+      "Crossing the Bridge of Khazad-dûm",
+      "Eating second breakfast",
+      "Following the Ranger",
+      "Hiding from the Nazgûl",
+      "Lighting the beacons",
+      "Mustering the Rohirrim",
+      "Riding to Helm's Deep",
+      "Slaying the Balrog",
+      "Speaking 'friend' and entering",
+      "Taking the hobbits to Isengard",
+      "Tearing the Fellowship apart",
+      "Walking the One Ring to Mordor"
+    ]
+  },
+  "spinnerTipsOverride": {
+    "excludeDefault": true,
+    "tips": [
+      "A wizard is never late. Nor is he early. He arrives precisely when he means to.",
+      "Avoid the Old Forest, and if you can't, sing for Tom Bombadil.",
+      "Do not meddle in the affairs of wizards, for they are subtle and quick to anger.",
+      "Don't forget second breakfast! It's the second most important meal of the day.",
+      "Don't take the Paths of the Dead without an army of your own.",
+      "Don't throw stones in the lake! You might wake the Watcher in the Water.",
+      "Elevenses, luncheon, afternoon tea, dinner, and supper also matter. Plan accordingly.",
+      "Even the smallest person can change the course of the future.",
+      "Fly, you fool!",
+      "If you put on the Ring you may be invisible to most, but the Nazgûl will see you!",
+      "Keep it secret. Keep it safe.",
+      "Mithril is light as a feather and hard as dragon scales. Wear it under your coat.",
+      "Never laugh at live dragons.",
+      "Never toss a dwarf. Exceptions apply.",
+      "Never trust a talking spider. Or anyone who calls you 'precious'.",
+      "Not all those who wander are lost.",
+      "One does not simply walk into Mordor. Pack lembas.",
+      "Po-tay-toes: boil 'em, mash 'em, stick 'em in a stew.",
+      "Short cuts make long delays. Stay on the road.",
+      "Speak 'friend' and enter. Read riddles carefully.",
+      "When in doubt, follow your nose. Or a Ranger.",
+      "When the beacons are lit, Rohan will answer. Usually."
+    ]
+  }
+}

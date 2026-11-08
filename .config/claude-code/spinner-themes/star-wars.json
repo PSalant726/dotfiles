@@ -1,0 +1,54 @@
+{
+  "spinnerTipsEnabled": true,
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Attempting a Kessel Run in under twelve parsecs",
+      "Bullseyeing womp rats",
+      "Doing or doing not",
+      "Escaping the trash compactor",
+      "Feeling the Force",
+      "Letting the wookiee win",
+      "Making the jump to lightspeed",
+      "Negotiating with Jabba",
+      "Searching for the droids you're looking for",
+      "Searching my feelings",
+      "Shooting first",
+      "Steering into an asteroid field",
+      "Targeting the exhaust port",
+      "Trusting the Force",
+      "Unlearning what I have learned",
+      "Using the Force",
+      "Warming myself with a dead tauntaun",
+      "Watching the twin sunset",
+      "Wielding an elegant weapon for a more civilized age"
+    ]
+  },
+  "spinnerTipsOverride": {
+    "excludeDefault": true,
+    "tips": [
+      "A Jedi uses the Force for knowledge and defense, never for attack.",
+      "Always check the exhaust port before declaring your battle station complete.",
+      "Always let a wookiee win. They're sore losers.",
+      "Always pay your debts to Jabba on time.",
+      "Do or do not. There is no try.",
+      "Don't get cocky.",
+      "Don't stick your hand in the trash compactor. Or anywhere near the dianoga.",
+      "Don't underestimate the power of the Dark Side.",
+      "Fear leads to anger. Anger leads to hate. Hate leads to suffering.",
+      "If you're cold, a tauntaun will keep you warm. Briefly.",
+      "It's a trap!",
+      "Keep your blaster close. Hokey religions and ancient weapons are no match for a good blaster at your side.",
+      "Never bargain with Jabba without a backup plan.",
+      "Never call a wookiee 'fuzzball'.",
+      "Never fly into an asteroid field when you could fly around it.",
+      "Never tell Han Solo the odds.",
+      "Patience you must have.",
+      "Size matters not.",
+      "Stay on target.",
+      "The Force is with you.",
+      "They aren't the droids you're looking for. Move along.",
+      "Wars not make one great."
+    ]
+  }
+}

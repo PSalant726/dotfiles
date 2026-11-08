@@ -1,0 +1,53 @@
+{
+  "spinnerTipsEnabled": true,
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Accio! ",
+      "Alohomora! ",
+      "Avada Kedavra! ",
+      "Catching the Golden Snitch",
+      "Checking the Marauder's Map",
+      "Consulting the Sorting Hat",
+      "Crucio! ",
+      "Expecto Patronum! ",
+      "Expelliarmus! ",
+      "Hunting Horcruxes",
+      "Imperio! ",
+      "Lumos! ",
+      "Petrificus totalus! ",
+      "Reparo! ",
+      "Sectumsempra! ",
+      "Stupefy! ",
+      "Summoning a Patronus",
+      "Trying platform nine and three quarters",
+      "Wingardium leviosa! "
+    ]
+  },
+  "spinnerTipsOverride": {
+    "excludeDefault": true,
+    "tips": [
+      "Always bow before approaching a Hippogriff, and wait for it to bow back.",
+      "Always say 'Mischief managed' when you're done with the Marauders' Map.",
+      "Always wear earmuffs when repotting Mandrakes.",
+      "Ask the staircases nicely. They like to change.",
+      "Avoid Moaning Myrtle's bathroom unless you're brewing something illegal.",
+      "Constant vigilance!",
+      "Dobby is a free elf. Give socks generously.",
+      "Don't go into the Forbidden Forest. It's forbidden.",
+      "Don't say his name. Say 'You-Know-Who'.",
+      "Help will always be given at Hogwarts to those who ask for it.",
+      "It does not do to dwell on dreams and forget to live.",
+      "It's Levi-O-sa, not Levio-SA.",
+      "Keep your jewelry locked up, especially if there's a Niffler around.",
+      "Keep your wand in your hand, not in your back pocket. Better wizards than you have lost buttocks.",
+      "Never brew Polyjuice Potion with cat hair.",
+      "Never trust anything that can think for itself if you can't see where it keeps its brain.",
+      "Owls deliver at breakfast. Keep your bacon covered.",
+      "Tell the Fat Lady the password before she starts singing.",
+      "The Room of Requirement appears when you really need it. Walk past three times.",
+      "Walk straight at the wall between platforms nine and ten. Best do it at a bit of a run if you're nervous.",
+      "When Bertie Bott's Every Flavor Beans say every flavor, they *mean* every flavor."
+    ]
+  }
+}
