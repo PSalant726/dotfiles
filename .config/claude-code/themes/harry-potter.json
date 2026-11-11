@@ -1,0 +1,17 @@
+{
+  "name": "Harry Potter",
+  "base": "dark",
+  "overrides": {
+    "claude": "#d3a625",
+    "promptBorder": "#d9483b",
+    "planMode": "#6ea8e8",
+    "autoAccept": "#4cb878",
+    "success": "#4cb878",
+    "error": "#ef5350",
+    "warning": "#eeba30",
+    "suggestion": "#eeba30",
+    "permission": "#d3a625",
+    "remember": "#b39ddb",
+    "userMessageBackground": "#2a1517"
+  }
+}

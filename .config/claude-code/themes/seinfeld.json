@@ -1,0 +1,17 @@
+{
+  "name": "Seinfeld",
+  "base": "dark",
+  "overrides": {
+    "claude": "#f2c14e",
+    "promptBorder": "#e06666",
+    "planMode": "#6fa8dc",
+    "autoAccept": "#93c47d",
+    "success": "#93c47d",
+    "error": "#ef6b6b",
+    "warning": "#f6b26b",
+    "suggestion": "#f2c14e",
+    "permission": "#e06666",
+    "remember": "#c27ba0",
+    "userMessageBackground": "#1f1b26"
+  }
+}

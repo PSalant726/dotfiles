@@ -1,0 +1,17 @@
+{
+  "name": "How I Met Your Mother",
+  "base": "dark",
+  "overrides": {
+    "claude": "#f6c90e",
+    "promptBorder": "#c7894b",
+    "planMode": "#6b9cf2",
+    "autoAccept": "#7cc576",
+    "success": "#7cc576",
+    "error": "#ee6650",
+    "warning": "#f0a04b",
+    "suggestion": "#f6c90e",
+    "permission": "#6b9cf2",
+    "remember": "#c78bd6",
+    "userMessageBackground": "#241c14"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Lord of the Rings",
+  "base": "dark",
+  "overrides": {
+    "claude": "#d4af37",
+    "promptBorder": "#a6884f",
+    "planMode": "#8fc1b0",
+    "autoAccept": "#9cc265",
+    "success": "#9cc265",
+    "error": "#f06a3a",
+    "warning": "#e8a33d",
+    "suggestion": "#d9c48a",
+    "permission": "#d4af37",
+    "remember": "#a8c6d8",
+    "userMessageBackground": "#221d14"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "The Office",
+  "base": "dark",
+  "overrides": {
+    "claude": "#5b9fe3",
+    "promptBorder": "#5b9fe3",
+    "planMode": "#9fc5e8",
+    "autoAccept": "#8bc34a",
+    "success": "#8bc34a",
+    "error": "#ef6b6b",
+    "warning": "#f1c232",
+    "suggestion": "#f1c232",
+    "permission": "#6fa8dc",
+    "remember": "#d0739c",
+    "userMessageBackground": "#172030"
+  }
+}

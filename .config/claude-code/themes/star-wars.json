@@ -1,0 +1,17 @@
+{
+  "name": "Star Wars",
+  "base": "dark",
+  "overrides": {
+    "claude": "#ffe81f",
+    "promptBorder": "#8a9ba8",
+    "planMode": "#4bd5ee",
+    "autoAccept": "#3ddc84",
+    "success": "#3ddc84",
+    "error": "#ff4d4d",
+    "warning": "#ff9f1c",
+    "suggestion": "#ffe81f",
+    "permission": "#4bd5ee",
+    "remember": "#b388ff",
+    "userMessageBackground": "#141a26"
+  }
+}

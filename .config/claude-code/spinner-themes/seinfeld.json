@@ -1,4 +1,5 @@
 {
+  "theme": "custom:seinfeld",
   "spinnerTipsEnabled": true,
   "spinnerVerbs": {
     "mode": "replace",
