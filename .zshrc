@@ -62,7 +62,7 @@ zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-dir
 zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':fzf-tab:complete:*' fzf-preview 'if [[ -d $realpath ]]; then eza -1 --color=always -- $realpath; elif [[ -f $realpath ]]; then bat --color=always --style=numbers --line-range=:500 -- $realpath; fi'
 zstyle ':fzf-tab:*' fzf-flags --border --height=95%
-zstyle ':fzf-tab:*' fzf-bindings '?:toggle-preview' 'alt-w:toggle-preview-wrap' 'ctrl-r:toggle-all' 'ctrl-s:toggle-sort'
+zstyle -e ':fzf-tab:*' fzf-bindings 'reply=("?:toggle-preview" "alt-w:toggle-preview-wrap" "ctrl-r:toggle-all" "ctrl-s:toggle-sort" {focus,load}":transform~[[ \${(M)\${(f)\"\$(<$compcap_file)\"}:#\${(b)\${\${\"\$(<{f})\"%\$'\''\\0'\''*}#*\$'\''\\0'\''}}\$'\''\\2'\''*} == *[[:cntrl:]]realdir[[:cntrl:]]* ]] && echo show-preview || echo hide-preview~")'
 zstyle ':fzf-tab:*' fzf-bindings-default 'change:top' 'btab:toggle' 'bspace:backward-delete-char/eof'
 zstyle ':fzf-tab:*' continuous-trigger tab
 
