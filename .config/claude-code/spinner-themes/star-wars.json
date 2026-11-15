@@ -1,30 +1,5 @@
 {
-  "theme": "custom:star-wars",
   "spinnerTipsEnabled": true,
-  "spinnerVerbs": {
-    "mode": "replace",
-    "verbs": [
-      "Attempting a Kessel Run in under twelve parsecs",
-      "Bullseyeing womp rats",
-      "Doing or doing not",
-      "Escaping the trash compactor",
-      "Feeling the Force",
-      "Letting the wookiee win",
-      "Making the jump to lightspeed",
-      "Negotiating with Jabba",
-      "Searching for the droids you're looking for",
-      "Searching my feelings",
-      "Shooting first",
-      "Steering into an asteroid field",
-      "Targeting the exhaust port",
-      "Trusting the Force",
-      "Unlearning what I have learned",
-      "Using the Force",
-      "Warming myself with a dead tauntaun",
-      "Watching the twin sunset",
-      "Wielding an elegant weapon for a more civilized age"
-    ]
-  },
   "spinnerTipsOverride": {
     "excludeDefault": true,
     "tips": [
@@ -50,6 +25,30 @@
       "The Force is with you.",
       "They aren't the droids you're looking for. Move along.",
       "Wars not make one great."
+    ]
+  },
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Attempting a Kessel Run in under twelve parsecs",
+      "Bullseyeing womp rats",
+      "Doing or doing not",
+      "Escaping the trash compactor",
+      "Feeling the Force",
+      "Letting the wookiee win",
+      "Making the jump to lightspeed",
+      "Negotiating with Jabba",
+      "Searching for the droids you're looking for",
+      "Searching my feelings",
+      "Shooting first",
+      "Steering into an asteroid field",
+      "Targeting the exhaust port",
+      "Trusting the Force",
+      "Unlearning what I have learned",
+      "Using the Force",
+      "Warming myself with a dead tauntaun",
+      "Watching the twin sunset",
+      "Wielding an elegant weapon for a more civilized age"
     ]
   }
 }

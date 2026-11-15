@@ -1,32 +1,5 @@
 {
-  "theme": "custom:seinfeld",
   "spinnerTipsEnabled": true,
-  "spinnerVerbs": {
-    "mode": "replace",
-    "verbs": [
-      "Airing Festivus grievances",
-      "Avoiding the close talker",
-      "Beboppin' and scattin'",
-      "Doing the opposite",
-      "Double-dipping",
-      "Explaining shrinkage",
-      "Finding a latex salesman",
-      "Giddying up",
-      "Mastering my domain",
-      "Not that there's anything wrong with that",
-      "Ordering from the Soup Nazi",
-      "Ordering the big salad",
-      "Performing feats of strength",
-      "Searching the parking garage",
-      "Serenity now!",
-      "Taking a reservation. Possibly holding it as well",
-      "Testing sponge-worthiness",
-      "These pretzels are making me thirsty",
-      "Wearing the puffy shirt",
-      "Working at Vandelay Industries",
-      "Yada yada yada"
-    ]
-  },
   "spinnerTipsOverride": {
     "excludeDefault": true,
     "tips": [
@@ -52,6 +25,32 @@
       "The coffee table book about coffee tables should come with legs.",
       "When in doubt, do the opposite of every instinct you have.",
       "When you control the mail, you control...information!"
+    ]
+  },
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Airing Festivus grievances",
+      "Avoiding the close talker",
+      "Beboppin' and scattin'",
+      "Doing the opposite",
+      "Double-dipping",
+      "Explaining shrinkage",
+      "Finding a latex salesman",
+      "Giddying up",
+      "Mastering my domain",
+      "Not that there's anything wrong with that",
+      "Ordering from the Soup Nazi",
+      "Ordering the big salad",
+      "Performing feats of strength",
+      "Searching the parking garage",
+      "Serenity now!",
+      "Taking a reservation. Possibly holding it as well",
+      "Testing sponge-worthiness",
+      "These pretzels are making me thirsty",
+      "Wearing the puffy shirt",
+      "Working at Vandelay Industries",
+      "Yada yada yada"
     ]
   }
 }

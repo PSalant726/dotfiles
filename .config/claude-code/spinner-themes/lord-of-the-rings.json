@@ -1,30 +1,5 @@
 {
-  "theme": "custom:lord-of-the-rings",
   "spinnerTipsEnabled": true,
-  "spinnerVerbs": {
-    "mode": "replace",
-    "verbs": [
-      "Admiring the precious",
-      "Answering riddles in the dark",
-      "Boiling, mashing, and stewing po-tay-toes",
-      "Climbing Mount Doom",
-      "Consulting Gandalf",
-      "Consulting the Ents",
-      "Consulting the Palantir",
-      "Crossing the Bridge of Khazad-dûm",
-      "Eating second breakfast",
-      "Following the Ranger",
-      "Hiding from the Nazgûl",
-      "Lighting the beacons",
-      "Mustering the Rohirrim",
-      "Riding to Helm's Deep",
-      "Slaying the Balrog",
-      "Speaking 'friend' and entering",
-      "Taking the hobbits to Isengard",
-      "Tearing the Fellowship apart",
-      "Walking the One Ring to Mordor"
-    ]
-  },
   "spinnerTipsOverride": {
     "excludeDefault": true,
     "tips": [
@@ -50,6 +25,30 @@
       "Speak 'friend' and enter. Read riddles carefully.",
       "When in doubt, follow your nose. Or a Ranger.",
       "When the beacons are lit, Rohan will answer. Usually."
+    ]
+  },
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Admiring the precious",
+      "Answering riddles in the dark",
+      "Boiling, mashing, and stewing po-tay-toes",
+      "Climbing Mount Doom",
+      "Consulting Gandalf",
+      "Consulting the Ents",
+      "Consulting the Palantir",
+      "Crossing the Bridge of Khazad-dûm",
+      "Eating second breakfast",
+      "Following the Ranger",
+      "Hiding from the Nazgûl",
+      "Lighting the beacons",
+      "Mustering the Rohirrim",
+      "Riding to Helm's Deep",
+      "Slaying the Balrog",
+      "Speaking 'friend' and entering",
+      "Taking the hobbits to Isengard",
+      "Tearing the Fellowship apart",
+      "Walking the One Ring to Mordor"
     ]
   }
 }

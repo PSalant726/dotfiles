@@ -1,30 +1,5 @@
 {
-  "theme": "custom:the-office",
   "spinnerTipsEnabled": true,
-  "spinnerVerbs": {
-    "mode": "replace",
-    "verbs": [
-      "Assisting the regional manager",
-      "Burning my foot on a George Foreman grill",
-      "Celebrating Pretzel Day",
-      "Declaring bankruptcy",
-      "Faking a fire drill",
-      "Faxing Dwight from future Dwight",
-      "Handing out Dundies",
-      "Hiding a stapler in Jell-O",
-      "Increasing threat level to midnight",
-      "Making Kevin's famous chili",
-      "Parkouring",
-      "Running a fun run",
-      "Schruting it",
-      "Selling paper",
-      "Spending Schrute Bucks",
-      "Starting a sentence with no idea where it's going",
-      "That's what she said",
-      "Watching Threat Level Midnight",
-      "Writing Somehow I Manage"
-    ]
-  },
   "spinnerTipsOverride": {
     "excludeDefault": true,
     "tips": [
@@ -48,6 +23,30 @@
       "Never promise to pay for anyone's college unless you've checked your savings first.",
       "Wikipedia is the best thing ever. Anyone can write anything about anything, so you know you are getting the best possible information.",
       "Would you rather be feared or loved? Easy. Both."
+    ]
+  },
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Assisting the regional manager",
+      "Burning my foot on a George Foreman grill",
+      "Celebrating Pretzel Day",
+      "Declaring bankruptcy",
+      "Faking a fire drill",
+      "Faxing Dwight from future Dwight",
+      "Handing out Dundies",
+      "Hiding a stapler in Jell-O",
+      "Increasing threat level to midnight",
+      "Making Kevin's famous chili",
+      "Parkouring",
+      "Running a fun run",
+      "Schruting it",
+      "Selling paper",
+      "Spending Schrute Bucks",
+      "Starting a sentence with no idea where it's going",
+      "That's what she said",
+      "Watching Threat Level Midnight",
+      "Writing Somehow I Manage"
     ]
   }
 }

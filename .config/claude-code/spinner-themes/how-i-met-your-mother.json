@@ -1,29 +1,5 @@
 {
-  "theme": "custom:how-i-met-your-mother",
   "spinnerTipsEnabled": true,
-  "spinnerVerbs": {
-    "mode": "replace",
-    "verbs": [
-      "Accepting the challenge",
-      "Checking the hot-crazy scale",
-      "Consulting the Bro Code",
-      "Consulting the Playbook",
-      "Eating a 'sandwich'",
-      "Finding the yellow umbrella",
-      "Going to the mall",
-      "Making it LEGEN-wait for it... DARY! ",
-      "Pausing the fight with Lily",
-      "Saving the booth at MacLaren's",
-      "Slap betting",
-      "Spotting doppelgangers",
-      "Stealing the blue french horn",
-      "Suiting up",
-      "Telling the kids an incredible story",
-      "Trying The Naked Man",
-      "Waiting for it",
-      "Waking up next to a pineapple"
-    ]
-  },
   "spinnerTipsOverride": {
     "excludeDefault": true,
     "tips": [
@@ -49,6 +25,29 @@
       "Wait for it...",
       "When in doubt, have a 'sandwich'. Purely for the munchies.",
       "When you get sad, stop being sad and be awesome instead."
+    ]
+  },
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Accepting the challenge",
+      "Checking the hot-crazy scale",
+      "Consulting the Bro Code",
+      "Consulting the Playbook",
+      "Eating a 'sandwich'",
+      "Finding the yellow umbrella",
+      "Going to the mall",
+      "Making it LEGEN-wait for it... DARY! ",
+      "Pausing the fight with Lily",
+      "Saving the booth at MacLaren's",
+      "Slap betting",
+      "Spotting doppelgangers",
+      "Stealing the blue french horn",
+      "Suiting up",
+      "Telling the kids an incredible story",
+      "Trying The Naked Man",
+      "Waiting for it",
+      "Waking up next to a pineapple"
     ]
   }
 }
