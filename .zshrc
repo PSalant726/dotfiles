@@ -145,6 +145,7 @@ function brewup() {
 
 # Start Claude Code with a random spinner theme (verbs + tips)
 function claude() {
+  emulate -L zsh
   local themes=("$HOME"/.config/claude-code/spinner-themes/*.json(N))
   (( $#themes )) || { command claude "$@"; return }
   command claude --settings "$themes[RANDOM % $#themes + 1]" "$@"
