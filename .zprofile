@@ -3,6 +3,9 @@ if [[ -d "/opt/homebrew" ]]; then
   export HOMEBREW_NO_ANALYTICS=1
   export HOMEBREW_NO_ENV_HINTS=1
   export HOMEBREW_XDG_CONFIG_HOME="$HOME/.config"
+  export HOMEBREW_BUNDLE_CLEANUP_NO_CARGO=1
+  export HOMEBREW_BUNDLE_CLEANUP_NO_NPM=1
+  export HOMEBREW_BUNDLE_CLEANUP_NO_VSCODE=1
 
   _brew_env="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/brew-shellenv.zsh"
   [[ "$_brew_env" -nt /opt/homebrew/Library/Homebrew/cmd/shellenv.sh ]] || { mkdir -p "${_brew_env:h}"; /opt/homebrew/bin/brew shellenv > "$_brew_env"; }
