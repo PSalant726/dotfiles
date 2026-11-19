@@ -136,7 +136,8 @@ alias gcb='git-forgit checkout_branch'
 
 # Homebrew maintenance; pass extra Brewfiles (e.g. a work Brewfile) to include them in the untracked-package check
 function brewup() {
-  brew upgrade --no-ask --greedy &&
+  brew update &&
+    brew upgrade --no-ask --greedy &&
     brew autoremove &&
     brew cleanup --prune=all &&
     brew doctor
